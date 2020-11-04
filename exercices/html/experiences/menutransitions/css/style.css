@@ -52,7 +52,7 @@ nav{
 
 .bouton:hover .sousmenu{
     display: flex;
-    height: auto; 
+
 }
 
 .sousitem:hover{
