@@ -1,0 +1,109 @@
+@font-face {
+	font-family: "BaksoSapi";
+	src: url('../fonts/BaksoSapi.otf');
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    font-family: "BaksoSapi";
+    color: #ffffff;
+    background: rgb(2,0,36);
+    background: linear-gradient(220deg, rgba(2,0,36,1) 0%,
+     rgba(39,39,73,1) 41%, rgba(0,212,255,1) 100%);
+}
+
+.container{
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+}
+
+div{
+    display: flex;
+    flex: 1;
+}
+
+/*header*/
+header{
+    display: flex;
+    font-size: 1.2em;
+    border: 5px solid black;
+    border-radius: 10px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo{
+    flex: 0.3;
+}
+
+.titre{
+    flex: 2;
+    justify-content: center;
+}
+
+header .logo img{
+    width: 100%;
+}
+
+nav{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex: 1;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+/*contenu principal*/
+.center{
+    display: flex;
+    border: 5px solid black;
+    border-radius: 10px;
+}
+
+.bouclart{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+article{
+    flex: 1;
+    border: 5px solid black;
+    border-radius: 10px;
+}
+
+.menucoter{
+flex: 0.5;
+justify-content: center;
+}
+
+.menucoter ul li{
+    list-style-image: url(../img/puce.png);
+    margin-bottom: 1%;
+}
+
+footer{
+    flex: 1;
+    display: flex;
+    background-color: pink;
+    border: 5px solid black;
+    border-radius: 10px;
+}
+
+footer p{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div .middle{
+
+    justify-content: center;
+    align-items: center;
+}

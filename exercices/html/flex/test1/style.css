@@ -1,0 +1,39 @@
+div
+{
+    display: flex;
+    flex: 1;
+    margin: 5px;
+}
+
+.colonne 
+{
+    flex-direction: column;
+}
+
+.blue
+{
+
+    background-color: blue;
+    height: 600px;
+}
+
+.orange
+{
+    background-color: orange;
+}
+
+.grey
+{
+    background-color: grey;
+    flex: 2;
+}
+
+.yellow
+{
+    background-color: yellow;
+}
+
+.green
+{
+    background-color: green;
+}

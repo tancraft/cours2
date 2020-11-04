@@ -1,0 +1,83 @@
+body
+{
+width: 80%;
+margin: auto;
+}
+
+/*entete*/
+header
+{
+    border: 1px dashed black;
+    height: 4em;
+    line-height: 4em;
+    white-space: nowrap;
+    margin: 1em;
+
+}
+
+header a
+{
+    margin-left: 0.5em;
+}
+
+/*contenu principal*/
+.corps
+{
+    width: 95%;
+    margin: auto;
+}
+
+section
+{
+    float: left;
+    width: 80%;
+    margin: 0.5em;
+}
+article
+{
+    border: 1px dashed black;
+    margin-bottom: 1em;
+}
+
+p
+{
+    margin-left: 0.5em;
+}
+
+.entart
+{
+    margin: 0.5em;
+    background-color: lightgrey;
+    padding: 0.5em;
+
+}
+
+.midart
+{
+    width: 80%;
+    margin: auto;
+    border: 1px dashed lightgrey;
+}
+
+.piedart
+{
+    height: 4em;
+    line-height: 4em;
+    margin: 0.5em;
+    background-color: lightgrey;
+}
+
+/*navigation de coter*/
+
+aside
+{
+    float: right;
+    vertical-align: top;
+    border: 1px dashed black;
+    padding: 1em;
+}
+
+aside a
+{
+    text-align: center;
+}

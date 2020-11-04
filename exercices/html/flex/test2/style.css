@@ -1,0 +1,81 @@
+/*general*/
+body{
+    padding: 0;
+    margin: auto;
+    width: 80%;
+    height: 100vh;
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+header, footer{
+    width: 100%;
+    height: 10%;
+    
+}
+
+/*le header*/
+header{
+
+    background-color: red;
+}
+
+/* le contenu principal*/
+section{
+    width: 100%;
+    height: 60%;
+}
+
+.row{
+
+    display: flex;
+}
+
+.boucleart{
+    width: 30%;
+    height: 100%;
+    margin-left: 10%;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2;
+    justify-content: space-between;
+}
+
+article{
+
+    width: 100%;
+    height: 20%;
+}
+
+.yellow{
+
+    background-color: yellow;
+}
+
+.blue{
+
+    background-color: lightskyblue;
+}
+
+.lightgreen{
+
+    background-color: lightgreen;
+}
+
+aside{
+
+    width: 30%;
+    height: 100%;
+    background-color: lightgrey;
+}
+
+/*le footer*/
+footer{
+
+    background-color: green;
+}
+
+

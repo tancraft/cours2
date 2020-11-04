@@ -1,0 +1,22 @@
+dans lancer joueur
+changer le nom du jeu dans le premier echo
+passer ba un nombre de joueurs fixe
+2 joueurs
+
+changer les valeurs minimales de la creation de tableau et de pions alignés
+de 4 pions aligné a xx
+taille du tableau de 6 lignes et 7 colonnes minimales
+
+selection position nas besoins que d'un int du numero de la colonne ou on fait tomber le pion
+et devra s ocuuper de verifier si la colonne choisit est un int et renvoyer cette valeur sous forme de tableau (meme si il ny as qu'une valeur)
+conversion position pour qu elle y ajoute la valeur de la ligne et verifie que la colonne est pas remplie
+
+affichage tableau 
+
+il n'est plus necessaire d afficher les titres des lignes
+
+creer pionQuiTombe($lignechoisi)
+
+creer une boucle qui parcours la colonne choisit par le joueur a la recherche de la premiere place dispo
+
+return le tableau de position pour conversion position qui renverra le tableau avec les 2 valeurs(ligne et colonne pour conversion position)

@@ -1,0 +1,64 @@
+body{
+    width: 80%;
+    height: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: blue;
+    justify-content: space-between;
+
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+
+.container{
+    width: 100%;
+    height: 25%;
+    background-color: pink;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+
+}
+
+.center{
+
+    width: 100%;
+    height: 25%;
+    background-color: orange;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.items{
+
+    width: 100px;
+    height: 50px;
+}
+
+.long{
+    width: 90%;
+    margin: auto;
+}
+.red{
+    background-color: red;
+}
+
+.grey{
+    background-color: lightgray;
+}
+
+.yellow{
+    background-color: yellow;
+}
+
+.green{
+    background-color: green;
+}

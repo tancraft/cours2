@@ -1,0 +1,37 @@
+
+
+body
+{
+    background-color: pink;
+
+}
+
+header
+{
+    background-color: red;
+}
+
+section
+{
+
+    background-color: blue;
+}
+aside
+{
+    width:20%;
+    float:right;
+    clear: inline-end;
+
+}
+
+footer
+{
+    background-color: orange;
+    border: 2px groove maroon;
+}
+
+footer .toto
+{
+    border: 5px dotted black;
+    color: white;
+}

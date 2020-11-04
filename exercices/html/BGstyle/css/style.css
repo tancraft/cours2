@@ -1,0 +1,121 @@
+
+@font-face {
+	font-family: "sherwood";
+	src: url('../fonts/SHERWOOD.TTF');
+}
+body{
+font-family: "sherwood", arial;
+color: #ffffff;
+background-color: blue;
+display: flex;
+justify-content: center;
+background-color: #DCDAC7;
+
+}
+main{
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    background-image: url("../img/backround\ articles.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+header, footer, article,
+nav, div, section, aside, .titre,
+.menuhaut, .contenu, .boucleart{
+    display: flex;
+    flex: 1;
+    border: 1px solid black;
+}
+
+.espacew{
+    flex: 0.2;
+}
+
+.espaceh{
+    height: 0.2vh;
+}
+
+header, main{
+    border-radius: 10px;
+}
+
+/*le header*/
+header{
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius : 0;
+    border-bottom-right-radius : 0;
+    border: none;
+    background-image: url("../img/avernus-full-1.jpg");
+    background-position-x: left;
+    background-position-y: 30%;
+    background-size: cover;
+}
+
+.logo{
+    flex: 0.2;
+    border-Top-left-radius : 10;
+    border: none;
+}
+
+.logo img{
+    width: 100%;
+}
+
+.titre{
+    flex: 2;
+    justify-content: center;
+    align-items: center;
+}
+.titre h1{
+    font-size: 1.5em;
+}
+
+header nav div a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.btn{
+    justify-content: center;
+}
+
+/*corps principal*/
+section{
+    flex-wrap: wrap;
+}
+
+.contenu{
+    flex: 2;
+    flex-direction: column;
+    align-items: center;
+}
+
+.boucleart{
+    flex-direction: column;
+    flex: 2;
+}
+
+article{
+    flex: 2;
+    flex-direction: column;
+    align-items: center;
+    background: radial-gradient(circle, rgba(4,2,25,0.9164040616246498)
+     0%, rgba(14,14,60,0.8827906162464986)
+     41%, rgba(184,225,233,0.804359243697479) 100%);
+}
+/* .synopsis{
+    flex: 2;
+    flex-direction: column;
+    align-items: center;
+} */
+aside{
+    flex: 1;
+}
+
+/* video{
+    width: 100%;
+    object-fit:contain;
+} */

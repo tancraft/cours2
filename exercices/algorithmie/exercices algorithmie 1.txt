@@ -1,0 +1,58 @@
+exercice 1.1
+
+la valeur de A sera 3 et la valeur de B sera 4
+
+exercice 1.2
+
+la valeur de A sera 2, la valeur de B sera 3 et la valeur de C sera 1
+
+exercice 1.3
+
+la valeur de A sera 6 et la valeur de B sera 2
+
+exrcice 1.4
+
+la valeur de A sera 13 la valeur de B sera 13 et la valeur de C sera 13
+
+exercice 1.5
+
+la valeur de A sera 2 et la valeur de B sera 2
+
+si on inverse les deux dernieres instructions la valeur de B serait 5
+
+exercice 1.6
+
+A <- 5
+B <- 6
+C <- A
+A <- B
+B <- C
+
+exercice 1.7
+
+A <- 5
+B <- 6
+C <- 8
+D <- C
+C <- B
+B <- A
+A <- D
+
+exercice 1.8
+
+le resultat de C est "435"
+
+exercice 1.9
+
+le resultat de C est "42312"
+
+
+Exercice 2.1
+
+le resultat produit est 
+
+231
+462
+
+
+

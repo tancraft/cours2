@@ -1,0 +1,35 @@
+
+body{
+    display: flex;
+}
+
+nav{
+    display: flex;
+    width: 50vw;
+}
+
+.avecEnfant{
+    flex: 1;
+    align-items: center;
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 0.5em;
+    position: relative;
+}
+.avecEnfant:hover .sous-menu{
+    display: flex;
+}
+.sous-menu{
+    display: none;
+    position: absolute;
+    left: -0.55em;
+    margin: 0.5em;
+    flex-flow: column wrap;
+    border: 1px solid black;
+    width: 100%;
+}
+
+.enf{
+    padding: 0.5;
+}

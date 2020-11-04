@@ -1,0 +1,56 @@
+body
+{
+    width: 80%;
+    margin: auto;
+}
+
+
+article
+{
+    min-height: 50px;
+
+}
+/* principal*/
+section
+{
+    float: left;
+    width: 70%;
+    height: 70%;
+
+}
+
+.green
+{
+    background-color: green;
+    border: 1px solid black;
+    border-bottom: none;
+}
+
+
+.blue
+    {background-color: blue;
+    min-height: 50px;
+}
+/*coter*/
+aside
+{
+    width: 30%;
+    min-height: 50px;
+    float: right;
+    vertical-align: top;
+}
+
+.red
+{
+    background-color: red;
+    min-height: 50px;
+    border: 1px solid black;
+}
+
+.yellow
+{
+    background-color: yellow;
+    min-height: 50px;
+    border: 1px solid black;
+}
+

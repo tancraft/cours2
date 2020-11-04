@@ -1,0 +1,41 @@
+*{
+    box-sizing: border-box;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+
+body{
+
+    background-color: pink;
+}
+
+img{
+    width: 10%;
+}
+article h1
+{
+    color: beige;
+    cursor:url("../img.pointeur-souris-valorant-defaut-knife-skin.cur"),pointer;
+}
+/*tableau*/
+table 
+{
+border: medium solid #fefefe;
+border-collapse: collapse;
+width: 50%;
+}
+
+th 
+{
+border: thin solid #ffffff;
+}
+
+td 
+{
+border: thin solid #fefefe;
+width: 25%;
+padding: 5px;
+}
+
