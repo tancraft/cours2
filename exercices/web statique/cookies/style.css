@@ -4,55 +4,125 @@ html, body{
     margin: 0;
 }
 body{
-    font-family: Arial, Helvetica, sans-serif;
     display: flex;
     justify-content: center;
     background-image: url("../media/fond.jpg");
     background-position: center;
 }
 
-header, article, video,
-nav, div, section, aside, .boucleart, .navigue{
+div{
     display: flex;
     flex: 1;
-    border: 1px solid black;
-    justify-content: center;
 }
 
-main, section, article,  .boucleart{
-    flex-direction: column;
-    background-color: antiquewhite;
-}
-
-main{
-    display: flex;
-    width: 80vw;
-    justify-content: center;
-}
-
-
-/*header*/
-header{
-    background-image: url("media/header.jpg");
-    background-position: center;
-    background-size: cover;
-}
-
-.logo{
-    flex: 0.15;
-}
 
 img{
     width: 100%;
 }
 
-/*navigation*/
-.navigue{
-    background-image: url("media/fond1.png");
-    background-position: center;
-    background-size: cover;
-    padding: 0.2em;
+video{
+    width: 100%;
 }
+
+.espace{
+    flex: 0.2;
+}
+.espaceHor {
+    height: 5vh;
+}
+/*header*/
+
+
+
+/*header*/
+header{
+    background-image: url("media/header.jpg");
+    display: flex;
+}
+
+
+
+/*footer*/
+footer{
+    display: flex;
+    background-image: url(../../media/fond1.png);
+    background-position: top;
+}
+/*main*/
+main
+{
+    width: 80vw;
+    flex-direction: column;
+    flex: none;
+    display: block;
+}
+
+.titre, .titrepied{
+    flex: 9;
+    justify-content: center;
+}
+
+.titre{
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 4em;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-shadow: white 0.1em 0.1em 0.2em;
+
+}
+
+/*menu*/
+
+/*section*/
+
+section{
+    flex-direction: column;
+    display: block;
+    flex: 1;
+}
+
+/*partie 1*/
+.titresemaine{
+    justify-content: center;
+}
+
+.cookiesemaine
+{
+    display: flex;
+    flex: 3;
+    flex-direction: column;
+    height: 35vh;
+    overflow-y: scroll;
+}
+
+.ingredients, .recette{
+    flex-direction: column;
+}
+
+/*partie2*/
+.boucleart{
+    flex-direction: column;
+}
+
+.titrearticle{
+    justify-content: center;
+}
+
+.textearticle{
+    flex: 9; 
+    text-align: justify;
+    padding: 0 1em;
+}
+
+aside{
+    display: flex;
+    flex: 1;
+    border: blue 1px solid;
+    border-radius: 6px;
+    padding: 0 0.5em;
+    align-items: center;
+}
+
 nav{
     flex: 0.5;
     width: 50%;
@@ -62,17 +132,6 @@ nav{
     padding: 0.5em;
     margin: 0.1em;
 }
-/*corps*/
 
-.partie1{
-    max-height: 35vh;
-}
 
-.part1{
-    justify-content: none;
-}
 
-.semaine{
-    background-color: white; 
-    overflow: auto;
-}
