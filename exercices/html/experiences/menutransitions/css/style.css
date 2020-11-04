@@ -1,0 +1,61 @@
+div{
+    display: flex;
+    flex: 1;
+}
+/*menu*/
+nav, a{
+    color:white;
+    text-decoration: none;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    background-image: url("media/fond1.png");
+    background-position: left;
+    padding: 0.2vw 0;  
+}
+
+.bouton{
+    flex: none; /*chaque bouton prend sa taille */
+    position: relative;
+    padding: 0 0.5vW;
+    background: linear-gradient(to bottom, #131313, #fefefe);
+    border: solid #393030 2px;
+    font-size: 1.5em;
+}
+
+.debut{
+    border-top-left-radius: 10px;  
+}
+
+.fin{
+    border-top-right-radius: 10px;
+}
+
+
+.sousmenu{
+    display: none;
+    flex-direction: column;
+    white-space: nowrap;
+    position: absolute;
+    margin-top: 1.5em;
+    margin-left: -0.65vw;
+    padding: 0 0.5vw;
+    background: linear-gradient(to bottom, #131313, #fefefe);
+    border: solid #393030 2px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 0.8em;
+    z-index: 999;
+}
+
+
+.bouton:hover .sousmenu{
+    display: flex;
+    height: auto; 
+}
+
+.sousitem:hover{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
