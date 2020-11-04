@@ -39,7 +39,10 @@ header{
     background-image: url("media/header.jpg");
     display: flex;
 }
-
+/*menu*/
+.espacemenu{
+    flex: 0.5;
+}
 
 
 /*footer*/
@@ -73,6 +76,17 @@ main
 
 /*menu*/
 
+nav{
+    background-image: url("media/fond1.png");
+    background-position: center;
+    display: flex;
+}
+
+.bouton{
+    flex: 1;
+    display: flex;
+    padding: 0.5em;
+}
 /*section*/
 
 section{
@@ -121,16 +135,6 @@ aside{
     border-radius: 6px;
     padding: 0 0.5em;
     align-items: center;
-}
-
-nav{
-    flex: 0.5;
-    width: 50%;
-}
-
-.bouton{
-    padding: 0.5em;
-    margin: 0.1em;
 }
 
 
