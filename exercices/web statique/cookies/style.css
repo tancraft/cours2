@@ -72,38 +72,75 @@ main
 }
 
 /*menu*/
-
+nav, a{
+    color:white;
+    text-decoration: none;;
+}
 nav{
-    background-image: url("media/fond1.png");
-    background-position: center;
     display: flex;
+    justify-content: center;
+    background-image: url("media/fond1.png");
+    background-position: left;
+    padding: 0.2vw 0;  
 }
 
 .bouton{
-    flex: 1;
+    flex: none; /*chaque bouton prend sa taille */
+    position: relative;
+    padding: 0 0.5vW;
+    background: linear-gradient(to bottom, #08598c, #3e99d1);
+    border: solid #326280 3px;
+    border-radius: 5px;
+    font-size: 2em;
+}
+
+.sousmenu{
+    display: none;
+    flex-direction: column;
+    white-space: nowrap;
+    position: absolute;
+    margin-top: 1.5em;
+    margin-left: -0.5vw;
+    padding: 0 0.5vw;
+    background: linear-gradient(to bottom, #08598c, #3e99d1);
+    border: solid #326280 3px;
+    border-radius: 5px;
+    font-size: 0.8em;
+    z-index: 999;
+}
+
+.bouton:hover .sousmenu{
     display: flex;
-    padding: 0.5em;
+}
+
+.sousitem:hover{
+    border: 1px solid #ccc;
 }
 /*section*/
 
 section{
     flex-direction: column;
     display: block;
-    flex: 1;
 }
 
 /*partie 1*/
 .titresemaine{
     justify-content: center;
+    background: linear-gradient(rgb(30, 87, 153) 0%, rgb(41, 137, 216) 50%, rgb(32, 124, 202) 51%, rgb(125, 185, 232) 100%);
 }
 
 .cookiesemaine
 {
-    display: flex;
     flex: 3;
     flex-direction: column;
     height: 35vh;
     overflow-y: scroll;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(229, 229, 229, 1) 100%);
+}
+
+.media{
+    flex-direction: column;
+    padding:0.5em;
 }
 
 .ingredients, .recette{
