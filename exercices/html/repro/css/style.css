@@ -5,6 +5,7 @@ body{
     background-image: url("../images/bg.jpg");
     background-position: center;
     background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 div, article, header{
@@ -37,14 +38,19 @@ header{
 }
 
 .logo{
-    padding: 1em;
+    padding: 2vw;
 }
-.titre, .titrebas{
-    flex: 5;
+.titre, .titrebas, .destinations{
+    font-size: 3em;
+    font-weight: 600;
+    flex: 3;
     justify-content: center;
     align-items: center;   
 }
 
+.destinations{
+    font-size: 1.4em;
+}
 /*****corps*****/
 
 article{
@@ -54,6 +60,12 @@ article{
 
 .white{
     background-color: white;
+}
+
+.soustitre{
+    justify-content: center;
+    font-size: 1.2em;
+    font-weight: 600;
 }
 
 .texte{
@@ -67,36 +79,40 @@ article{
     color: khaki;
     background-image: url("../images/08.jpg");
     background-position: center;
-    background-size: cover;
+    background-size: cover; 
+
 }
 #elt2{
     background-image: url("../images/04.jpg");
     background-position: center;
-    background-size: cover;
+    background-size: cover; 
+
 }
 #elt3{
-    background-image: url("../images/05.jpg");    background-position: center;
-    background-size: cover;
+    background-image: url("../images/05.jpg");
+    background-position: center;
+    background-size: cover; 
 }
 #elt4{
     background-image: url("../images/06.jpg");
     background-position: center;
-    background-size: cover;
+    background-size: cover; 
 }
 #elt5{
     background-image: url("../images/07.jpg");
     background-position: center;
-    background-size: cover;
+    background-size: cover; 
 }
+
 #elt6{
     background-image: url("../images/03.jpg");
     background-position: center;
-    background-size: cover;
+    background-size: cover; 
 }
 #elt7{
     background-image: url("../images/02.jpg");
     background-position: center;
-    background-size: cover;
+    background-size: cover; 
 }
 #elt8{
     color: khaki;
@@ -106,11 +122,13 @@ article{
 }
 
 .image{
-    padding: 2em;
+    padding: 5vh 0;
+    justify-content: center;
     font-size: 1.5em;
     font-weight: bolder;
     text-align: center;
 }
+
 footer{
     background-image: url("../images/pp.jpg");
     background-position: center;
