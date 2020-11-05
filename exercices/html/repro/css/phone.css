@@ -1,0 +1,18 @@
+@media screen and (max-width: 800px)
+{
+
+    main{
+        width:100%
+    }
+    .espacefoot{
+        height: 2vh;
+    }
+    .espacehor{
+        height: 4vh;
+    }
+    .espace{
+        flex: 0.2;
+    }
+    
+
+}
