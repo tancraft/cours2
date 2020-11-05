@@ -1,0 +1,73 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-image: url("../images/bg.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+div, article, header{
+    display: flex;
+    flex: 1;
+}
+
+img{
+    width: 100%;
+}
+
+.main{
+    width: 70vw;
+    display: flex;
+    flex: 1;
+}
+
+.espacehor{
+    height: 5vh;
+}
+
+.espace{
+    flex: 1;
+}
+/*******header*******/
+header{
+    background-image: url("../images/sky.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.logo{
+    padding: 1em;
+}
+.titre, .titrebas{
+    flex: 5;
+    justify-content: center;
+    align-items: center;   
+}
+
+/*****corps*****/
+
+article{
+    flex: 2;
+    align-self: center;
+}
+
+.white{
+    background-color: white;
+}
+
+.texte{
+    flex-direction: column;
+    flex: 2;
+    padding: 0.4em;
+}
+
+/*galerie*/
+
+
+
+footer{
+    background-image: url("../images/pp.jpg");
+    background-position: center;
+    background-size: cover;
+}
