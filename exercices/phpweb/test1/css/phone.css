@@ -1,0 +1,46 @@
+@media screen and (max-width: 800px)
+{
+
+main{
+    width:100%
+}
+
+.titre, .titrebas{
+    font-size: 2em;
+}
+    
+.espace{
+    flex: 0.2;
+}
+
+.image{
+    font-size: 1em;
+    padding: 3vh 0;
+}
+
+
+.name{
+    justify-content: center;
+    align-items: center;
+    display: block;
+}
+
+nav {
+    display : none;
+}
+
+.hamburger:hover nav{
+display : block;
+}
+
+.bouton{
+    text-align: center;
+}
+
+.sousmenu {
+width: 100%;
+position: unset; 
+margin-top: 0;
+}
+
+}
