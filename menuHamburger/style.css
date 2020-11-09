@@ -1,0 +1,65 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+/*navigation*/
+nav a{
+    text-decoration: none;
+    color: black;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    background-image: url("media/fond1.png");
+    background-position: left;
+    padding: 0.2vw 0;  
+}
+
+.bouton{
+    flex: none; /*chaque bouton prend sa taille */
+    position: relative;
+    padding: 0 0.5vW;
+    font-size: 2em;
+    border-bottom: 2px solid orange;
+}
+
+.sousmenu{
+    display: none;
+    flex-direction: column;
+    white-space: nowrap;
+    position: absolute;
+    margin-top: 0em;/*valeur a modifier pour s approcher du bouton*/
+    margin-left: -0.5vw;
+    padding: 0 0.5vw;
+    font-size: 0.8em;
+    z-index: 999;
+}
+
+.bouton:hover .sousmenu{
+    display: flex;
+}
+
+.sousitem:hover{
+    border: 1px solid #ccc;
+}
+
+.hamburger{
+    display: none;
+}
+
+nav input[type="checkbox"]{
+    display: none;
+}
+
+@media screen and (max-width: 800px)
+{
+    .bouton{
+        display: none;
+    }
+
+    nav input[type="checkbox"]{
+        display: flex;
+    }
+}
