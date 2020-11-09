@@ -1,0 +1,76 @@
+nav, a{
+    color:white;
+    text-decoration: none;;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    background-image: url("media/fond1.png");
+    background-position: left;
+    padding: 0.2vw 0;  
+}
+
+.hamburger {
+    justify-content: center;
+    align-items: center;
+}
+
+.name{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: none;
+}
+
+.bouton{
+    flex: none; /*chaque bouton prend sa taille */
+    position: relative;
+    padding: 0 0.5vW;
+    background: linear-gradient(to bottom, #08598c, #3e99d1);
+    border: solid #326280 3px;
+    border-radius: 5px;
+    font-size: 2em;
+}
+
+.sousmenu{
+    display: none;
+    flex-direction: column;
+    white-space: nowrap;
+    position: absolute;
+    margin-top: 0;
+    margin-left: -0.5vw;
+    padding: 0 0.5vw;
+    background: linear-gradient(to bottom, #08598c, #3e99d1);
+    border: solid #326280 3px;
+    border-radius: 5px;
+    font-size: 0.8em;
+    z-index: 999;
+}
+
+.bouton:hover .sousmenu{
+    display: flex;
+}
+
+.sousitem:hover{
+    border: 1px solid #ccc;
+}
+
+@media screen and (max-width:800px){
+
+
+
+    .name{
+        justify-content: center;
+        align-items: center;
+        display: block;
+    }
+
+    nav {
+        display : none;  
+   }
+
+   .hamburger:hover nav{
+    display : block;
+}
+
+}
