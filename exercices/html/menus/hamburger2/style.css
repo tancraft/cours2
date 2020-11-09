@@ -1,6 +1,6 @@
-nav a{
+nav, a{
     color:white;
-    text-decoration: none;
+    text-decoration: none;;
 }
 nav{
     display: flex;
@@ -67,6 +67,8 @@ nav{
 
     nav {
         display : none;  
+        font-size: 0.8em;
+        text-align: center;
    }
 
    .hamburger:hover nav{
@@ -74,9 +76,7 @@ nav{
 }
 
 .sousmenu {
-    width: 100%;
-    position: unset; 
-    margin-top: 0;
+width: 80%;
 }
 
 }
