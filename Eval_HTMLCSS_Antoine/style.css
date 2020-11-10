@@ -65,7 +65,6 @@ div, header, section, aside{
 aside{
     background-color: #F1E3C7;
     border: 2px solid #BB8C00;
-    float: left;
 }
 
 /***partie1***/
@@ -90,11 +89,6 @@ section{
     border: 1px solid black;
     border-radius: 2em;
 }
-
-.image{
-    float: right;
-}
-
 
 /***partie2***/
 .numero1{
