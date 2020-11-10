@@ -1,0 +1,118 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: #F7EFDF ;
+    justify-content: center;
+}
+
+main{
+    width: 90%
+}
+
+img{
+    width: 100%;
+}
+
+.espace{
+    height: 3vh;
+}
+.texte{
+    flex: 2;
+}
+
+.article{
+    padding: 0.3em;
+}
+
+.liste{
+    color: #006633;
+}
+
+li{
+    list-style-type: circle;
+}
+
+b{
+    color: #000066;
+}
+
+p{
+    text-justify: auto;
+}
+
+/***header***/
+div, header, section, aside{
+    display: flex;
+    flex: 1;
+}
+.titre{
+    font-size: 1.5em;
+    font-weight: 600;
+}
+/***principal***/
+
+
+.soustitre{
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.decrire{
+    font-weight: 600;
+}
+
+aside{
+    background-color: #F1E3C7;
+    border: 2px solid #BB8C00;
+    float: left;
+}
+
+/***partie1***/
+section{
+    flex-direction: column;
+}
+
+.partie1{
+    display: flex;
+}
+
+.presente{
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+.intro, .coter{
+    flex-direction: column;
+}
+.coter{
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 2em;
+}
+
+.image{
+    float: right;
+}
+
+
+/***partie2***/
+.numero1{
+    flex-direction: column;
+    flex: 2;
+}
+
+.partie2{
+    flex-direction: row;
+}
+
+aside{
+    flex-direction: column;
+}
+
+@media screen and (max-width: 800px)
+{
+    .partie1, .article, .partie2{
+        flex-direction: column;
+    }
+}
