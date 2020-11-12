@@ -1,0 +1,58 @@
+/****  GENERAL ****/
+body {
+	margin : 0;
+	padding : 0;
+	display:flex;
+	justify-content: center;
+	background-image: url("../IMG/xwingtie2.jpg");
+	background-size: auto;
+	background-repeat: no-repeat;
+
+}
+
+div, header, section, article, footer{
+	display: flex;
+	flex: 1;
+}
+
+.colonne{
+	flex-direction: column;
+}
+
+.centrer{
+	justify-content: center;
+}
+
+img{
+	width: 100%;
+}
+
+.espace{
+	flex: 0.2;
+}
+
+.espaceHor{
+	height: 5vh;
+}
+
+
+.affiche{
+	flex: 0.5;
+}
+
+main{
+	width: 80vw;
+}
+
+/***header**/
+header{
+	padding: 0.5em;
+	background: rgba(0, 0, 0, 0.7);
+
+}
+nav{
+	align-self: flex-end;
+}
+
+
+
