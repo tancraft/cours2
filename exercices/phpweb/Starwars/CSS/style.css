@@ -42,7 +42,7 @@ a{
 }
 
 .espace{
-	flex: 1;
+	flex: 0.5;
 }
 
 .espaceHor{
@@ -112,6 +112,9 @@ nav a{
 
 @media screen and (max-width: 800px)
 {
+	.espace{
+		flex: 0.2;
+	}
 
 header, article{
 	flex-direction: column;
