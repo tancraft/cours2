@@ -1,16 +1,25 @@
 /****  GENERAL ****/
+
+@font-face {
+	font-family: "starTitre";
+	src: url(../fonts/Starjhol.ttf);
+}
+
 body {
 	margin : 0;
 	padding : 0;
 	display:flex;
-	justify-content: center;
-	background-image: url("../IMG/xwingtie2.jpg");
-	background-size: auto;
-	background-repeat: no-repeat;
+	flex-direction: column;
+	align-items: center;
+	background: url("../IMG/xwingtie2.jpg") no-repeat center  fixed; 
+	background-size: cover;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #fff;
+	text-align: justify;
 
 }
 
-div, header, section, article, footer{
+div, header, section, article, footer, nav{
 	display: flex;
 	flex: 1;
 }
@@ -27,8 +36,13 @@ img{
 	width: 100%;
 }
 
+a{
+	font-size: 1.1em;
+	text-decoration: none;
+}
+
 .espace{
-	flex: 0.2;
+	flex: 1;
 }
 
 .espaceHor{
@@ -37,22 +51,92 @@ img{
 
 
 .affiche{
-	flex: 0.5;
+	flex: 0.2;
 }
 
-main{
-	width: 80vw;
+.titre, .sousTitre{
+	text-align: center;
+	font-family: "starTitre";
+	color: #ffc500;
 }
 
 /***header**/
-header{
-	padding: 0.5em;
+header, footer{
 	background: rgba(0, 0, 0, 0.7);
-
+	padding: 0.5em;
+	align-items: center;
 }
+
+.espaceHead, .texte, .boucleFilms{
+	flex: 2;
+}
+
+
+.titre{
+	display: none;
+	font-size: 1.8em;
+	font-weight: 600;
+	font-family: "starTitre";
+}
+
+.sousTitre{
+	align-self: center;
+	align-items: center;
+	font-size: 1.2em;
+}
+
 nav{
 	align-self: flex-end;
+	flex: 3;
+	justify-content: flex-end
+}
+
+nav a{
+	color: #fff;
+	padding-right: 1em;
+}
+
+.end{
+	padding-right: 0;
 }
 
 
+/**corps**/
+
+/**footer**/
+
+.copyright, .sitesExt{
+	align-items: center;
+	justify-content: center;
+}
+
+@media screen and (max-width: 800px)
+{
+
+header, article{
+	flex-direction: column;
+}
+
+.espaceHead{
+	flex: 2;
+}
+
+.logo{
+	display: none;
+}
+
+nav{
+	align-self: unset;
+	justify-content: center;
+}
+
+.titre{
+	display: flex;
+}
+
+footer{
+	flex-direction: column;
+}
+
+}
 
