@@ -1,52 +1,4 @@
-<!DOCTYPE html>
-<html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StarWars</title>
-    <link rel="stylesheet" href="CSS/style.css">
-</head>
-
-<body>
-
-    <main>
-        <header>
-            <div class="espaceHead"></div>
-            <div class="logo"><img src="IMG/logo.png" alt="logo su site"></div>
-            <div class="titre">Star Wars</div>
-            <nav>
-                <a href="#">Accueil</a>
-                <a href="#">Les films</a>
-                <a href="#">Produits Dérivés</a>
-                <a href="#" class="reset">Forums</a>
-            </nav>
-        </header>
-        <div class="espaceHor"></div>
-        <section>
-            <div class="espace"></div>
-            <div class="boucleFilms  colonne">
-                <div class="colonne">
-                    <div id="news" class="centrer">A la une</div>
-                    <div>
-                        <div class="espace"></div>
-                        <div class="decouvrir">
-                            <div class="resume colonne">
-                                <div class="sousTitre">le mandalorien</div>
-                                <div class="texte">la saison 2 du mandalorien est disponible sur disney</div>
-                                <div>
-                                    <div class="espaceBouton centrer"></div>
-                                    <div class="bouton centrer"><a href="#">Bouton</a></div>
-                                    <div class="espace"></div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="espace"></div>
-                    </div>
-
-                </div>
-                <div class="colonne">
+<div class="colonne">
                     <div id="films" class="centrer">les films</div>
                     <article>
                         <div class="affiche"><img src="IMG/afficheep1.jpg" alt="affiche de film1" class="aff"></div>
@@ -273,21 +225,3 @@
                     </article>
                 </div>
             </div>
-            <div class="espace"></div>
-        </section>
-        <div class="espaceHor"></div>
-        <footer>
-            <div class="copyright centrer">TOUS DROITS RÉSERVÉS &#169;</div>
-            <nav class="copyright centrer">
-                <a href="#films">retour aux films</a>
-                <a href="#news">retour aux news</a>
-                <a href="#">Menu 3</a>
-                <a href="#" class="end">Menu 4</a>
-            </nav>
-        </footer>
-    </main>
-
-    <script src="JS/script.js"></script>
-</body>
-
-</html>

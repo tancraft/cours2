@@ -1,5 +1,13 @@
 /****  GENERAL ****/
 
+:root{
+
+	--couleur1: rgba(45, 42, 38,0.8);
+	--couleur2: #ffc500;
+	--couleur3: #fff;
+
+}
+
 @font-face {
 	font-family: "starTitre";
 	src: url(../fonts/Starjhol.ttf);
@@ -14,7 +22,7 @@ body {
 	background: url("../IMG/xwingtie2.jpg") no-repeat center  fixed; 
 	background-size: cover;
 	font-family: Arial, Helvetica, sans-serif;
-	color: #fff;
+	color: var(--couleur3);
 	text-align: justify;
 
 }
@@ -52,29 +60,40 @@ a{
 
 .affiche{
 	flex: 0.2;
+
 }
 
-.titre, .sousTitre{
+.titre, .sousTitre, #films, #news{
 	text-align: center;
 	font-family: "starTitre";
-	color: #ffc500;
+	color: var(--couleur2);
+}
+
+#films, #news{
+	font-size: 1.8em;
+
+}
+
+.reset{
+	padding-right: 0;
+	margin: 0;
 }
 
 /***header**/
 header, footer{
-	background: rgba(0, 0, 0, 0.7);
+	background: var(--couleur1);
 	padding: 0.5em;
 	align-items: center;
 }
 
-.espaceHead, .texte, .boucleFilms{
+.espaceHead, .texte, .boucleFilms, .espaceBouton{
 	flex: 2;
 }
 
 
 .titre{
 	display: none;
-	font-size: 1.8em;
+	font-size: 2em;
 	font-weight: 600;
 	font-family: "starTitre";
 }
@@ -92,29 +111,65 @@ nav{
 }
 
 nav a{
-	color: #fff;
+	color: var(--couleur3);
 	padding-right: 1em;
-}
-
-.end{
-	padding-right: 0;
 }
 
 
 /**corps**/
 
+.decouvrir{
+	text-align: center;
+	background-image: url("../IMG/The_Mandalorian.jpg");
+	background-size: cover;
+	background-position: 50%;
+	height: 70vh;
+	flex: 2;
+	justify-content: center;
+	align-items: center;
+}
+
+.bouton{
+	border: 2px solid var(--couleur3);
+	padding: 0.2em 0;
+	border-bottom-right-radius: 0.5em;
+	border-top-left-radius: 0.5em;
+	background: var(--couleur1);
+}
+
+.bouton a{
+	color: var(--couleur3);
+}
+
+article{
+	margin-bottom: 2em;
+	background: var(--couleur1);
+	border-radius: 1em;
+}
+
+.aff{
+	border-top-left-radius: 1em;
+	border-bottom-left-radius: 1em;
+}
+
+.texte{
+	padding: 0.6em;
+	justify-content: center;
+}
 /**footer**/
 
-.copyright, .sitesExt{
+.copyright{
+	align-self: unset;
+	flex: 1;
 	align-items: center;
-	justify-content: center;
 }
 
 @media screen and (max-width: 800px)
 {
-	.espace{
-		flex: 0.2;
-	}
+
+.espace{
+	flex: 0.2;
+}
 
 header, article{
 	flex-direction: column;
@@ -133,12 +188,26 @@ nav{
 	justify-content: center;
 }
 
+.decouvrir{
+
+	height: 50vh;
+}
+
 .titre{
 	display: flex;
 }
 
+.aff{
+	border-top-right-radius: 1em;
+	border-bottom-left-radius: unset;
+}
+
 footer{
 	flex-direction: column;
+}
+
+.ancre{
+	display: flex;
 }
 
 }
