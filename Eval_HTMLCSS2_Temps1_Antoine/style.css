@@ -1,0 +1,235 @@
+:root{
+    --couleur1: #0a6290;
+    --couleur2: #e5ebf7;
+    --couleur3: #fff;
+    --couleur4: #000;
+    --lueur: 0px 0px 10px 4px #d1e0ea;
+}
+
+@font-face{
+    font-family: "montserrat regular";
+    src: url(fonts/Montserrat-Regular.ttf);
+}
+
+@font-face{
+    font-family: "montserrat bold";
+    src: url(fonts/Montserrat-Bold.ttf);
+}
+
+html{
+    scroll-behavior : smooth;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    text-align: justify;
+    background-color: var(--couleur2);
+    font-family: "montserrat regular";
+
+}
+
+img{
+    width: 100%;
+}
+
+div, nav, footer, header, section, article{
+    display: flex;
+    flex: 1;
+}
+
+h1, h2, h3, h4, h5, h6, p{
+    padding: 0;
+    margin: 0;
+}
+
+.colonne{
+    flex-direction: column;
+}
+
+.espace{
+    flex: 0.5;
+}
+
+.espaceHor{
+    height: 5vh;
+}
+
+.centrer{
+    justify-content: center;
+}
+.reset{
+    margin: 0;
+    padding: 0;
+}
+
+nav, section{
+    background-color: var(--couleur3);
+}
+
+.espaceSocial{
+    flex: 2;
+}
+
+/**navigation**/
+nav{
+    border-bottom: 2px solid var(--couleur1);
+}
+
+.menu{
+    flex: 12;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu a {
+    text-decoration: none;
+    font-family: "montserrat bold";
+    color: var(--couleur1)
+}
+
+.logo{
+    flex: 0.5;
+    padding: 0.2em;
+}
+
+.Tel{
+    display: none;
+}
+
+/**header**/
+.phone{
+    display: none;
+}
+
+.pc{
+    position: relative;
+}
+
+.decrire{
+position: absolute;
+right: 40%;
+top: 85%;
+}
+
+.titre, .fleche{
+    color: var(--couleur3);
+}
+
+.fleche{
+    font-size: 2em;
+}
+
+/**corps**/
+
+section{
+    flex: 3;
+    box-shadow: var(--lueur);
+}
+
+.article{
+    flex:2;
+    padding: 2em;
+}
+
+.sousTitre, .nom{
+    margin-bottom: 1em;
+}
+
+.bordurebas{
+    border-bottom: 2px dashed var(--couleur1) ;
+    align-items: center;
+}
+.partage{
+    flex: 3;
+}
+
+/**footer**/
+footer, .copyright{
+   color: var(--couleur3);
+}
+footer{
+    background-color:var(--couleur1);
+}
+.adresse{
+    margin: 2em;
+}
+
+/**copyright**/
+.copyright{
+    background-color: var(--couleur4);
+    padding: 1em 0;
+}
+
+@media screen and (max-width:800px){
+    body{
+        font-size: 0.7em;
+    }
+
+    .espace{
+        flex: 0.3;
+    }
+    
+    .espaceHor{
+        height: 2vh;
+    }
+
+    h3{
+        font-size: 1em;
+    }
+
+   .media{
+       flex-direction: column;
+   }
+
+   .PC{
+       display: none;
+   }
+
+   .Tel{
+       display: flex;
+   }
+
+   .menu{
+       flex: 5;
+   }
+   .bouton{
+       display: none;
+   }
+
+   .nomSite{
+       display: flex;
+       font-size: 1.2em;
+   }
+
+   .decrire{
+       display: none;
+
+   }
+
+   .pc{
+       display: none;
+   }
+
+   .phone{
+       display: flex;
+   }
+
+   .premier{
+       order: -1;
+   }
+
+   footer{
+       padding: 3em;
+   }
+
+   .nom{
+       border-bottom: 1px solid var(--couleur3);
+   }
+
+   .adresse{
+        margin: 1em 0;
+    }
+
+
+}
