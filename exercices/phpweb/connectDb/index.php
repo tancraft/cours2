@@ -42,17 +42,27 @@ catch (Exception $e) // si une erreur est levée, on agit en conséquence
 // var_dump($q);
 
 //on crée un objet
-$perso = new Personne(["nom"=>"Dupond","prenom"=>"Gilles","age"=>21]);
+// $perso = new Personne(["nom"=>"Dupond","prenom"=>"Gilles","age"=>21]);
 
 //on prepare la requete
 // :nom est une variable SQL
-$q = $db->prepare('INSERT INTO employe(nom, prenom, age) VALUES(:nom, :prenom, :age)');
+// $q = $db->prepare('INSERT INTO employe(nom, prenom, age) VALUES(:nom, :prenom, :age)');
 
-// Assignation des valeurs pour le nom, le pr�nom.
-$q->bindValue(':nom', $perso->getNom());
-$q->bindValue(':prenom', $perso->getPrenom());
-$q->bindValue(':age', $perso->getAge());
+// // Assignation des valeurs pour le nom, le prenom.
+// $q->bindValue(':nom', $perso->getNom());
+// $q->bindValue(':prenom', $perso->getPrenom());
+// $q->bindValue(':age', $perso->getAge());
 
-// Execution de la requete.
+// // Execution de la requete.
+// $reponse = $q->execute();
+// var_dump($reponse);
+
+
+$perso = new Personne(["Nom"=>"Videl","Prenom"=>"Sophie","Age"=>51]);
+
+
+// :nom est une variable SQL
+$q = $db->prepare('INSERT INTO employe(nom, prenom, age) VALUES("'.$perso->getNom().'","'.$perso->getPrenom().'",'.$perso->getAge().')');
+
 $reponse = $q->execute();
 var_dump($reponse);
