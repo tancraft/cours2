@@ -1,0 +1,2 @@
+dans ce dossier il y aura 2 fichiers distinct
+celui de la creation de la BDD (createBDD.sql) et celui avec les ordres insert de remplissage de cette BDD (donnees.sql) en vue de tests et si c est une BDD a restaurer

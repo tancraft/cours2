@@ -1,0 +1,1 @@
+il s agit du dossier principal ou se trouve tout le site normalement rien d'autre a mettre a ce niveau a part l'index.php ou un .htaccess pour la protection
