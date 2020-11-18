@@ -1,0 +1,86 @@
+:root{
+
+    --couleur1: #00c6bb;
+    --couleur2: #212121;
+    --couleur3: #fff;
+}
+
+@font-face{
+    font-family: "regular";
+    src: url(fonts/Montserrat-Regular.ttf);
+}
+@font-face{
+    font-family: "bold";
+    src: url(fonts/Montserrat-Bold.ttf);
+}
+
+@font-face{
+    font-family: "black";
+    src: url(fonts/Montserrat-Black.ttf);
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    font-family: "regular";
+    text-align: justify;
+}
+
+div, header, section{
+    display: flex;
+    flex: 1;
+}
+
+img{
+    width: 100%;
+}
+
+.colonne{
+    flex-direction: column;
+}
+
+.centre{
+    justify-content: center;
+}
+
+.espace{
+    flex: 0.5;
+}
+.espaceHor{
+    height: 10vh;
+}
+
+/**header**/
+header{
+    background-color: var(--couleur1);
+    align-items: center;
+}
+
+.logo{
+    padding: 0.3em;
+}
+
+
+.titre{
+    flex: 8;
+    font-family: "black";
+    letter-spacing: 0.3em;
+    color: var(--couleur3);
+}
+
+/**corps**/
+.tableau{
+    flex: 3;
+    border: 3px solid black;
+}
+
+.cache{
+    display: none;
+}
+
+.entete, .ligne{
+    padding: 0.5em;
+    border: 1px solid black;
+    border-collapse: collapse;
+}

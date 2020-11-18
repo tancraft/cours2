@@ -1,0 +1,175 @@
+/*global*/
+html, body{
+    padding: 0;
+    margin: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    background-image: url("../media/fond.jpg");
+    background-position: center;
+}
+
+div{
+    display: flex;
+    flex: 1;
+}
+
+
+img{
+    width: 100%;
+}
+
+video{
+    width: 100%;
+}
+
+.espace{
+    flex: 0.2;
+}
+.espaceHor {
+    height: 5vh;
+}
+
+/*header*/
+header{
+    background-image: url("../media/header.jpg");
+    display: flex;
+}
+/*menu*/
+.espacemenu{
+    flex: 0.5;
+}
+
+
+/*footer*/
+footer{
+    display: flex;
+    background-image: url(../media/fond1.png);
+    background-position: top;
+}
+/*main*/
+main
+{
+    width: 80vw;
+    flex-direction: column;
+    flex: none;
+    display: block;
+}
+
+.titre, .titrepied{
+    flex: 9;
+    justify-content: center;
+}
+
+.titre{
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 4em;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-shadow: white 0.1em 0.1em 0.2em;
+
+}
+
+/*menu*/
+nav, a{
+    color:white;
+    text-decoration: none;;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    background-image: url("../media/fond1.png");
+    background-position: left;
+    padding: 0.2vw 0;  
+}
+
+.bouton{
+    flex: none; /*chaque bouton prend sa taille */
+    position: relative;
+    padding: 0 0.5vW;
+    background: linear-gradient(to bottom, #08598c, #3e99d1);
+    border: solid #326280 3px;
+    border-radius: 5px;
+    font-size: 2em;
+}
+
+.sousmenu{
+    display: none;
+    flex-direction: column;
+    white-space: nowrap;
+    position: absolute;
+    margin-top: 1.5em;
+    margin-left: -0.5vw;
+    padding: 0 0.5vw;
+    background: linear-gradient(to bottom, #08598c, #3e99d1);
+    border: solid #326280 3px;
+    border-radius: 5px;
+    font-size: 0.8em;
+    z-index: 999;
+}
+
+.bouton:hover .sousmenu{
+    display: flex;
+}
+
+.sousitem:hover{
+    border: 1px solid #ccc;
+}
+/*section*/
+
+section{
+    flex-direction: column;
+    display: block;
+}
+
+/*partie 1*/
+.titresemaine{
+    justify-content: center;
+    background: linear-gradient(rgb(30, 87, 153) 0%, rgb(41, 137, 216) 50%, rgb(32, 124, 202) 51%, rgb(125, 185, 232) 100%);
+}
+
+.cookiesemaine
+{
+    flex: 3;
+    flex-direction: column;
+    height: 35vh;
+    overflow-y: scroll;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(229, 229, 229, 1) 100%);
+}
+
+.media{
+    flex-direction: column;
+    padding:0.5em;
+}
+
+.ingredients, .recette{
+    flex-direction: column;
+}
+
+/*partie2*/
+.boucleart{
+    flex-direction: column;
+}
+
+.titrearticle{
+    justify-content: center;
+}
+
+.textearticle{
+    flex: 9; 
+    text-align: justify;
+    padding: 0 1em;
+}
+
+aside{
+    display: flex;
+    flex: 1;
+    border: blue 1px solid;
+    border-radius: 6px;
+    padding: 0 0.5em;
+    align-items: center;
+}
+
+
+

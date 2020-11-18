@@ -1,0 +1,213 @@
+/****  GENERAL ****/
+
+:root{
+
+	--couleur1: rgba(45, 42, 38,0.8);
+	--couleur2: #ffc500;
+	--couleur3: #fff;
+
+}
+
+@font-face {
+	font-family: "starTitre";
+	src: url(../fonts/Starjhol.ttf);
+}
+
+body {
+	margin : 0;
+	padding : 0;
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+	background: url("../IMG/xwingtie2.jpg") no-repeat center  fixed; 
+	background-size: cover;
+	font-family: Arial, Helvetica, sans-serif;
+	color: var(--couleur3);
+	text-align: justify;
+
+}
+
+div, header, section, article, footer, nav{
+	display: flex;
+	flex: 1;
+}
+
+.colonne{
+	flex-direction: column;
+}
+
+.centrer{
+	justify-content: center;
+}
+
+img{
+	width: 100%;
+}
+
+a{
+	font-size: 1.1em;
+	text-decoration: none;
+}
+
+.espace{
+	flex: 0.5;
+}
+
+.espaceHor{
+	height: 5vh;
+}
+
+
+.affiche{
+	flex: 0.2;
+}
+
+.titre, .sousTitre, #films, #news{
+	text-align: center;
+	font-family: "starTitre";
+	color: var(--couleur2);
+}
+
+#films, #news{
+	font-size: 1.8em;
+
+}
+
+.reset{
+	padding-right: 0;
+	margin: 0;
+}
+
+/***header**/
+header, footer{
+	background: var(--couleur1);
+	padding: 0.5em;
+	align-items: center;
+}
+
+.espaceHead, .texte, .boucleFilms, .espaceBouton{
+	flex: 2;
+}
+
+
+.titre{
+	display: none;
+	font-size: 2em;
+	font-weight: 600;
+	font-family: "starTitre";
+}
+
+.sousTitre{
+	align-self: center;
+	align-items: center;
+	font-size: 1.2em;
+}
+
+nav{
+	align-self: flex-end;
+	flex: 3;
+	justify-content: flex-end
+}
+
+nav a{
+	color: var(--couleur3);
+	padding-right: 1em;
+}
+
+
+/**corps**/
+
+.decouvrir{
+	text-align: center;
+	background-image: url("../IMG/The_Mandalorian.jpg");
+	background-size: cover;
+	background-position: 50%;
+	height: 70vh;
+	flex: 2;
+	justify-content: center;
+	align-items: center;
+}
+
+.bouton{
+	border: 2px solid var(--couleur3);
+	padding: 0.2em 0;
+	border-bottom-right-radius: 0.5em;
+	border-top-left-radius: 0.5em;
+	background: var(--couleur1);
+}
+
+.bouton a{
+	color: var(--couleur3);
+}
+
+article{
+	margin-bottom: 2em;
+	background: var(--couleur1);
+	border-radius: 1em;
+}
+
+.aff{
+	border-top-left-radius: 1em;
+	border-bottom-left-radius: 1em;
+}
+
+.texte{
+	padding: 0.6em;
+	justify-content: center;
+}
+/**footer**/
+
+.copyright{
+	align-self: unset;
+	flex: 1;
+	align-items: center;
+}
+
+@media screen and (max-width: 800px)
+{
+
+.espace{
+	flex: 0.2;
+}
+
+header, article{
+	flex-direction: column;
+}
+
+.espaceHead{
+	flex: 2;
+}
+
+.logo{
+	display: none;
+}
+
+nav{
+	align-self: unset;
+	justify-content: center;
+}
+
+.decouvrir{
+
+	height: 50vh;
+}
+
+.titre{
+	display: flex;
+}
+
+.aff{
+	border-top-right-radius: 1em;
+	border-bottom-left-radius: unset;
+}
+
+footer{
+	flex-direction: column;
+}
+
+.ancre{
+	display: flex;
+}
+
+}
+

@@ -1,0 +1,30 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.espace{
+    flex: 0.1;
+}
+
+.espaceHor{
+    height: 2vh;
+}
+.recto{
+    display: flex;
+    flex: 1;
+}
+
+.verso{
+    display: none;
+}
+
+.case:hover .verso{
+    display: flex;
+}
+
+.case:hover .recto{
+    display: none;
+}

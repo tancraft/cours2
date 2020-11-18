@@ -1,0 +1,40 @@
+@media screen and (max-width:1200px)
+{
+    main{
+        width:90vw;
+    }
+}
+
+@media screen and (max-width:800px)
+{
+    body{
+        height: 100vh;
+    }
+    main{
+        width:98vw;
+    }
+
+    .logo{
+        display:none;
+    }
+
+    .partie1{
+        flex-direction: column;
+    }
+
+    .descriptionsemaine{
+        flex-direction: column;
+    }
+
+    .cookiesemaine{
+        overflow-y:hidden;
+    }
+    .photosemaine{
+        width:50%;
+        align-self: center
+    }
+    .textaside{
+        flex-direction: column;
+    }
+
+}
