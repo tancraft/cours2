@@ -7,37 +7,42 @@ $css[] = "init";
 $css[] = "style";
 $css[] = "phone";
 
+
 function logo($logo)
 {
     if (file_exists('CSS/images/'.$logo)) 
     {
-        echo '<img href="CSS/images/'. $logo .'" alt = "logo">';
+        echo '<img href="CSS/images/'.$logo.'">';
     } 
+    else if (file_exists('./../CSS/images/'.$logo.'.css')) 
+    {
+        echo '<img href="./../CSS/images/'.$logo.'">';
+    }
     else 
     {
-        echo '<img rel="stylesheet" href="./../CSS/images'. $logo.'" alt = "logo">';
+        echo '<img href="./../../CSS/images/'.$logo.'">';
     }
 
 }
 
 function chargerClasse($classe)
 {
-    if (file_exists("PHP/CONTROLLER/" . $classe . ".class.php"))
+    if (file_exists("PHP/CONTROLLER/" . $classe . ".Class.php"))
     {
-        require "PHP/CONTROLLER/" . $classe . ".class.php";
+        require "PHP/CONTROLLER/" . $classe . ".Class.php";
     }
-    else if (file_exists("../PHP/CONTROLLER/" . $classe . ".class.php"))
+    else if (file_exists("../CONTROLLER/" . $classe . ".Class.php"))
     {
-       echo file_exists("../PHP/CONTROLLER/" . $classe . ".class.php");
+       require "../CONTROLLER/" . $classe . ".Class.php";
     }
 
-    if (file_exists("PHP/MODEL/" . $classe . ".class.php"))
+    if (file_exists("PHP/MODEL/" . $classe . ".Class.php"))
     {
-        require "PHP/MODEL/" . $classe . ".class.php";
+        require "PHP/MODEL/" . $classe . ".Class.php";
     }
-    else if (file_exists("../PHP/MODEL/" . $classe . ".class.php"))
+    else if (file_exists("../MODEL/" . $classe . ".Class.php"))
     {
-       echo file_exists("../PHP/MODEL/" . $classe . ".class.php");
+       require "../MODEL/" . $classe . ".Class.php";
     }
 
 }
@@ -56,9 +61,13 @@ foreach ($css as $elt) {
     {
         echo '<link rel="stylesheet" href="CSS/'. $elt .'.css">';
     } 
-    else 
+    else if (file_exists('./../CSS/'.$elt.'.css')) 
     {
         echo '<link rel="stylesheet" href="./../CSS/'. $elt .'.css">';
+    }
+    else 
+    {
+        echo '<link rel="stylesheet" href="./../../CSS/'. $elt .'.css">';
     }
 }
 
