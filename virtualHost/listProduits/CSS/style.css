@@ -1,0 +1,15 @@
+
+/**header**/
+
+header{
+    background-color: #dbcf9a;
+}
+
+body{
+    background-color: #4d4b45;
+}
+
+.titre{
+    flex: 8;
+}
+
