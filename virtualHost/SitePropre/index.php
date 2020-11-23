@@ -40,8 +40,15 @@ $routes = [
 
     "liste" => ["PHP/VIEW/", "Liste", "Liste des produits"],
     "detail" => ["PHP/VIEW/", "Detail", "Détail du produit"],
+
     "formAjout" => ["PHP/VIEW/", "FormAjout", "Ajout de Produit"],
-    "ajoutBDD" => ["PHP/VIEW/", "AjoutBDD", "ajout sur la BDD" ]
+    "formAjoutBDD" => ["PHP/VIEW/", "FormAjoutBDD", "ajout sur la BDD" ],
+
+    "formModifier" => ["PHP/VIEW/", "FormModifier", "Modifier le Produit"],
+    "formModifierBDD" => ["PHP/VIEW/", "FormModifierBDD", "Modifier la BDD" ],
+
+    "formDelete" => ["PHP/VIEW/", "FormDelete", "Supprimer le Produit"],
+    "formDeleteBDD" => ["PHP/VIEW/", "FormDeleteBDD", "Supprimer de la BDD" ]
     
 ];
 
