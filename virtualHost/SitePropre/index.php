@@ -38,8 +38,10 @@ DbConnect::init();
 $routes = [
     "default" => ["PHP/VIEW/", "Liste", "Liste des produits"],
 
-    "Liste" => ["PHP/VIEW/", "Liste", "Liste des produits"],
-    "Detail" => ["PHP/VIEW/", "Detail", "Détail du produit"]
+    "liste" => ["PHP/VIEW/", "Liste", "Liste des produits"],
+    "detail" => ["PHP/VIEW/", "Detail", "Détail du produit"],
+    "formAjout" => ["PHP/VIEW/", "FormAjout", "Ajout de Produit"],
+    "ajoutBDD" => ["PHP/VIEW/", "AjoutBDD", "ajout sur la BDD" ]
     
 ];
 
