@@ -3,27 +3,6 @@
 <head>
 <?php
 
-$css[] = "init";
-$css[] = "style";
-$css[] = "phone";
-
-
-function logo($logo)
-{
-    if (file_exists('CSS/images/'.$logo)) 
-    {
-        echo '<img href="CSS/images/'.$logo.'">';
-    } 
-    else if (file_exists('./../CSS/images/'.$logo.'.css')) 
-    {
-        echo '<img href="./../CSS/images/'.$logo.'">';
-    }
-    else 
-    {
-        echo '<img href="./../../CSS/images/'.$logo.'">';
-    }
-
-}
 
 function chargerClasse($classe)
 {
@@ -56,21 +35,44 @@ echo (!empty($titre)) ? '<title>' . $titre . '</title>' : '<title> Titre de la p
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <?php 
 
-foreach ($css as $elt) {
-    if (file_exists('CSS/'.$elt.'.css')) 
+    if (file_exists('CSS/init.css')) 
     {
-        echo '<link rel="stylesheet" href="CSS/'. $elt .'.css">';
+        echo '<link rel="stylesheet" href="CSS/init.css">';
     } 
-    else if (file_exists('./../CSS/'.$elt.'.css')) 
+    else if (file_exists('./../CSS/init.css')) 
     {
-        echo '<link rel="stylesheet" href="./../CSS/'. $elt .'.css">';
+        echo '<link rel="stylesheet" href="./../CSS/init.css">';
     }
     else 
     {
-        echo '<link rel="stylesheet" href="./../../CSS/'. $elt .'.css">';
+        echo '<link rel="stylesheet" href="./../../CSS/init.css">';
     }
-}
 
+    if (file_exists('CSS/style.css')) 
+    {
+        echo '<link rel="stylesheet" href="CSS/style.css">';
+    } 
+    else if (file_exists('./../CSS/style.css')) 
+    {
+        echo '<link rel="stylesheet" href="./../CSS/style.css">';
+    }
+    else 
+    {
+        echo '<link rel="stylesheet" href="./../../CSS/style.css">';
+    }
+
+    if (file_exists('CSS/phone.css')) 
+    {
+        echo '<link rel="stylesheet" href="CSS/phone.css">';
+    } 
+    else if (file_exists('./../CSS/phone.css')) 
+    {
+        echo '<link rel="stylesheet" href="./../CSS/phone.css">';
+    }
+    else 
+    {
+        echo '<link rel="stylesheet" href="./../../CSS/phone.css">';
+    }
 ?>
 
 </head>

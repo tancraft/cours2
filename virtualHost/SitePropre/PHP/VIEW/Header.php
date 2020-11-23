@@ -1,16 +1,13 @@
-
-
 <header>
 
 <div class="logo">
 
-<img src="images/logo.jpg" alt="toto">
+        <img src="MEDIA/IMG/logo.jpg" alt="logo">
 
 </div>
 <div class="titre centrer">
-<h1>Gestion de produits</h1>
+<?php echo '<h1>'.$titre.'</h1>'; ?>
 </div>
 <div class="logo"></div>
 </header>
 <main>
-
