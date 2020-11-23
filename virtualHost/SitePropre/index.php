@@ -38,10 +38,32 @@ DbConnect::init();
 $routes = [
     "default" => ["PHP/VIEW/", "Liste", "Liste des produits"],
 
-    "liste" => ["PHP/VIEW/", "Liste", "Liste des produits"],
-    "detail" => ["PHP/VIEW/", "Detail", "Détail du produit"],
-    "test" => ["PHP/VIEW/", "test", "Détail du produit"]
+    "Liste" => ["PHP/VIEW/", "Liste", "Liste des produits"],
+    "Detail" => ["PHP/VIEW/", "Detail", "Détail du produit"]
     
 ];
 
-AfficherPage($routes["default"]);
+if (isset($_GET["code"]))
+{
+
+    $code = $_GET["code"];
+
+    //Si cette route existe dans le tableau des routes
+    if (isset($routes[$code]))
+    {
+        //Afficher la page correspondante
+        AfficherPage($routes[$code]);
+    }
+    else
+    {
+        //Sinon afficher la page par defaut
+        AfficherPage($routes["default"]);
+    }
+
+}
+else
+{
+    //Sinon afficher la page par defaut
+    AfficherPage($routes["default"]);
+
+}
