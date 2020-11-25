@@ -8,6 +8,7 @@ echo (!empty($titre)) ? '<title>' . $titre . '</title>' : '<title> Titre de la p
 ?>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
+<link rel="stylesheet" href="CSS/init.css">
 <link rel="stylesheet" href="CSS/style.css">
 <link rel="stylesheet" href="CSS/phone.css">
 

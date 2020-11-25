@@ -36,19 +36,11 @@ DbConnect::init();
 
 /* création d'u tableau de redirection, en fonction du code, on choisit la page à afficher */
 $routes = [
-    "default" => ["PHP/VIEW/", "Liste", "Liste des produits"],
+    "default" => ["PHP/VIEW/", "ListeProduits", "Liste des produits"],
 
-    "liste" => ["PHP/VIEW/", "Liste", "Liste des produits"],
-    "detail" => ["PHP/VIEW/", "Detail", "Détail du produit"],
-
-    "formAjout" => ["PHP/VIEW/", "FormAjout", "Ajout de Produit"],
-    "formAjoutBDD" => ["PHP/VIEW/", "FormAjoutBDD", "ajout sur la BDD" ],
-
-    "formModifier" => ["PHP/VIEW/", "FormModifier", "Modifier le Produit"],
-    "formModifierBDD" => ["PHP/VIEW/", "FormModifierBDD", "Modifier la BDD" ],
-
-    "formDelete" => ["PHP/VIEW/", "FormDelete", "Supprimer le Produit"],
-    "formDeleteBDD" => ["PHP/VIEW/", "FormDeleteBDD", "Supprimer de la BDD" ]
+    "listeProduits" => ["PHP/VIEW/", "ListeProduits", "Liste des produits"],
+    "formProduit" => ["PHP/VIEW/", "FormProduit", "Détail du produit"],
+    "actionProduit" => ["PHP/VIEW/", "ActionProduit", "Mise a jour du produits" ]
     
 ];
 
