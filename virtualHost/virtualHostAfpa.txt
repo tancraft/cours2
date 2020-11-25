@@ -1,1 +1,1 @@
-//59011VMFIC02.exchange.ad.afpanet/59011-DATA/GRP-95/59011-95-12\cours2\virtualHost\nom du dossier
+//59011VMFIC02.exchange.ad.afpanet/59011-DATA/GRP-95/59011-95-12/cours2/virtualHost/nom du dossier

@@ -1,0 +1,47 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    text-align: justify;
+    display: flex;
+
+}
+
+div, header{
+    display: flex;
+    flex: 1;
+}
+
+img{
+    width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, p{
+    padding: 0;
+    margin: 0;
+}
+.centrer{
+    justify-content: center;
+}
+
+.colonne{
+    flex-direction: column;
+}
+
+/**header**/
+
+header{
+    background-color: #dbcf9a;
+}
+
+body{
+    background-color: #4d4b45;
+}
+
+.titre{
+    flex: 8;
+}
+
