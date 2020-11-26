@@ -27,24 +27,28 @@ case "delete" :
 
 if (isset($_GET['id']))
 {
-$choix = ProduitsManager::findById($_GET['id']);
+$choix = ClientsManager::findById($_GET['id']);
 var_dump($choix);
 }
 ?>
 
 
-    <input name= "idProduit" value="<?php if($mode != "ajout") echo $choix->getIdProduit(); ?>" type= "hidden">
+    <input name= "idClient" value="<?php if($mode != "ajout") echo $choix->getIdClient(); ?>" type= "hidden">
     <div>
-        <label for="libelleProduit">Libelle : </label>
-        <input name="libelleProduit" <?php if($mode != "ajout") echo 'value= "'.$choix->getLibelleProduit().'"';if($mode=="edit" || $mode=="delete") echo '" disabled'; ?>/>
+        <label for="nomClient">Nom : </label>
+        <input name="nomClient" <?php if($mode != "ajout") echo 'value= "'.$choix->getNomClient().'"';if($mode=="edit" || $mode=="delete") echo '" disabled'; ?>/>
     </div>
     <div>
-        <label for="prix">Prix : </label>
-        <input name="prix" <?php if($mode != "ajout") echo 'value= "'.$choix->getPrix().'"';  if($mode=="edit" || $mode=="delete") echo '" disabled'; ?>/>
+        <label for="prenomClient">Prenom : </label>
+        <input name="prenomClient" <?php if($mode != "ajout") echo 'value= "'.$choix->getPrenomClient().'"';  if($mode=="edit" || $mode=="delete") echo '" disabled'; ?>/>
     </div>
     <div>
-        <label for="dateDePeremption">Date de Peremption : </label>
-        <input name="dateDePeremption" <?php if($mode != "ajout") echo 'value= "'. $choix->getDateDePeremption().'"';  if($mode=="edit" || $mode=="delete") echo '" disabled' ; ?>/>
+        <label for="emailClient">E mail : </label>
+        <input name="emailClient" <?php if($mode != "ajout") echo 'value= "'. $choix->getEmailClient().'"';  if($mode=="edit" || $mode=="delete") echo '" disabled' ; ?>/>
+    </div>
+    <div>
+        <label for="motDePasseClient">Mot de passe : </label>
+        <input name="motDePasseClient" <?php if($mode != "ajout") echo 'value= "'. $choix->getMotDePasseClient().'"';  if($mode=="edit" || $mode=="delete") echo '" disabled' ; ?>/>
     </div>
 <?php 
 // en fonction du mode, on affiche les boutons utils
@@ -72,7 +76,7 @@ var_dump($choix);
     }
 // dans tous les cas, on met le bouton annuler
     ?>
-    <button><a href="index.php?code=listeProduits">Annuler</a></button>
+    <button><a href="index.php?code=listeClients">Annuler</a></button>
 </div>
 
 </form>

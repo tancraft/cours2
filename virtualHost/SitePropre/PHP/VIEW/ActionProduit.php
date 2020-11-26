@@ -22,4 +22,4 @@ switch ($_GET['mode']) {
         }
 }
 
-header("location:index.php?action=liste");
+header("location:index.php?action=listeProduits");
