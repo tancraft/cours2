@@ -1,0 +1,17 @@
+
+DROP DATABASE IF EXISTS connexions;
+CREATE DATABASE connexions;
+USE connexions;
+
+CREATE TABLE users(
+        idUtilisateur Int  Auto_increment NOT NULL PRIMARY KEY,
+        nom Varchar (50) NOT NULL,
+        prenom Varchar (50) NOT NULL,
+        motDePasse Varchar (50) NOT NULL,
+        adresseMail  Varchar (50) NOT NULL,
+        roleUser Varchar (50) NOT NULL,
+        pseudo Varchar (50) NOT NULL 
+)ENGINE=InnoDB;
+
+
+INSERT INTO `users`(`idUtilisateur`, `nom`, `prenom`, `motDePasse`, `adresseMail`, `roleUser`, `pseudo`) VALUES (NULL,"bobozo","toto","georges225","toto@mail.fr","admin","toto59");

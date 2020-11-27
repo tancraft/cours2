@@ -1,8 +1,7 @@
 <?php
 $mode = $_GET['mode'];
 
-switch ($mode) 
-{
+switch ($mode) {
     case "ajout":
         {
             echo '<form action="index.php?codePage=actionsFilms&mode=ajoutFilm" method="POST">';
@@ -26,90 +25,53 @@ switch ($mode)
 
 }
 
-if (isset($_GET['id'])) 
-{
-    $choix = FilmsManager::findById($_GET['id']);    
+if (isset($_GET['id'])) {
+    $choix = FilmsManager::findById($_GET['id']);
+    $studio = StudiosManager::findById($choix->getIdStudio());
+    $affStudio = '<option value="' . $studio->getIdStudio() . '">' . $studio->getNomStudio() . '</option>';
+    $genre = GenresManager::findById($choix->getIdGenre());
+    $affGenre = '<option value="' . $genre->getIdGenre() . '">' . $genre->getLibelleGenre() . '</option>';
 }
 
-function valeurStudio($mode)
+function listeStudio()
 {
-    $choix = FilmsManager::findById($_GET['id']); 
-    if (isset($_GET['id'])) 
-    {
-        $studio = StudiosManager::findById($choix->getIdGenre());
-        $aff = '<select name="idStudio" id="idStudio"'; 
-        if ($mode == "edit" || $mode == "delete") 
-        {
-            $aff .=' disabled><option value="' . $studio->getIdStudio() . '"' .$studio->getNomStudio() .'</option>';
-        }
-        else
-        {
-            $aff .= '>'.$studio->getNomStudio() .'</option>';
-        }
-        $aff .= '</select>';
-    } 
-    else 
-    {
-        $studios = StudiosManager::getList();
-        foreach ($studios as $unStudio) 
-        {
-            $aff = '<select name="idStudio" value="' . $unStudio->getIdStudio() . '">' . $unStudio->getNomStudio() . '</option>';
-        }
-        $aff .= '</select>';
+    $studios = StudiosManager::getList();
+    foreach ($studios as $unStudio) {
+        echo '<option>' . $unStudio->getNomStudio() . '</option>';
     }
-    return $aff;
 }
 
-function valeurGenre($mode)
+function listeGenre()
 {
-    $choix = FilmsManager::findById($_GET['id']); 
-    if (isset($_GET['id'])) 
-    {
-        $genre = GenresManager::findById($choix->getIdGenre());
-        $aff = '<select name="idGenre" id="idGenre"'; 
-        if ($mode == "edit" || $mode == "delete") 
-        {
-            $aff .=' disabled><option value="' . $genre->getIdGenre() . '"' .$genre->getLibelleGenre() .'</option>';
-        }
-        else
-        {
-            $aff .= '>'.$genre->getLibelleGenre() .'</option>';
-        }
-        $aff .= '</select>';
-    } 
-    else 
-    {
-        $genres = GenresManager::getList();
-        foreach ($genres as $unGenre) 
-        {
-            $aff = '<select name="idGenre"><option value="' . $unGenre->getIdGenre() . '">' . $unGenre->getLibelleGenre() . '</option></select>';
-        }
+    $genres = GenresManager::getList();
+    foreach ($genres as $unGenre) {
+        echo '<option>' . $unGenre->getLibelleGenre() . '</option>';
     }
-    return $aff;
+
 }
 
 ?>
 
 
-    <?php if ($mode != "ajout") 
-    {
+    <?php if ($mode != "ajout") {
     echo '<input name= "idFilm" value="' . $choix->getIdFilm() . '"type= "hidden">';
-    }
+}
 ?>
     <div>
         <label for="nomFilm">Nom : </label>
-        <input name="nomFilm" <?php if ($mode != "ajout") {
+        <input name="nomFilm"
+        <?php if ($mode != "ajout") {
     echo 'value= "' . $choix->getNomFilm() . '"';
 }
-if ($mode == "edit" || $mode == "delete") 
-{
+if ($mode == "edit" || $mode == "delete") {
     echo '" disabled';
 }
 ?>/>
     </div>
     <div>
         <label for="dateFilm">Date du film : </label>
-        <input type="date" name="dateFilm" <?php if ($mode != "ajout") {
+        <input type="date" name="dateFilm"
+        <?php if ($mode != "ajout") {
     echo 'value= "' . $choix->getDateFilm() . '"';
 }
 if ($mode == "edit" || $mode == "delete") {
@@ -119,7 +81,8 @@ if ($mode == "edit" || $mode == "delete") {
     </div>
     <div>
         <label for="coutFilm">Cout du film : </label>
-        <input name="coutFilm" <?php if ($mode != "ajout") {
+        <input name="coutFilm"
+        <?php if ($mode != "ajout") {
     echo 'value= "' . $choix->getCoutFilm() . '"';
 }
 if ($mode == "edit" || $mode == "delete") {
@@ -129,7 +92,8 @@ if ($mode == "edit" || $mode == "delete") {
     </div>
     <div>
         <label for="dureeFilm">Duree du film (en minutes) : </label>
-        <input name="dureeFilm" <?php if ($mode != "ajout") {
+        <input name="dureeFilm"
+        <?php if ($mode != "ajout") {
     echo 'value= "' . $choix->getDureeFilm() . '"';
 }
 if ($mode == "edit" || $mode == "delete") {
@@ -139,7 +103,8 @@ if ($mode == "edit" || $mode == "delete") {
     </div>
     <div>
         <label for="synopFilm">Synopsis du film : </label>
-        <input name="synopFilm" <?php if ($mode != "ajout") {
+        <input name="synopFilm"
+        <?php if ($mode != "ajout") {
     echo 'value= "' . $choix->getSynopFilm() . '"';
 }
 if ($mode == "edit" || $mode == "delete") {
@@ -149,12 +114,22 @@ if ($mode == "edit" || $mode == "delete") {
     </div>
     <div>
         <label for="idStudio">Studio du film : </label>
-        <?php echo valeurStudio($mode); ?>
+        <select name="idStudio" <?php if ($mode == "edit" || $mode == "delete") {
+    echo 'disabled';
+}
+?> >
+        <?php if ($mode == "ajout" || $mode == "modif") { listeStudio();}else{  echo $affStudio;} ?>
+</select>
     </div>
 
     <div>
         <label for="idGenre">Genre du film : </label>
-        <?php echo valeurGenre($mode); ?>
+        <select name="idGenre" <?php if ($mode == "edit" || $mode == "delete") {
+    echo 'disabled';
+}
+?> >
+        <?php if ($mode == "ajout" || $mode == "modif") { listeGenre();}else{  echo $affGenre;} ?>
+        </select>
     </div>
 
 <?php
@@ -183,7 +158,7 @@ switch ($mode) {
 }
 // dans tous les cas, on met le bouton annuler
 ?>
-    <button><a href="index.php?codePage=listeActeurs">Annuler</a></button>
+    <button><a href="index.php?codePage=listeFilms">Annuler</a></button>
 </div>
 
 </form>
