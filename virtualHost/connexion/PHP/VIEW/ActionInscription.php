@@ -1,5 +1,5 @@
 <?php
-var_dump($_POST);
+
 if ($_POST['motDePasse'] == $_POST['confirmation'])
 {
     // recherche si le pseudo existe
@@ -8,7 +8,7 @@ if ($_POST['motDePasse'] == $_POST['confirmation'])
     {
         $u = new Users($_POST);
         //encodage du mot de passe
-        $u->setMotDePasse(md5($u->getMotDePasse()));
+        $u->setMotDePasse(cryptage($u->getMotDePasse()));
         UsersManager::add($u);
     }
     else

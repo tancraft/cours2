@@ -31,13 +31,24 @@ function AfficherPage($page)
     include 'PHP/VIEW/Footer.php';
 }
 
+/**
+ * fonctions pour crypter le mot d epasse
+ * 
+ */
+function cryptage($mot)
+{
+
+    return md5(md5(md5($mot).strlen($mot))."m6");
+
+}
+
 //on active la connexion à la base de données
 DbConnect::init();
 session_start();  // initialise la variable de Session
 
 /* création d'u tableau de redirection, en fonction du code, on choisit la page à afficher */
 $routes = [
-    "default" => ["PHP/VIEW/", "FormInscription", "Formulaire d'inscription"],
+    "default" => ["PHP/VIEW/", "Accueil", "Accueil"],
 
     "accueil" => ["PHP/VIEW/", "Accueil", "Accueil"],
 
