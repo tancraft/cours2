@@ -33,16 +33,22 @@ function AfficherPage($page)
 
 //on active la connexion à la base de données
 DbConnect::init();
+session_start();  // initialise la variable de Session
 
 /* création d'u tableau de redirection, en fonction du code, on choisit la page à afficher */
 $routes = [
-    "default" => ["PHP/VIEW/", "tests", "tests"],
+    "default" => ["PHP/VIEW/", "FormInscription", "Formulaire d'inscription"],
 
     "accueil" => ["PHP/VIEW/", "Accueil", "Accueil"],
 
     "listeUsers" => ["PHP/VIEW/", "ListeUsers", "Liste d'utilisteurs"],
-    "formUsers" => ["PHP/VIEW/", "FormUsers", "Formulaire d'utilisteur"],
-    "actionsUser" => ["PHP/VIEW/", "ActionsUsers", "action d'utilisteur"],
+    "formUsers" => ["PHP/VIEW/", "FormUsers", "Formulaire de connection"],
+    "actionsConnect" => ["PHP/VIEW/", "ActionsConnect", "action d'utilisteur"],
+
+    "inscription" => ["PHP/VIEW/", "FormInscription", "Formulaire d'inscription"],
+    "actionInscription" => ["PHP/VIEW/", "ActionInscription", "xx"],
+
+    "deconnection" => ["PHP/VIEW/", "Actiondeconnection", "xx"]
     
 ];
 

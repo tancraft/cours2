@@ -16,7 +16,6 @@ function arborescence($nomSite)
     mkdir('./' . $nomSite . '/MEDIA' . '/VIDEO', 0777, true);
     mkdir('./' . $nomSite . '/CSS', 0777, true);
     mkdir('./' . $nomSite . '/CSS' . '/FONTS', 0777, true);
-    mkdir('./' . $nomSite . '/CSS' . '/Images', 0777, true);
     mkdir('./' . $nomSite . '/SQL', 0777, true);
     mkdir('./' . $nomSite . '/JS', 0777, true);
     mkdir('./' . $nomSite . '/DOCS', 0777, true);
@@ -31,7 +30,6 @@ function creationIndex($nomSite)
     $index = fopen('./'.$nomSite. '/index.php', "w");
     $indexTests = fopen('./'.$nomSite. '/indexTests.php', "w");
     $indexCss = fopen('./'.$nomSite. '/CSS/index.php', "w");
-    $indexCssImg = fopen('./'.$nomSite. '/CSS/Images/index.php', "w");
     $indexCssFonts = fopen('./'.$nomSite. '/CSS/FONTS/index.php', "w");
     $indexMedia = fopen('./'.$nomSite. '/MEDIA/index.php', "w");
     $indexMediaImg = fopen('./'.$nomSite. '/MEDIA/IMG/index.php', "w");
@@ -48,7 +46,6 @@ function creationIndex($nomSite)
     fputs($index,"");
     fputs($indexTests,"");
     fputs($indexCss,"");
-    fputs($indexCssImg,"");
     fputs($indexCssFonts,"");
     fputs($indexMedia,"");
     fputs($indexMediaImg,"");

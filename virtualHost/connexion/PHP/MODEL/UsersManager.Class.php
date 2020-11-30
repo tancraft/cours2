@@ -65,4 +65,25 @@ class UsersManager
         return $liste;  // tableau contenant les objets Acteurs
     }
 
+    public static function findByPseudo($pseudo)// recherche per pseudo utilisateur
+    {
+		$db = DbConnect::getDb();
+        if (!in_array(";",str_split( $pseudo))) // s'il n'y a pas de ; , je lance la requete
+        {
+            $q = $db->query("SELECT * FROM users WHERE pseudo ='" . $pseudo . "'");
+            $results = $q->fetch(PDO::FETCH_ASSOC);
+            if ($results != false)
+            {
+                return new Users($results);
+            }
+            else
+            {
+                return false;
+            }}
+        else
+        {
+            return false;
+        }
+    }
+
 }
