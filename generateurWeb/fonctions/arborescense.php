@@ -34,8 +34,8 @@ function creationIndex($nomSite)
     $indexMedia = fopen('./'.$nomSite. '/MEDIA/Index.php', "w");
     $indexMediaImg = fopen('./'.$nomSite. '/MEDIA/IMG/Index.php', "w");
     $indexMediaVideo = fopen('./'.$nomSite. '/MEDIA/VIDEO/Index.php', "w");
-    $indexJs = fopen('./'.$nomSite. '/JS/index.php', "w");
-    $indexPhp = fopen('./'.$nomSite. '/PHP/index.php', "w");
+    $indexJs = fopen('./'.$nomSite. '/JS/Index.php', "w");
+    $indexPhp = fopen('./'.$nomSite. '/PHP/Index.php', "w");
     $indexPhpControl = fopen('./'.$nomSite. '/PHP/CONTROLLER/Index.php', "w");
     $indexPhpView = fopen('./'.$nomSite. '/PHP/VIEW/Index.php', "w");
     $indexPhpModel = fopen('./'.$nomSite. '/PHP/MODEL/Index.php', "w");
