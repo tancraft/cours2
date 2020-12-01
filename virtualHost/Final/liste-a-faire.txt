@@ -1,0 +1,10 @@
+1.faire le CRUD ok
+2.faire la base de donnees  avec les classes et les managers ok
+3.faire le dbconnect ok
+4.faire un fichier test
+5.faire langage ok
+faire utilisateur, connection et reconnaitre le role de l utilisateur ok
+6.faire des ajouts, modifications, et delete dans la base de donnees
+7.faire des tests sur des bases liées
+8.paramettres.ini ok
+9.crypter parametres

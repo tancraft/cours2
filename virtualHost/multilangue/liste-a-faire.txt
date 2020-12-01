@@ -1,8 +1,0 @@
-1.faire le CRUD ok
-2.faire la base de donnees  avec les classes et les managers
-3.faire le dbconnect
-4.faire un fichier test
-5.faire langage
-faire utilisateur, connection et reconnaitre le role de l utilisateur
-6.faire des ajouts, modifications, et delete dans la base de donnees
-7.faire des tests sur des bases liées
