@@ -8,16 +8,13 @@
 function demandeEntier($phrase) // Demande un entier à l'utilisateur
 
 {
-    do
-    {
-        do
-        {
+    do {
+        do {
             $nombre = readline($phrase);
         } while (!is_numeric($nombre)); // on verifie que la chaine de caractere ne contient que des chiffres
     } while (!is_int($nombre * 1)); // on vérifie que le nombre est entier (pas réel)
     return $nombre; //renvoi le nombre saisi
 }
-
 /**
  * fonction qui permet de lister les attributs choisi au depart
  *
@@ -28,8 +25,7 @@ function ajoutAttributs(array $tabatt) // en ajoutant array on recoit que des ta
 
 {
     $attributs = "";
-    foreach ($tabatt as $elt)
-    {
+    foreach ($tabatt as $elt) {
         $attributs .= "\t" . 'private $_' . $elt . ';' . "\n"; //les elements sont les attributs
     }
     return $attributs;
@@ -45,9 +41,8 @@ function ajoutObjet(array $tabclasse) // en ajoutant array on recoit que des tab
 
 {
     $aff = "";
-    foreach ($tabclasse as $elt)
-    {
-        $aff .= '$' . strtolower($elt) . ' = new ' . $elt . ' ([""=>" ", ""=>" "]); // remplacer le mot classe par le nom de la classe de l objet a creer' . "\n";
+    foreach ($tabclasse as $elt) {
+        $aff .= '$' . strtolower($elt) . ' = new ' . $elt . ' ([""=>"", ""=>""]); // remplacer le mot classe par le nom de la classe de l objet a creer' . "\n";
     }
     return $aff;
 }
@@ -62,8 +57,7 @@ function afficheGetSet(array $tabatt) // en ajoutant array on recoit que des tab
 
 {
     $getSet = "";
-    foreach ($tabatt as $elt)
-    {
+    foreach ($tabatt as $elt) {
         $getSet .= "\t" . 'public function get' . ucfirst($elt) . '()' . "\n" . //les elements sont les attributs
         "\t" . '{' . "\n" .
         "\t\t" . 'return $this->_' . $elt . ';' . "\n" .
@@ -76,43 +70,48 @@ function afficheGetSet(array $tabatt) // en ajoutant array on recoit que des tab
     }
     return $getSet;
 }
-do
+
+function createToString($tabatt)
 {
+    $toString = '"' . ucfirst($tabatt[0]) . ' : "' . '.$this->get' . ucfirst($tabatt[0]) . '()';
+
+    for ($i = 1; $i < count($tabatt); $i++) {
+
+            $toString .= '."' . ucfirst($tabatt[$i]) . ' : "' . '.$this->get' . ucfirst($tabatt[$i]) . '()';
+
+    }
+    return $toString;
+
+}
+
+do {
 //saisie des paramettres
 
     $classe = ucfirst(readline("Quel est le nom de votre classe? ")); // on indique le nom de la classe en mettant la premiere lettre en maj
     $nbatt = demandeEntier("Combien d'attributs avez vous besoin? "); // on demande combien ilfaut d'attributs
     $tabclasse[] = $classe; // creation et remplissage tableau classe pas besoin d indice
 
-    if ($nbatt == 0)
-    {
+    if ($nbatt == 0) {
         $aff = "";
-    }
-    else
-    {
-        for ($i = 0; $i < $nbatt; $i++)
-        {
-            do
-            {
+    } else {
+        for ($i = 0; $i < $nbatt; $i++) {
+            do {
                 $att = readline("veulliez entrer le nom de votre attribut: ");
             } while (!ctype_alnum($att)); // on boucle tant que la saisie n'est pas de type alpha
             $tabatt[] = $att; //on remplit le tableau des attributs avec la saisie reussi
         }
     }
 
-    $fp = fopen('./' . $classe . '.Class.php', "w"); // on cree le fichier
+    $fp = fopen('./PHP' . '/CONTROLLER/' . $classe . '.Class.php', "w"); // on cree le fichier
 
     $entete = '<?php' . "\n\n" .
         'class ' . $classe . "\n" .
         '{' . "\n";
 
     fputs($fp, $entete); // on affiche l'entete
-    if ($nbatt == 0)
-    {
+    if ($nbatt == 0) {
         $aff = "";
-    }
-    else
-    {
+    } else {
         $ajoutAttributs = "\t" . '/*****************Attributs***************** */' . "\n" .
         ajoutAttributs($tabatt);
 
@@ -124,7 +123,7 @@ do
 
         $ajoutConstruct = "\t" . '/*****************Constructeur***************** */' . "\n\n" . //creer une variable string pour le constructeur
 
-            "\t " . 'public function __construct(array $options = [])' . "\n" .
+        "\t " . 'public function __construct(array $options = [])' . "\n" .
             "\t" . '{' .
             "\t\t" . 'if (!empty($options)) // empty : renvoi vrai si le tableau est vide' . "\n" .
             "\t\t" . '{' . "\n" .
@@ -145,7 +144,6 @@ do
         fputs($fp, $ajoutConstruct);
     }
     $ajoutMethode = "\t" . '/*****************Autres Méthodes***************** */' . "\n" .
-
         "\t" . '/**' . "\n" .
         "\t" . '* Transforme l objet en chaine de caractères' . "\n" .
         "\t" . '*' . "\n" .
@@ -153,59 +151,22 @@ do
         "\t" . '*/' . "\n" .
         "\t" . 'public function toString()' . "\n" .
         "\t" . '{' . "\n" .
-        "\t\t" . 'return ' . "\" \";" . "\n" .
-        "\t" . '}' . "\n\n" .
-
-        "\t" . '/**' . "\n" .
-        "\t" . '* Renvoi vrai si l objet en paramètre est égal à l objet appelant' . "\n" .
-        "\t" . '*' . "\n" .
-        "\t" . '* @param [type] $obj' . "\n" .
-        "\t" . '* @return bool' . "\n" .
-        "\t" . '*/' . "\n" .
-        "\t" . 'public function equalsTo($obj)' . "\n" .
-        "\t" . '{' . "\n" .
-        "\t\t" . ' return true;' . "\n" .
-        "\t" . '}' . "\n\n" .
-
-        "\t" . '/**' . "\n" .
-        "\t" . '* Compare 2 objets' . "\n" .
-        "\t" . '* Renvoi 1 si le 1er est >' . "\n" .
-        "\t" . '* 0 si ils sont égaux' . "\n" .
-        "\t" . '* -1 si le 1er est <' . "\n" .
-        "\t" . '*' . "\n" .
-        "\t" . '* @param [type] $obj1' . "\n" .
-        "\t" . '* @param [type] $obj2' . "\n" .
-        "\t" . '* @return void' . "\n" .
-        "\t" . '*/' . "\n" .
-        "\t" . 'public static function compareTo($obj1, $obj2)' . "\n" .
-        "\t" . '{' . "\n" .
-        "\t\t" . 'return 0;' . "\n" .
-        "\t" . '}' . "\n\n";
+        "\t\t" . 'return ';
 
     fputs($fp, $ajoutMethode);
+
+    $toString = createToString($tabatt);
+    $toString .= ";\t\n" . '}' . "\n\n";
+
+    fputs($fp, $toString);
 
     fputs($fp, "}");
 
     unset($tabatt); // supprimer tableau des attributs en vue de reconstrution
-    do
-    {
+    do {
 
         $choix = strtoupper(readline("Voulez vous continuer ? ")); // je demande a se que la casse soit obligatoirement une majuscule mais ne fonctionne pas
 
     } while ($choix != "O" && $choix != "N");
 
 } while ($choix == "O");
-
-$fp = fopen('./' . 'Main.php', "w"); // on cree le fichier
-
-$entMain = '<?php' . "\n\n" .
-'//charge les fichiers de classe necessaires au programme' . "\n" .
-'function ChargerClasse($classe)' . "\n" .
-'{' . "\n" .
-"\t" . 'require $classe . ".Class.php";' . "\n" .
-'}' . "\n" .
-'spl_autoload_register("ChargerClasse");' . "\n\n" .
-
-ajoutObjet($tabclasse);
-
-fputs($fp, $entMain); // on affiche l'entete

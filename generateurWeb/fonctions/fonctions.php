@@ -30,3 +30,22 @@ function nomDeSite()
     return $nomSite;
 
 }
+
+/**
+ * fonction pour verifier si le chiffre saisi est bien un entier
+ *
+ * @param string $phrase mettez la phrase pour la saisie que vous attendez
+ * @return int retourne un entier
+ */
+function demandeEntier($phrase) // Demande un entier à l'utilisateur
+
+{
+    do
+    {
+        do
+        {
+            $nombre = readline($phrase);
+        } while (!is_numeric($nombre)); // on verifie que la chaine de caractere ne contient que des chiffres
+    } while (!is_int($nombre * 1)); // on vérifie que le nombre est entier (pas réel)
+    return $nombre; //renvoi le nombre saisi
+}
