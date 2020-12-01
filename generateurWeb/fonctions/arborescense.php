@@ -27,20 +27,20 @@ function arborescence($nomSite)
 function creationIndex($nomSite)
 {
 
-    $index = fopen('./'.$nomSite. '/index.php', "w");
-    $indexTests = fopen('./'.$nomSite. '/indexTests.php', "w");
-    $indexCss = fopen('./'.$nomSite. '/CSS/index.php', "w");
-    $indexCssFonts = fopen('./'.$nomSite. '/CSS/FONTS/index.php', "w");
-    $indexMedia = fopen('./'.$nomSite. '/MEDIA/index.php', "w");
-    $indexMediaImg = fopen('./'.$nomSite. '/MEDIA/IMG/index.php', "w");
-    $indexMediaVideo = fopen('./'.$nomSite. '/MEDIA/VIDEO/index.php', "w");
+    $index = fopen('./'.$nomSite. '/Index.php', "w");
+    $indexTests = fopen('./'.$nomSite. '/IndexTests.php', "w");
+    $indexCss = fopen('./'.$nomSite. '/CSS/Index.php', "w");
+    $indexCssFonts = fopen('./'.$nomSite. '/CSS/FONTS/Index.php', "w");
+    $indexMedia = fopen('./'.$nomSite. '/MEDIA/Index.php', "w");
+    $indexMediaImg = fopen('./'.$nomSite. '/MEDIA/IMG/Index.php', "w");
+    $indexMediaVideo = fopen('./'.$nomSite. '/MEDIA/VIDEO/Index.php', "w");
     $indexJs = fopen('./'.$nomSite. '/JS/index.php', "w");
     $indexPhp = fopen('./'.$nomSite. '/PHP/index.php', "w");
-    $indexPhpControl = fopen('./'.$nomSite. '/PHP/CONTROLLER/index.php', "w");
-    $indexPhpView = fopen('./'.$nomSite. '/PHP/VIEW/index.php', "w");
-    $indexPhpModel = fopen('./'.$nomSite. '/PHP/MODEL/index.php', "w");
-    $indexSql = fopen('./'.$nomSite. '/SQL/index.php', "w");
-    $indexDocs = fopen('./'.$nomSite. '/DOCS/index.php', "w");
+    $indexPhpControl = fopen('./'.$nomSite. '/PHP/CONTROLLER/Index.php', "w");
+    $indexPhpView = fopen('./'.$nomSite. '/PHP/VIEW/Index.php', "w");
+    $indexPhpModel = fopen('./'.$nomSite. '/PHP/MODEL/Index.php', "w");
+    $indexSql = fopen('./'.$nomSite. '/SQL/Index.php', "w");
+    $indexDocs = fopen('./'.$nomSite. '/DOCS/Index.php', "w");
 
 
     fputs($index,"");
