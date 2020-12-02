@@ -1,0 +1,18 @@
+equipe 1 : Cedric Quentin Steeven Zied
+equipe 2 : Sofiane Maxime Amanda Marvine
+equipe 3 : Bruno Antoine Pierre Clement (Bryan)
+Consignes : un nouveau projet, avec une partie CRUD réservé à l'administrateur,
+ une partie consultation / information pour l'utilisateur (qui doit se connecter). Application multilingue.
+ Une interface soignée. Rédaction du cahier des charges, MCD, Diagrammes de Cas d'utilisation, de classes et de flux
+
+
+
+Planning : 9h30 Cahier des charges (min 5 lignes)(modifié)
+[08:51]
+9h30 : Mise en place du trello (vide) et du GIT(modifié)
+[08:53]
+10h : MCD et cas d'utilisation
+[08:56]
+11h : diagrammes de classes et de flux, script de SQL(modifié)
+[08:56]
+11h15 : création des cartes dans Trello
