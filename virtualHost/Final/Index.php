@@ -26,7 +26,7 @@ function texte($codetexte)
 }
 /************************ FIN GESTION DES LANGUES ******************/
 
-/* création d'u tableau de redirection, en fonction du code, on choisit la page à afficher */
+/* création d'un tableau de redirection, en fonction du code, on choisit la page à afficher */
 $routes = [
     "default" => ["PHP/VIEW/", "Accueil", "Accueil"],
     "accueil" => ["PHP/VIEW/", "Accueil", "Accueil"],
@@ -40,7 +40,7 @@ $routes = [
     "actionDeconnection" => ["PHP/VIEW/", "ActionDeconnection", "xxx"],
 
     "user" => ["PHP/VIEW/", "User", "Page utilisateur"],
-    "admin" => ["PHP/VIEW/", "Admin", "Page administrateur"],
+    "admin" => ["PHP/VIEW/", "Admin", "Page administrateur"]
 
 ];
 
