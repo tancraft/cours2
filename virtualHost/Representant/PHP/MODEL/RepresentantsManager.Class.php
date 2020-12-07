@@ -20,6 +20,7 @@ class RepresentantsManager
 		$q->bindValue(":VilleRepres", $obj->getVilleRepres());
 		$q->execute();
 	}
+	
 	public static function delete(Representants $obj)
 	{
 		$db=DBConnect::getDb();

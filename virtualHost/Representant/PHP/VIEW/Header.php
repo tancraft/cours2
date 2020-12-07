@@ -17,3 +17,27 @@ else
 }
 
 ?>
+
+<header>
+<div class="logo">
+	<img src="MEDIA/IMG/Logo.jpg" alt="">
+</div>
+<div class="titreDuSite">
+	nom de l'application
+</div>
+<div class="connect">
+<?php
+if (isset($_SESSION['utilisateur'])) {
+    echo '<div>' . $_SESSION['utilisateur']->getNomRepres(). '</div>
+        <div>
+            <button><a href="Index.php?codePage=actionConnect&mode=disconnect">Deconnexion</a></button>
+        </div>';
+} else {
+    echo '<div>
+        <button><a href="Index.php?codePage=formConnect">Connexion</a></button>
+        </div>';
+}
+?>
+</div>
+
+</header>

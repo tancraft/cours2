@@ -1,4 +1,11 @@
 
+INSERT INTO `roles`(`IdRole`, `LibelleRole`) VALUES (NULL,"administrateur");
+INSERT INTO `roles`(`IdRole`, `LibelleRole`) VALUES (NULL,"utilisateur");
+
+INSERT INTO `utilisateurs`(`IdUtilisateur`, `NomUtilisateur`, `PrenomUtilisateur`, `PseudoUtilisateur`, `MotDePasseUtilisateur`, `IdRole`) VALUES (NULL,"Braguet","Georges","braguet25","braguet25",1);
+INSERT INTO `utilisateurs`(`IdUtilisateur`, `NomUtilisateur`, `PrenomUtilisateur`, `PseudoUtilisateur`, `MotDePasseUtilisateur`, `IdRole`) VALUES (NULL,"Dupond","Alfred","dupond25","dupond25",2);
+INSERT INTO `utilisateurs`(`IdUtilisateur`, `NomUtilisateur`, `PrenomUtilisateur`, `PseudoUtilisateur`, `MotDePasseUtilisateur`, `IdRole`) VALUES (NULL,"Thomas","Sophie","thomas25","thomas25",2);
+
 INSERT INTO REPRESENTANTS (IdRepres, NomRepres, VilleRepres) VALUES (NULL, 'non affecter', 'non affecter');
 INSERT INTO REPRESENTANTS (IdRepres, NomRepres, VilleRepres) VALUES (NULL, 'Stephane', 'Lyon');
 INSERT INTO REPRESENTANTS (IdRepres, NomRepres, VilleRepres) VALUES (NULL, 'Benjamin', 'Paris');

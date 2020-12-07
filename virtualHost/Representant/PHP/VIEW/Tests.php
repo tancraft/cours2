@@ -114,6 +114,9 @@ var_dump($pSuppr);
 RepresentantsManager::delete($pSuppr);**/
 
 
+/**$liste= VentesManager::getVentesRepresentant(4);
+var_dump($liste);**/
+
 /**echo "liste des ventes" . '<br>';
 $tableau = VentesManager::getList();
 foreach ($tableau as $unProduit)
@@ -143,6 +146,59 @@ $pSuppr = VentesManager::findById(13);
 VentesManager::delete($pSuppr);**/
 
 
-/**$liste= VentesManager::getVentesRepresentant(4);
-var_dump($liste);**/
+/**echo "liste des Roles" . '<br>';
+$tableau = RolesManager::getList();
+foreach ($tableau as $unProduit)
+{
+    echo $unProduit->toString() . '<br>';
+}
+
+echo "ajout d'un Roles" . '<br>';
+$cNew = new Roles (["LibelleRole" => "Noob"]);
+RolesManager ::add($cNew);
+
+// on teste la recherche par ID
+echo 'recherche id = 1' . '<br>';
+$p = RolesManager::findById(6);
+var_dump($p);
+
+// on teste la mise à jour
+echo "on met à jour l'id 2" . '<br>';
+$pRecharge=RolesManager::findById(2);
+$pRecharge->setLibelleRole("esclave");
+var_dump($pRecharge);
+RolesManager::update($pRecharge);
+
+// on teste la suppression
+echo "on supprime un role" . '<br>';
+$pSuppr = RolesManager ::findById(3);
+RolesManager ::delete($pSuppr);**/
+
+/**echo "liste d'utilisateurs" . '<br>';
+$tableau = UtilisateursManager::getList();
+foreach ($tableau as $unProduit)
+{
+    echo $unProduit->toString() . '<br>';
+}
+
+echo "ajout d'un utilisateur" . '<br>';
+$cNew = new Utilisateurs (["NomUtilisateur" => "tata","PrenomUtilisateur" => "toto","PseudoUtilisateur"=>"toto25","MotDePasseUtilisateur"=>"toto25","IdRole"=>2]);
+UtilisateursManager ::add($cNew);
+
+// on teste la recherche par ID
+echo 'recherche id = 1' . '<br>';
+$p = UtilisateursManager::findById(1);
+var_dump($p);
+
+// on teste la mise à jour
+echo "on met à jour l'id 2" . '<br>';
+$pRecharge=UtilisateursManager::findById(2);
+$pRecharge->setNomUtilisateur("lina");
+var_dump($pRecharge);
+UtilisateursManager::update($pRecharge);
+
+// on teste la suppression
+echo "on supprime un role" . '<br>';
+$pSuppr = UtilisateursManager ::findById(4);
+UtilisateursManager ::delete($pSuppr);**/
 
