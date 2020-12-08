@@ -1,0 +1,23 @@
+il y a plusieurs roles
+il y as plusieurs categories 
+plusieurs possibilitées par categorie
+
+
+role1
+voir utilisateurs
+utilisateurs= ajout, supprimer, modifier, voir
++acces role 2
+
+role2
+
+categories
+
+representant= ajout, supprimer, modifier, voir
+clients= ajout, supprimer, modifier, voir
+produits= ajout, supprimer, modifier, voir
+ventes= ajout, supprimer, modifier, voir
+
+
+donc 5 formulaires avec 4 possibilites
+
+index.php?codePage=action&categorie=ventes&mode=ajout

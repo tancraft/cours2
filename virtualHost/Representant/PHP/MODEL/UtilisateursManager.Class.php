@@ -5,10 +5,11 @@ class UtilisateursManager
 	public static function add(Utilisateurs $obj)
 	{
  		$db=DbConnect::getDb();
-		$q=$db->prepare("INSERT INTO Utilisateurs (NomUtilisateur,PrenomUtilisateur,PseudoUtilisateur,MotDePasseUtilisateur,IdRole) VALUES (:NomUtilisateur,:PrenomUtilisateur,:PseudoUtilisateur,:MotDePasseUtilisateur,:IdRole)");
+		$q=$db->prepare("INSERT INTO Utilisateurs (NomUtilisateur,PrenomUtilisateur,PseudoUtilisateur,EmailUtilisateur,MotDePasseUtilisateur,IdRole) VALUES (:NomUtilisateur,:PrenomUtilisateur,:PseudoUtilisateur,:EmailUtilisateur,:MotDePasseUtilisateur,:IdRole)");
 		$q->bindValue(":NomUtilisateur", $obj->getNomUtilisateur());
         $q->bindValue(":PrenomUtilisateur", $obj->getPrenomUtilisateur());
-        $q->bindValue(":PseudoUtilisateur", $obj->getPseudoUtilisateur());
+		$q->bindValue(":PseudoUtilisateur", $obj->getPseudoUtilisateur());
+		$q->bindValue(":EmailUtilisateur", $obj->getEmailUtilisateur());
         $q->bindValue(":MotDePasseUtilisateur", $obj->getMotDePasseUtilisateur());
         $q->bindValue(":IdRole", $obj->getIdRole());
 		$q->execute();
@@ -17,11 +18,12 @@ class UtilisateursManager
 	public static function update(Utilisateurs $obj)
 	{
  		$db=DbConnect::getDb();
-		$q=$db->prepare("UPDATE Utilisateurs SET IdUtilisateur=:IdUtilisateur,NomUtilisateur=:NomUtilisateur,PrenomUtilisateur=:PrenomUtilisateur,PseudoUtilisateur=:PseudoUtilisateur,IdRole=:IdRole WHERE IdUtilisateur=:IdUtilisateur");
+		$q=$db->prepare("UPDATE Utilisateurs SET IdUtilisateur=:IdUtilisateur,NomUtilisateur=:NomUtilisateur,PrenomUtilisateur=:PrenomUtilisateur,PseudoUtilisateur=:PseudoUtilisateur,EmailUtilisateur=:EmailUtilisateur,IdRole=:IdRole WHERE IdUtilisateur=:IdUtilisateur");
 		$q->bindValue(":IdUtilisateur", $obj->getIdUtilisateur());
 		$q->bindValue(":NomUtilisateur", $obj->getNomUtilisateur());
 		$q->bindValue(":PrenomUtilisateur", $obj->getPrenomUtilisateur());
-        $q->bindValue(":PseudoUtilisateur", $obj->getPseudoUtilisateur());
+		$q->bindValue(":PseudoUtilisateur", $obj->getPseudoUtilisateur());
+		$q->bindValue(":EmailUtilisateur", $obj->getEmailUtilisateur());
         $q->bindValue(":MotDePasseUtilisateur", $obj->getMotDePasseUtilisateur());
         $q->bindValue(":IdRole", $obj->getIdRole());
 		$q->execute();
@@ -46,6 +48,28 @@ class UtilisateursManager
 			return false;
 		}
 	}
+
+	public static function findByEmail($email)
+	{
+		 $db=DbConnect::getDb();
+		 if (!in_array(";",str_split( $email))) 
+		 {
+			 $q = $db->query("SELECT * FROM utilisateurs WHERE EmailUtilisateur ='" . $email . "'");
+			 $results = $q->fetch(PDO::FETCH_ASSOC);
+			 if ($results != false)
+			 {
+				 return new Utilisateurs($results);
+			 }
+			 else
+			 {
+				 return false;
+			 }}
+		 else
+		 {
+			 return false;
+		 }
+	}
+
 	public static function getList()
 	{
  		$db=DbConnect::getDb();

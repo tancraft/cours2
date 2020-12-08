@@ -7,6 +7,7 @@ class Utilisateurs
 	private $_NomUtilisateur;
 	private $_PrenomUtilisateur;
 	private $_PseudoUtilisateur;
+	private $_EmailUtilisateur;
 	private $_MotDePasseUtilisateur;
 	private $_IdRole;
 	/*****************Accesseurs***************** */
@@ -48,6 +49,16 @@ class Utilisateurs
 	public function setPseudoUtilisateur($PseudoUtilisateur)
 	{
 		return $this->_PseudoUtilisateur = $PseudoUtilisateur;
+	}
+
+	public function setEmailUtilisateur($EmailUtilisateur)
+	{
+		return $this->_EmailUtilisateur = $EmailUtilisateur;
+	}
+
+	public function getEmailUtilisateur()
+	{
+		return $this->_EmailUtilisateur;
 	}
 
 	public function getMotDePasseUtilisateur()

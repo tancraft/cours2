@@ -36,6 +36,13 @@ $routes = [
 	"formConnect" => ["PHP/VIEW/","FormConnect","Connexion"],
 	"actionConnect" => ["PHP/VIEW/","ActionConnect","Connexion"],
 
+	"formInscript" => ["PHP/VIEW/","FormInscript","Inscription"],
+	"actionInscript" => ["PHP/VIEW/","ActionInscript","Inscription"],
+
+	"listes" => ["PHP/VIEW/","Listes","Listes"],
+	"details" => ["PHP/VIEW/","Details","Detail"],
+	"actions" => ["PHP/VIEW/","Actions","Actions"],
+
 	"tests" => ["PHP/VIEW/", "Tests", "Accueil"]
 
 ];

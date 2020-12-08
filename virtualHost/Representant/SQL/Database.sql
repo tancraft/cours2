@@ -27,6 +27,7 @@ CREATE TABLE IF NOT EXISTS `utilisateurs` (
   `NomUtilisateur` varchar(25) DEFAULT NULL,
   `PrenomUtilisateur` varchar(25) DEFAULT NULL,
   `PseudoUtilisateur` varchar(25) DEFAULT NULL,
+  `EmailUtilisateur` varchar(25) DEFAULT NULL,
   `MotDePasseUtilisateur` varchar(25) DEFAULT NULL,
   `IdRole` INT(10) DEFAULT NULL
 

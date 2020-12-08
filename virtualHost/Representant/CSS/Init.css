@@ -12,7 +12,7 @@ body{
 	text-align: justify;
 }
 
-div, header{
+div, header, nav{
 	display: flex;
 	flex: 1;
 }

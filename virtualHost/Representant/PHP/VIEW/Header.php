@@ -25,17 +25,13 @@ else
 <div class="titreDuSite">
 	nom de l'application
 </div>
-<div class="connect">
+<div>
 <?php
 if (isset($_SESSION['utilisateur'])) {
-    echo '<div>' . $_SESSION['utilisateur']->getNomRepres(). '</div>
-        <div>
-            <button><a href="Index.php?codePage=actionConnect&mode=disconnect">Deconnexion</a></button>
-        </div>';
+    echo '<div>Bonjour ' . $_SESSION['utilisateur']->getPseudoUtilisateur().'</div>';
+
 } else {
-    echo '<div>
-        <button><a href="Index.php?codePage=formConnect">Connexion</a></button>
-        </div>';
+    echo '<div>Bonjour Invité</div>';
 }
 ?>
 </div>

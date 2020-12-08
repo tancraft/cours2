@@ -182,7 +182,7 @@ foreach ($tableau as $unProduit)
 }
 
 echo "ajout d'un utilisateur" . '<br>';
-$cNew = new Utilisateurs (["NomUtilisateur" => "tata","PrenomUtilisateur" => "toto","PseudoUtilisateur"=>"toto25","MotDePasseUtilisateur"=>"toto25","IdRole"=>2]);
+$cNew = new Utilisateurs (["NomUtilisateur" => "tata","PrenomUtilisateur" => "toto","PseudoUtilisateur"=>"toto25","EmailUtilisateur"=>"toto@gmail.com","MotDePasseUtilisateur"=>"toto25","IdRole"=>2]);
 UtilisateursManager ::add($cNew);
 
 // on teste la recherche par ID
