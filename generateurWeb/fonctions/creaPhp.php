@@ -78,9 +78,9 @@ function creationPhp($nomSite)
     $head='<html>'."\n".
     '<head>'."\n\t".
         '<title><?php echo $titre ?></title>'."\n\t".
-        '<link rel="stylesheet" href="CSS/init.css">'."\n\t".
-        '<link rel="stylesheet" href="CSS/style.css">'."\n\t".
-        '<link rel="stylesheet" href="CSS/phone.css">'."\n\n".
+        '<link rel="stylesheet" href="CSS/Init.css">'."\n\t".
+        '<link rel="stylesheet" href="CSS/Style.css">'."\n\t".
+        '<link rel="stylesheet" href="CSS/Phone.css">'."\n\n".
     
     '</head>'."\n".
     '<body>'."\n\t".
