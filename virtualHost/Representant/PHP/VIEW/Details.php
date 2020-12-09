@@ -1,55 +1,54 @@
 <?php
-
-$categorie = $_GET['categorie'];
-$mode = $_GET['mode'];
-
-if (isset($_GET['id'])) // si l'id est renseigné
-{
-    switch ($categorie) {
-        case ('users'):
-            {
-                $idRecu = $_GET['id'];
-                if ($idRecu != false) {
-                    $idChoisi = UtilisateursManager::findById($idRecu);
-                }
-                break;
-            }
-        case ('repres'):
-            {
-                $idRecu = $_GET['id'];
-                if ($idRecu != false) {
-                    $idChoisi = RepresentantsManager::findById($idRecu);
-                }
-                break;
-            }
-        case ('clients'):
-            {
-                $idRecu = $_GET['id'];
-                if ($idRecu != false) {
-                    $idChoisi = ClientsManager::findById($idRecu);
-                }
-                break;
-            }
-        case ('produits'):
-            {
-                $idRecu = $_GET['id'];
-                if ($idRecu != false) {
-                    $idChoisi = ProduitsManager::findById($idRecu);
-                }
-                break;
-            }
-        case ('ventes'):
-            {
-                $idRecu = $_GET['id'];
-                if ($idRecu != false) {
-                    $idChoisi = VentesManager::findById($idRecu);
-                }
-                break;
-            }
-    }
-}
-
 if (isset($_SESSION['utilisateur'])) {
+    $categorie = $_GET['categorie'];
+    $mode = $_GET['mode'];
+
+    if (isset($_GET['id'])) // si l'id est renseigné
+    {
+        switch ($categorie) {
+            case ('users'):
+                {
+                    $idRecu = $_GET['id'];
+                    if ($idRecu != false) {
+                        $idChoisi = UtilisateursManager::findById($idRecu);
+                    }
+                    break;
+                }
+            case ('repres'):
+                {
+                    $idRecu = $_GET['id'];
+                    if ($idRecu != false) {
+                        $idChoisi = RepresentantsManager::findById($idRecu);
+                    }
+                    break;
+                }
+            case ('clients'):
+                {
+                    $idRecu = $_GET['id'];
+                    if ($idRecu != false) {
+                        $idChoisi = ClientsManager::findById($idRecu);
+                    }
+                    break;
+                }
+            case ('produits'):
+                {
+                    $idRecu = $_GET['id'];
+                    if ($idRecu != false) {
+                        $idChoisi = ProduitsManager::findById($idRecu);
+                    }
+                    break;
+                }
+            case ('ventes'):
+                {
+                    $idRecu = $_GET['id'];
+                    if ($idRecu != false) {
+                        $idChoisi = VentesManager::findById($idRecu);
+                    }
+                    break;
+                }
+        }
+    }
+
     switch ($categorie) {
         case ('users'):
             {
@@ -60,12 +59,12 @@ if (isset($_SESSION['utilisateur'])) {
                                 break;
                             }
                         case "modif":{
-                                echo '<form action="index.php?codePage=actions&categorie=users&mode=modif&id='.$idChoisi->getIdUtilisateur().'" method="POST">
+                                echo '<form action="index.php?codePage=actions&categorie=users&mode=modif&id=' . $idChoisi->getIdUtilisateur() . '" method="POST">
                         <input name="IdUtilisateur"  value="' . $idChoisi->getIdUtilisateur() . '" type="hidden" />';
                                 break;
                             }
                         case "delete":{
-                                echo '<form action="index.php?codePage=actions&categorie=users&mode=delete&id='.$idChoisi->getIdUtilisateur().'" method="POST">
+                                echo '<form action="index.php?codePage=actions&categorie=users&mode=delete&id=' . $idChoisi->getIdUtilisateur() . '" method="POST">
                         <input name="IdUtilisateur"  value="' . $idChoisi->getIdUtilisateur() . '" type="hidden" />';
                                 break;
                             }
@@ -156,12 +155,12 @@ switch ($mode) {
                             break;
                         }
                     case "modif":{
-                            echo '<form action="index.php?codePage=actions&categorie=repres&mode=modif&id='.$idChoisi->getIdRepres().'" method="POST">
+                            echo '<form action="index.php?codePage=actions&categorie=repres&mode=modif&id=' . $idChoisi->getIdRepres() . '" method="POST">
                     <input name="IdRepres"  value="' . $idChoisi->getIdRepres() . '" type="hidden" />';
                             break;
                         }
                     case "delete":{
-                            echo '<form action="index.php?codePage=actions&categorie=repres&mode=delete&id='.$idChoisi->getIdRepres().'" method="POST">
+                            echo '<form action="index.php?codePage=actions&categorie=repres&mode=delete&id=' . $idChoisi->getIdRepres() . '" method="POST">
                     <input name="IdRepres"  value="' . $idChoisi->getIdRepres() . '" type="hidden" />';
                             break;
                         }
@@ -219,12 +218,12 @@ switch ($mode) {
                             break;
                         }
                     case "modif":{
-                            echo '<form action="index.php?codePage=actions&categorie=clients&mode=modif&id='.$idChoisi->getIdClient().'" method="POST">
+                            echo '<form action="index.php?codePage=actions&categorie=clients&mode=modif&id=' . $idChoisi->getIdClient() . '" method="POST">
                     <input name="IdClient"  value="' . $idChoisi->getIdClient() . '" type="hidden" />';
                             break;
                         }
                     case "delete":{
-                            echo '<form action="index.php?codePage=actions&categorie=clients&mode=delete&id='.$idChoisi->getIdClient().'" method="POST">
+                            echo '<form action="index.php?codePage=actions&categorie=clients&mode=delete&id=' . $idChoisi->getIdClient() . '" method="POST">
                     <input name="IdClient"  value="' . $idChoisi->getIdClient() . '" type="hidden" />';
                             break;
                         }
@@ -282,12 +281,12 @@ switch ($mode) {
                             break;
                         }
                     case "modif":{
-                            echo '<form action="index.php?codePage=actions&categorie=produits&mode=modif&id='.$idChoisi->getIdProduit().'" method="POST">
+                            echo '<form action="index.php?codePage=actions&categorie=produits&mode=modif&id=' . $idChoisi->getIdProduit() . '" method="POST">
                     <input name="IdProduit"  value="' . $idChoisi->getIdProduit() . '" type="hidden" />';
                             break;
                         }
                     case "delete":{
-                            echo '<form action="index.php?codePage=actions&categorie=produits&mode=delete&id='.$idChoisi->getIdProduit().'" method="POST">
+                            echo '<form action="index.php?codePage=actions&categorie=produits&mode=delete&id=' . $idChoisi->getIdProduit() . '" method="POST">
                     <input name="IdProduit"  value="' . $idChoisi->getIdProduit() . '" type="hidden" />';
                             break;
                         }
@@ -352,12 +351,12 @@ switch ($mode) {
                             break;
                         }
                     case "modif":{
-                            echo '<form action="index.php?codePage=actions&categorie=ventes&mode=modif&id='.$idChoisi->getIdVente().'" method="POST">
+                            echo '<form action="index.php?codePage=actions&categorie=ventes&mode=modif&id=' . $idChoisi->getIdVente() . '" method="POST">
                     <input name="IdVente"  value="' . $idChoisi->getIdVente() . '" type="hidden" />';
                             break;
                         }
                     case "delete":{
-                            echo '<form action="index.php?codePage=actions&categorie=ventes&mode=delete&id='.$idChoisi->getIdVente().'" method="POST">
+                            echo '<form action="index.php?codePage=actions&categorie=ventes&mode=delete&id=' . $idChoisi->getIdVente() . '" method="POST">
                     <input name="IdVente"  value="' . $idChoisi->getIdVente() . '" type="hidden" />';
                             break;
                         }
@@ -425,7 +424,40 @@ switch ($mode) {
     }
 
 } else {
-    echo '<h1>Vous n\'avez rien a faire ici</h1>';
+
+    ?>
+<form action="index.php?codePage=actions&categorie=new&mode=inscript" method="POST">
+<div>
+    <label for="NomUtilisateur">Nom</label>
+    <input type="text"  name="NomUtilisateur" required />
+</div>
+<div>
+    <label for="PrenomUtilisateur">Prenom</label>
+    <input type="text" name="PrenomUtilisateur" required />
+</div>
+<div>
+    <label for="PseudoUtilisateur">Pseudo</label>
+    <input type="text" name="PseudoUtilisateur" required />
+</div>
+<div>
+    <label for="EmailUtilisateur">E mail</label>
+    <input type="text" name="EmailUtilisateur" required />
+</div>
+<div>
+    <label for="MotDePasseUtilisateur">mot De Passe</label>
+    <input type="password" name="MotDePasseUtilisateur" required />
+</div>
+<div>
+    <label for="confirmation">Confirmation du mot de passe</label>
+    <input type="password" name="confirmation" required />
+</div>
+<div>
+    <input name="IdRole" value="2" type="hidden" />
+</div>
+<button type="submit">Valider</button>
+<button><a href="index.php?codePage=accueil">Accueil</a></button>
+</form>
+    <?php
 }
 
 ?>

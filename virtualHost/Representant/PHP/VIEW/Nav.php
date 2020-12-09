@@ -27,7 +27,7 @@ if (isset($_SESSION['utilisateur'])) {
         <button><a href="Index.php?codePage=formConnect">Connexion</a></button>
 		</div>
 		<div>
-        <button><a href="Index.php?codePage=formInscript">Inscription</a></button>
+        <button><a href="Index.php?codePage=details">Inscription</a></button>
         </div>';
 }
 
