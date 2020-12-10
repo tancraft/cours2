@@ -1,8 +1,13 @@
-var _nb1 = parseInt(prompt('saisissez un nombre'));
-var _nb2 = parseInt(prompt('saisissez le molutiplicateur'));
+var str = prompt('ecrire une chaine');
 
-for (_i=0;_i<=_nb1;_i++)
-{
-    var _som = _i*_nb2;
-    console.log(_i+' x '+_nb2+' = '+_som);
-}
+var compteur = 0;
+
+var lettre=str.substr(0,1);
+
+    if (lettre == 'a' || lettre == 'e' || lettre == 'i' || lettre == 'o' || lettre == 'u' || lettre == 'y' )
+    {
+        compteur++;
+    }
+
+
+console.log(compteur);
