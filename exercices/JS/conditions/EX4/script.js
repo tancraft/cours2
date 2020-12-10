@@ -20,3 +20,23 @@ else
         var _portot = 6;
     }
 }
+
+if(_tot>200)
+{
+    var _rem = _tot*10/100;
+}
+else if (_tot<100)
+{
+    var _rem = 0;
+}
+else
+{
+    var _rem = _tot*5/100;
+}
+
+console.log('le total est '+_tot+' euros');
+console.log('les frais de port sont de  '+_portot+' euros');
+console.log('la remise est de  '+_rem+' euros');
+
+var _coutTot = _tot+_portot+_rem;
+console.log('le prix total est de  '+_coutTot+' euros');
