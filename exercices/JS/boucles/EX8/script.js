@@ -1,13 +1,19 @@
 var str = prompt('ecrire une chaine');
 
+var depart = 0;
+
 var compteur = 0;
 
-var lettre=str.substr(0,1);
-
-    if (lettre == 'a' || lettre == 'e' || lettre == 'i' || lettre == 'o' || lettre == 'u' || lettre == 'y' )
-    {
-        compteur++;
+while (str.length == 1) {
+    var check = ['a', 'e', 'i', 'o', 'u', 'y'];
+    for (j = 0; j< check.length;)
+    for (i = depart; i < str.length; i++) {
+        
+        var lettre = str.substring(depart, str.length)
+        if (check[i] == lettre) {
+            compteur++;
+        }
     }
-
+}
 
 console.log(compteur);
