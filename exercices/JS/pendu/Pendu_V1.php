@@ -1007,13 +1007,7 @@ function afficherMauvaisesLettres($listeLettres)
  * @return  string  $mot    le mot choisi le dictionnaire
  *
  */
-// function choisirMot()
-// {
 
-//     $dico = creer_dico();
-//     $nb = rand(0, count($dico) - 1);
-//     return $dico[$nb]; // ou  return $dico[array_rand($dico)]
-// }
 function choisirMot($niv)
 {
     $dico = creer_dico();
@@ -1042,6 +1036,7 @@ function demanderLettre()
     } while ((!ctype_alpha($lettre)) || (strlen($lettre) > 1)); // ou utilisation de  while (!IntlChar::isalpha($lettre))
     return $lettre;
 }
+
 /**
  * méthode qui renvoi 1 si la partie est gagné, -1 si la partie est perdu, 0 si la partie continue.
  * Elle reçoit en paramètre le nombre d’erreurs et le tableau contenant le mot composé
