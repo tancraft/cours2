@@ -63,5 +63,24 @@ class UtilisateursManager
 		return $liste;
     }
     
-
+	public static function findPseudo($Login)
+	{
+		 $db=DbConnect::getDb();
+		 if (!in_array(";",str_split( $Login))) 
+		 {
+			 $q = $db->query("SELECT * FROM utilisateurs WHERE Login ='" . $Login . "'");
+			 $results = $q->fetch(PDO::FETCH_ASSOC);
+			 if ($results != false)
+			 {
+				 return new Utilisateurs($results);
+			 }
+			 else
+			 {
+				 return false;
+			 }}
+		 else
+		 {
+			 return false;
+		 }
+	}
 }

@@ -1,4 +1,5 @@
 <html>
+
 <head>
 	<title><?php echo $titre ?></title>
 	<link rel="stylesheet" href="CSS/Init.css">

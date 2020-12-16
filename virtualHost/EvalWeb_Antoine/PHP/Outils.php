@@ -13,7 +13,7 @@ function ChargerClasse($classe)
 spl_autoload_register("ChargerClasse");
 
 /**
- * Méthode qui permet d'affichre une page en fonction de ces paramètres
+ * Méthode qui permet d'afficher une page en fonction de ces paramètres
  * $page tableau contenant 3 valeurs    le chemein d'acces à la page
  *                                      le nom de la page
  *                                      le titre à afficher sur la page

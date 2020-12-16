@@ -13,7 +13,14 @@ $routes = [
 	"default" => ["PHP/VIEW/", "Accueil", "Accueil"],
 	"accueil" => ["PHP/VIEW/", "Accueil", "Accueil"],
 
+	"formConnect" => ["PHP/VIEW/", "FormConnect", "connections"],
+	"actionConnect" => ["PHP/VIEW/", "ActionConnect", "actions de connection"],
+
+	"interface" => ["PHP/VIEW/", "Interface", "Menu"],
+	"listes" => ["PHP/VIEW/", "Listes", "listes"],
+
 	"tests" => ["PHP/VIEW/", "Tests", "Tests"]
+
 
 
 ];

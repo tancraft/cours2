@@ -5,7 +5,7 @@ INSERT INTO `eleves`(`IdEleve`, `NomEleve`, `PrenomEleve`, `Classe`) VALUES (NUL
 INSERT INTO `eleves`(`IdEleve`, `NomEleve`, `PrenomEleve`, `Classe`) VALUES (NULL,"Orion","alfred","4eme");
 INSERT INTO `eleves`(`IdEleve`, `NomEleve`, `PrenomEleve`, `Classe`) VALUES (NULL,"Bidule","julie","6eme");
 
-INSERT INTO `matieres`(`IdMatiere`, `LibelleMatiere`) VALUES (NULL,"Aucune");
+INSERT INTO `matieres`(`IdMatiere`, `LibelleMatiere`) VALUES (NULL,"Proviseur");
 INSERT INTO `matieres`(`IdMatiere`, `LibelleMatiere`) VALUES (NULL,"Francais");
 INSERT INTO `matieres`(`IdMatiere`, `LibelleMatiere`) VALUES (NULL,"Anglais");
 INSERT INTO `matieres`(`IdMatiere`, `LibelleMatiere`) VALUES (NULL,"Maths");

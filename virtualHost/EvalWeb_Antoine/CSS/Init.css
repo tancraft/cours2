@@ -1,5 +1,7 @@
 :root{
-	/** utiliser ce genre de syntaxe pour les variables --[nom de la variable]: [propriétées];**/
+
+	--couleur1: #f8cbad;
+	--couleur2: #f2a16a;
 }
 
 html{
