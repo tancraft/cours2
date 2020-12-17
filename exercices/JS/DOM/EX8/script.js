@@ -11,16 +11,16 @@ image.addEventListener("click", changeCoter);
 
 function changeCoter() 
 {
-    var tourne = document.getElementById("carte");
-    if (tourne.getAttribute("change") == "verso") 
+
+    if (image.getAttribute("change") == "verso") 
     {
         image.src = "recto.jpg";
-        tourne.setAttribute("change", "recto");
+        image.setAttribute("change", "recto");
         setTimeout(changeCoter, 3000);
 
     }
     else {
         image.src = "verso.jpg";
-        tourne.setAttribute("change", "verso");
+        image.setAttribute("change", "verso");
     }
 }

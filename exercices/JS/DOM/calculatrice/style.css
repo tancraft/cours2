@@ -1,0 +1,29 @@
+body{
+    text-align: justify;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+
+div, body{
+    display: flex;
+    flex: 1;
+}
+
+.colonne{
+    flex-direction: column;
+}
+main{
+    width: 10%;
+    background-color: #245b1b;
+}
+
+.corps{
+    padding: 0.3em;
+}
+
+#ecran{
+    min-height: 20px;
+    background-color: grey;
+    color: #fff;
+}

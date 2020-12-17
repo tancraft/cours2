@@ -1,0 +1,28 @@
+/* body{
+    text-align: justify;
+    margin: 0;
+    padding: 0;
+
+} */
+
+div, body{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+.colonne{
+    flex-direction: column;
+}
+
+#joueur{
+
+    height: 3em;
+    width: 3em;
+    border: 2px solid red;
+    border-radius: 50%;
+    background-color: pink;
+    position: absolute;
+    top: 2em;
+    left: 3em;
+}
