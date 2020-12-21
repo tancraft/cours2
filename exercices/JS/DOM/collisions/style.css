@@ -1,11 +1,11 @@
-/* body{
+body{
     text-align: justify;
     margin: 0;
     padding: 0;
-
-} */
+}
 
 div, body{
+    box-sizing: border-box;
     display: flex;
     flex: 1;
     justify-content: center;
@@ -20,9 +20,19 @@ div, body{
     height: 3em;
     width: 3em;
     border: 2px solid red;
-    border-radius: 50%;
     background-color: pink;
     position: absolute;
     top: 2em;
     left: 3em;
+}
+
+.mur{
+
+    height: 3em;
+    width: 3em;
+    border: 2px solid greenyellow;
+    background-color: green;
+    position: absolute;
+    top: 8em;
+    left: 7em;
 }
