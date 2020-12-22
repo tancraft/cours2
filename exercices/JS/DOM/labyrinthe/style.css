@@ -24,7 +24,10 @@ img{
 
     height: 3em;
     width: 3em;
-    background-image: url("./player.png");
+    /* background-color: #413834; */
+    background-image: url('player.png');
+    background-position: center;
+    background-size: cover;
     z-index: 999;
     position: absolute;
     top: 1em;

@@ -1,7 +1,7 @@
 //gestion au clavier plus les boutons
 function mouvement(dirleft, dirTop)// dans les parametres ne pas inverser left et top
 {
-    var col = true;
+    var col = false;
     var styleJoueur = window.getComputedStyle(document.getElementById('joueur'), null);
 
     var topActuel = parseInt(styleJoueur.top);
@@ -9,24 +9,49 @@ function mouvement(dirleft, dirTop)// dans les parametres ne pas inverser left e
     var joueurW = parseInt(styleJoueur.width);
     var joueurH = parseInt(styleJoueur.height);
 
-    //on recupere les Murs
+    // //on recupere les Murs
     var listeMurs = document.querySelectorAll('.mur');
-    listeMurs.forEach(function (elt) {
-        var listeMurs = window.getComputedStyle(elt, null);
-        var topM = parseInt(listeMurs.top);
-        var leftM = parseInt(listeMurs.left);
-        var widthM = parseInt(listeMurs.width);
-        var heigthM = parseInt(listeMurs.height);
-        col = col && collision(topM, leftM, widthM, heigthM, topActuel + dirTop, leftActuel + dirleft, joueurW, joueurH);
 
-    });
+    var i =0;
+
+    do{
+
+     
+        var styleMur = window.getComputedStyle(listeMurs[i], null);
+        
+        var topM = parseInt(styleMur.top);
+        var leftM = parseInt(styleMur.left);
+        var widthM = parseInt(styleMur.width);
+        var heigthM = parseInt(styleMur.height);
+        col = collision(topM, leftM, widthM, heigthM, topActuel + dirTop, leftActuel + dirleft, joueurW, joueurH);
+        i++;
+    }while (col && i <= listeMurs.length-1);
 
     //on modifie les positions left et top actuelles
     if (col) {
     document.getElementById('joueur').style.top = topActuel + dirTop + 'px';
     document.getElementById('joueur').style.left = leftActuel + dirleft + 'px';
+    //colis();
     }
 }
+
+
+// function colis()
+// {
+//     var styleJoueur = window.getComputedStyle(document.getElementById('joueur'), null);
+//     var bcg = styleJoueur.backgroundImage;
+
+//     if (bcg == "url('player.png')") 
+//     {
+
+//         document.getElementById('joueur').style.backgroundImage = "url('col.png')";
+//         setTimeout(colis, 300);
+
+//     }
+//     else {
+//         document.getElementById('joueur').style.backgroundImage = "url('player.png')";
+//     }
+// }
 
 function collision(topM,leftM, widthM, heigthM, topActuel, leftActuel, joueurW, joueurH) {
     if (leftActuel < leftM + widthM && leftActuel + joueurW > leftM && topActuel < topM + heigthM && topActuel + joueurH > topM) {
@@ -87,6 +112,22 @@ var flag = false;
 var ecartY, ecartX;
 var joueur = document.getElementById('joueur');
 
+// var chrono =document.getElementById('chrono');
+
+// function chronometre()
+// {
+//     secondes += 1;
+   
+//     if(secondes>59){
+//       minutes += 1;
+//       secondes = 0;
+//     }
+// }
+
+// function start()
+// {
+//     temp = document.setInterval()
+// }
 
 
 //gestion au clavier
