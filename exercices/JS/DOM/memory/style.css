@@ -1,0 +1,19 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.espace{
+    flex: 0.1;
+}
+
+.espaceHor{
+    height: 2vh;
+}
+
+.carte{
+    display: flex;
+    flex: 1;
+}
