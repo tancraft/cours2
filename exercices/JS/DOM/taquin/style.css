@@ -1,0 +1,22 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+div{
+    display: flex;
+    flex: 1;
+}
+
+.colonne{
+    flex-direction: column;
+}
+
+.case{
+    background-color: pink;
+    border: 2px solid red;
+}
