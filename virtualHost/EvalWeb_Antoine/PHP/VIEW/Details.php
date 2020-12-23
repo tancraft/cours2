@@ -59,16 +59,11 @@ if (isset($_SESSION['utilisateur'])) {
                         <input name="IdUtilisateur"  value="' . $idChoisi->getIdUtilisateur() . '" type="hidden" />';
                                 break;
                             }
-                        case "detail":{
-                                echo '<form >
-                    <input name="IdUtilisateur"  value="' . $idChoisi->getIdUtilisateur() . '" type="hidden" />';
-                                break;
-                            }
                     }
                 ?>
             <div>
                 <label for="NomUtilisateur">Nom</label>
-                <input name="NomUtilisateur" <?php if ($mode != "add") {echo 'value="' . $idChoisi->getNomUtilisateur() . '"';}if ($mode == "delete" || $mode == "detail") {
+                <input name="NomUtilisateur" <?php if ($mode != "add") {echo 'value="' . $idChoisi->getNomUtilisateur() . '"';}if ($mode == "delete") {
                     echo 'disabled';
                 }
                 ?>/>
@@ -76,15 +71,15 @@ if (isset($_SESSION['utilisateur'])) {
             <div class="espace"></div>
              <div>
              <label for="PrenomUtilisateur">Prenom</label>
-             <input name="PrenomUtilisateur"  <?php if ($mode != "add") {echo 'value="' . $idChoisi->getPrenomUtilisateur() . '"';}if ($mode == "delete" || $mode == "detail") {
+             <input name="PrenomUtilisateur"  <?php if ($mode != "add") {echo 'value="' . $idChoisi->getPrenomUtilisateur() . '"';}if ($mode == "delete") {
                     echo 'disabled';
                 }
                 ?> />
              </div>
              <div class="espace"></div>
              <div>
-                 <label for="PseudoUtilisateur">Pseudo</label>
-                 <input name="PseudoUtilisateur" <?php if ($mode != "add") {echo 'value="' . $idChoisi->getLogin() . '"';}if ($mode == "delete" || $mode == "detail") {
+                 <label for="Login">Pseudo</label>
+                 <input name="Login" <?php if ($mode != "add") {echo 'value="' . $idChoisi->getLogin() . '"';}if ($mode == "delete") {
                     echo 'disabled';
                 }
                 ?> />
@@ -92,21 +87,21 @@ if (isset($_SESSION['utilisateur'])) {
              <div class="espace"></div>
              <div>
                  <label for="EmailUtilisateur">E-mail</label>
-                 <input name="EmailUtilisateur" <?php if ($mode != "add") {echo 'value="' . $idChoisi->getEmailUtilisateur() . '"';}if ($mode == "delete" || $mode == "detail") {
+                 <input name="EmailUtilisateur" <?php if ($mode != "add") {echo 'value="' . $idChoisi->getEmailUtilisateur() . '"';}if ($mode == "delete") {
                     echo 'disabled';
                 }
                 ?>  />
              </div>
              <div>
                 <label for="MotDePasseUtilisateur">Mot de passe</label>
-                <input type="password" name="MotDePasseUtilisateur" <?php if ($mode != "add") {echo 'value="' . $idChoisi->getMotDePasseUtilisateur() . '"';}if ($mode == "delete" || $mode == "detail") {
+                <input type="password" name="MotDePasseUtilisateur" <?php if ($mode != "add") {echo 'value="' . $idChoisi->getMotDePasseUtilisateur() . '"';}if ($mode == "delete") {
                     echo 'disabled';
                 }
                 ?>  />
              </div>
              <div>
                 <label for="IdRole">Role</label>
-                <input name="IdRole" <?php if ($mode != "add") {echo 'value="' . $idChoisi->getIdRole() . '"';}if ($mode == "delete" || $mode == "detail") {
+                <input name="IdRole" <?php if ($mode != "add") {echo 'value="' . $idChoisi->getIdRole() . '"';}if ($mode == "delete") {
                     echo 'disabled';
                 }
                 ?>  />
@@ -139,29 +134,24 @@ switch ($mode) {
             {
                 switch ($mode) {
                     case "add":{
-                            echo '<form action="index.php?codePage=actions&categorie=repres&mode=add" method="POST">';
+                            echo '<form action="index.php?codePage=actions&categorie=eleves&mode=add" method="POST">';
                             break;
                         }
                     case "modif":{
-                            echo '<form action="index.php?codePage=actions&categorie=repres&mode=modif&id=' . $idChoisi->getIdRepres() . '" method="POST">
+                            echo '<form action="index.php?codePage=actions&categorie=eleves&mode=modif&id=' . $idChoisi->getIdRepres() . '" method="POST">
                     <input name="IdRepres"  value="' . $idChoisi->getIdRepres() . '" type="hidden" />';
                             break;
                         }
                     case "delete":{
-                            echo '<form action="index.php?codePage=actions&categorie=repres&mode=delete&id=' . $idChoisi->getIdRepres() . '" method="POST">
+                            echo '<form action="index.php?codePage=actions&categorie=eleves&mode=delete&id=' . $idChoisi->getIdRepres() . '" method="POST">
                     <input name="IdRepres"  value="' . $idChoisi->getIdRepres() . '" type="hidden" />';
-                            break;
-                        }
-                    case "detail":{
-                            echo '<form >
-                <input name="IdRepres"  value="' . $idChoisi->getIdRepres() . '" type="hidden" />';
                             break;
                         }
                 }
                 ?>
             <div>
                 <label for="NomRepres">Nom</label>
-                <input name="NomRepres" <?php if ($mode != "add") {echo 'value="' . $idChoisi->getNomRepres() . '"';}if ($mode == "delete" || $mode == "detail") {
+                <input name="NomRepres" <?php if ($mode != "add") {echo 'value="' . $idChoisi->getNomRepres() . '"';}if ($mode == "delete") {
                     echo 'disabled';
                 }
                 ?>/>
@@ -169,7 +159,7 @@ switch ($mode) {
             <div class="espace"></div>
              <div>
              <label for="VilleRepres">Ville</label>
-             <input name="VilleRepres"  <?php if ($mode != "add") {echo 'value="' . $idChoisi->getVilleRepres() . '"';}if ($mode == "delete" || $mode == "detail") {
+             <input name="VilleRepres"  <?php if ($mode != "add") {echo 'value="' . $idChoisi->getVilleRepres() . '"';}if ($mode == "delete") {
                     echo 'disabled';
                 }
                 ?> />
@@ -194,7 +184,7 @@ switch ($mode) {
                             break;
                         }
                 }
-                echo '<button><a href="Index.php?codePage=listes&mode=repres">Retour</a></button>
+                echo '<button><a href="Index.php?codePage=listes&mode=eleves">Retour</a></button>
                       </form>';
                 break;
             }
@@ -215,16 +205,11 @@ switch ($mode) {
                     <input name="IdClient"  value="' . $idChoisi->getIdClient() . '" type="hidden" />';
                             break;
                         }
-                    case "detail":{
-                            echo '<form >
-                <input name="IdClient"  value="' . $idChoisi->getIdClient() . '" type="hidden" />';
-                            break;
-                        }
                 }
                 ?>
             <div>
                 <label for="NomClient">Nom</label>
-                <input name="NomClient" <?php if ($mode != "add") {echo 'value="' . $idChoisi->getNomClient() . '"';}if ($mode == "delete" || $mode == "detail") {
+                <input name="NomClient" <?php if ($mode != "add") {echo 'value="' . $idChoisi->getNomClient() . '"';}if ($mode == "delete") {
                     echo 'disabled';
                 }
                 ?>/>
@@ -232,7 +217,7 @@ switch ($mode) {
             <div class="espace"></div>
              <div>
              <label for="VilleClient">Prenom</label>
-             <input name="VilleClient"  <?php if ($mode != "add") {echo 'value="' . $idChoisi->getVilleClient() . '"';}if ($mode == "delete" || $mode == "detail") {
+             <input name="VilleClient"  <?php if ($mode != "add") {echo 'value="' . $idChoisi->getVilleClient() . '"';}if ($mode == "delete") {
                     echo 'disabled';
                 }
                 ?> />
@@ -278,16 +263,11 @@ switch ($mode) {
                     <input name="IdProduit"  value="' . $idChoisi->getIdProduit() . '" type="hidden" />';
                             break;
                         }
-                    case "detail":{
-                            echo '<form >
-                <input name="IdProduit"  value="' . $idChoisi->getIdProduit() . '" type="hidden" />';
-                            break;
-                        }
                 }
                 ?>
                 <div>
                     <label for="NomProduit">Nom du produit</label>
-                    <input name="NomProduit" <?php if ($mode != "add") {echo 'value="' . $idChoisi->getNomProduit() . '"';}if ($mode == "delete" || $mode == "detail") {
+                    <input name="NomProduit" <?php if ($mode != "add") {echo 'value="' . $idChoisi->getNomProduit() . '"';}if ($mode == "delete") {
                     echo 'disabled';
                 }
                 ?>/>
@@ -295,14 +275,14 @@ switch ($mode) {
                 <div class="espace"></div>
                  <div>
                  <label for="CouleurProduit">Couleur</label>
-                 <input name="CouleurProduit"  <?php if ($mode != "add") {echo 'value="' . $idChoisi->getCouleurProduit() . '"';}if ($mode == "delete" || $mode == "detail") {
+                 <input name="CouleurProduit"  <?php if ($mode != "add") {echo 'value="' . $idChoisi->getCouleurProduit() . '"';}if ($mode == "delete") {
                     echo 'disabled';
                 }
                 ?> />
                  </div>
                  <div>
                  <label for="PoidsProduit">Poids</label>
-                 <input name="PoidsProduit"  <?php if ($mode != "add") {echo 'value="' . $idChoisi->getPoidsProduit() . '"';}if ($mode == "delete" || $mode == "detail") {
+                 <input name="PoidsProduit"  <?php if ($mode != "add") {echo 'value="' . $idChoisi->getPoidsProduit() . '"';}if ($mode == "delete") {
                     echo 'disabled';
                 }
                 ?> />
