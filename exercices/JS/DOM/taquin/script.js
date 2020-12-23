@@ -34,7 +34,7 @@ do {
     j++
 } while (j < cases.length);
 
-videX.videY
+//videX.videY
 
 // xc = e.target.getAttribute("x");
 // yc = e.target.getAttribute("y");
