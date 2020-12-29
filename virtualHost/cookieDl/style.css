@@ -1,0 +1,36 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body.light {
+    background-color: azure;
+}
+
+body.dark {
+    background-color: darkslategray;
+}
+
+h1 {
+    margin-bottom: 3vw;
+}
+
+.paragraphe {
+    width: 80%;
+    padding: 0.5vw;
+}
+
+.paragraphe.light {
+    background-color:darkgrey;
+    color: black;
+}
+
+.paragraphe.dark {
+    background-color:  black;
+    color: darkgrey;
+}
+
+.espace {
+    margin: 1vw;
+}
