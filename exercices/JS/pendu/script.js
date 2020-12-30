@@ -22,7 +22,7 @@ function choisirMot(niveau)
     }
     else
     { //mot au hasard dans tout le dico
-        return nb = dico[Math.floor(Math.random() * dico.length)];;
+        return nb = dico[Math.floor(Math.random() * dico.length)];
     }
 }
 

@@ -63,11 +63,7 @@ function changeCouleur(maValeur) {
 //changement de couleur
 var monMode = document.getElementById('mode');
 monMode.addEventListener("click", function () {
-    changeMode(monMode);
-});
-
-monMode.addEventListener("click", function () {
-    changeCouleur(monMode.value);
+    changeMode(monMode),changeCouleur(monMode.value);
 });
 
 maCouleur = readCookie("couleur");

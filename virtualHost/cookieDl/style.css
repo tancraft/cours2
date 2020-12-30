@@ -1,3 +1,6 @@
+
+
+
 body {
     display: flex;
     flex-direction: column;
@@ -5,7 +8,7 @@ body {
 }
 
 body.light {
-    background-color: azure;
+    background-color: white;
 }
 
 body.dark {
