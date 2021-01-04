@@ -36,23 +36,6 @@ function mouvement(dirleft, dirTop)// dans les parametres ne pas inverser left e
 }
 
 
-// function colis()
-// {
-//     var styleJoueur = window.getComputedStyle(document.getElementById('joueur'), null);
-//     var bcg = styleJoueur.backgroundImage;
-
-//     if (bcg == "url('player.png')") 
-//     {
-
-//         document.getElementById('joueur').style.backgroundImage = "url('col.png')";
-//         setTimeout(colis, 300);
-
-//     }
-//     else {
-//         document.getElementById('joueur').style.backgroundImage = "url('player.png')";
-//     }
-// }
-
 function collision(topM,leftM, widthM, heigthM, topActuel, leftActuel, joueurW, joueurH) {
     if (leftActuel < leftM + widthM && leftActuel + joueurW > leftM && topActuel < topM + heigthM && topActuel + joueurH > topM) {
         return false
@@ -111,24 +94,6 @@ function collisionMurs(posX, posY) {
 var flag = false;
 var ecartY, ecartX;
 var joueur = document.getElementById('joueur');
-
-// var chrono =document.getElementById('chrono');
-
-// function chronometre()
-// {
-//     secondes += 1;
-   
-//     if(secondes>59){
-//       minutes += 1;
-//       secondes = 0;
-//     }
-// }
-
-// function start()
-// {
-//     temp = document.setInterval()
-// }
-
 
 //gestion au clavier
 window.addEventListener("keydown", function (event) {
