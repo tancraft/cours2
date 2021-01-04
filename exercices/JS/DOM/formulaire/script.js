@@ -1,10 +1,18 @@
-var valide = document.querySelector('input');
-var form = document.querySelector()
+var inputs = document.getAttribute("required");
+
+for (var i = 0; i<inputs.length-1; i++)
+{
+    var toto = inputs[i]['required'=" "];
+    console.log(toto);
+}
+
+
+console.log(inputs);
 
 document.forms[0].addEventListener('submit', function(){
-    if (valide.value == "")
-    {
-        alert('toto');
-    }
+if(toto.value == "ok"){
+    alert("toto");
 }
-);
+
+});
+

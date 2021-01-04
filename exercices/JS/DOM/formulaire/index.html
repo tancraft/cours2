@@ -1,41 +1,43 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-<div id="inscrire" class="colonne">
-    <form name="inscrire" class="colonne centrer" action="#">
-    <div class="inscrit">
-        <label for="nom">Nom:&nbsp</label>
-        <input id="nom" type="text" name="nom" required>
-    </div>
-    <div class="inscrit">
-        <label for="prenom">Prenom:&nbsp</label>
-        <input id="prenom" type="text" name="prenom">
-    </div>
-    <div class="inscrit">
-        <label for="email">E-mail:&nbsp</label>
-        <input id="email" type="text" name="email" required>
-    </div>
-    <div class="inscrit">
-        <label for="motDePasse">Mot de passe&nbsp</label>
-        <input id="motdePasse" type="password" name="motDePasse" required>
-    </div>
-    <div class="inscrit">
-        <label for="confirm">Confirmez Mot de passe:&nbsp</label>
-        <input id="confirm" type="password" name="confirm" required>
-    </div>
 
-    <div id="ok">
-        <input type="submit">
-    </div>
-</form>
-</div>
-    
+<body>
+
+    <main>
+        <div id="inscrire" class="colonne">
+            <form class="centrer" action="#">
+                <fieldset class="centrer colonne">
+                    <legend>Coordonnées:&nbsp</legend>
+                    <div class="coord">
+                        <label for="nom">Nom:&nbsp</label>
+                        <input name="nom" type="text" required><div class="etoile"></div>
+                    </div>
+                    <div class="coord">
+                        <label for="prenom">prenom:&nbsp</label>
+                        <input name="prenom" type="text" ><div class="etoile"></div>
+                    </div>
+                    <div class="coord">
+                        <label for="email">E-mail:&nbsp</label>
+                        <input name="email" type="text" required><div class="etoile"></div>
+                    </div>
+                    <div class="coord">
+                        <label for="mdp">Mot de passe:&nbsp</label>
+                        <input name="mdp" type="password" required><div class="etoile"></div>
+                    </div>
+                    <div id="envoi"><input class="end" type="submit"></div>
+                </fieldset>
+            </form>
+        </div>
+    </main>
+
     <script src="script.js"></script>
 </body>
+
 </html>

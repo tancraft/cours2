@@ -2,28 +2,56 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+
 }
 
-div, form{
-    display: flex;
+div, form, label, input{
     flex: 1;
+    display: flex;
+}
+
+fieldset{
+    display: flex;
 }
 
 .colonne{
     flex-direction: column;
 }
 
+label, input{
+    display: inline-block;
+}
+
 .centrer{
     justify-content: center;
 }
 
-#inscrire{
-    width: 80%;
-    margin: auto;
+.coord{
+    padding: 0.5em;
+    justify-content: space-between;
+}
+
+input[required] +div::before{
+    padding-left: 0.1em;
+    content: "*";
+    display: flex;
+    color: red;
     align-items: center;
 }
 
-input:required::after{
-    content: "*";
+/* input+div::after{
+    padding-left: 0.1em;
+    content: url('icone.png');
+    display: flex;
     color: red;
+    align-items: center;
+} */
+
+#envoi{
+    align-self: flex-end;
+    padding: 0.2em;
+}
+
+.etoile{
+    flex: 0.1;
 }
