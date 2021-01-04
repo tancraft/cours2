@@ -1,0 +1,29 @@
+*, ::before, ::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+div, form{
+    display: flex;
+    flex: 1;
+}
+
+.colonne{
+    flex-direction: column;
+}
+
+.centrer{
+    justify-content: center;
+}
+
+#inscrire{
+    width: 80%;
+    margin: auto;
+    align-items: center;
+}
+
+input:required::after{
+    content: "*";
+    color: red;
+}
