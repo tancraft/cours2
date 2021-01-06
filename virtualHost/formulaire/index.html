@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="centrer">
+
+    <main>
+        <div id="inscrire" class="colonne">
+            <form class="centrer" action="#">
+                <fieldset class="centrer colonne">
+                    <legend>Coordonnées:&nbsp</legend>
+                    <div class="coord">
+                        <label for="nom">Nom:&nbsp</label>
+                        <input name="nom" type="text" required><div class="requis"></div>
+                        <div class="infos" ><div><img class="help" src="infos.png" alt="infos"></div><div class="aide">ceci est une aide</div></div><div class="check"><img class="valid" ></div>
+
+                    </div>
+                    <div class="coord">
+                        <label for="prenom">prenom:&nbsp</label>
+                        <input name="prenom" type="text"><div class="requis"></div>
+                        <div class="infos" ><div><img class="help" src="infos.png" alt="infos"></div><div class="aide">ceci est une aide</div></div><div class="check"><img class="valid" ></div>
+
+                    </div>
+                    <div class="coord">
+                        <label for="email">E-mail:&nbsp</label>
+                        <input name="email" type="text" required><div class="requis"></div>
+                        <div class="infos" ><div><img class="help" src="infos.png" alt="infos"></div><div class="aide">ceci est une aide</div></div><div class="check"><img class="valid" ></div>
+
+                    </div>
+                    <div class="coord">
+                        <label for="mdp">Mot de passe:&nbsp</label>
+                        <input name="mdp" type="password" required><div class="requis"></div>
+                       <div class="infos" ><div><img class="help" src="infos.png" alt="infos"></div><div class="aide">ceci est une aide</div></div><div class="check"><img class="valid" ></div>
+                        
+                    </div>
+                    <div id="envoi"><input class="end" type="submit"></div>
+                </fieldset>
+            </form>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

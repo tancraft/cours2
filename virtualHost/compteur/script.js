@@ -25,10 +25,12 @@ function readCookie(name) {
 	return null;
 }
 
+
 function eraseCookie(name) {
     // pour supprimer un cookie, on le périme
     createCookie(name, "", -1);
 }
+
 
 // du coup je reutilise index of que j aime bien et on verifie si le cookie est present sur le document le.cookie lance une api dedier aux cookies pas mal de fonctions dispo a partir de sa a verifier
 
@@ -58,3 +60,4 @@ reset.addEventListener("click",function(){
     document.getElementById("compteVue").innerHTML = compte;
     createCookie("compteur", compte, 1);
 });
+
