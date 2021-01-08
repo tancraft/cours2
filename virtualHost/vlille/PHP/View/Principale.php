@@ -5,9 +5,10 @@
 </div>
 <div id="divContenu">
 	<div class="ligne titreLigne">
-		<div class="ville">Ville</div>
-		<div class="libelle">Nom du Parking</div>
-		<div class="dispo">Etat</div>
+		<div class="commune">Ville</div>
+		<div class="rue">Rue</div>
+		<div class="type">Type</div>
+		<div class="etat">Etat</div>
 	</div>
 	<div class="espaceHorizon"></div>
 </div>

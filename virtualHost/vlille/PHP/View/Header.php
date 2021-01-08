@@ -8,7 +8,7 @@
 				</div>
 
 				<div id="titre_page">
-                  Parking de Lille
+                  Parking velo de Lille
                 </div>
             </div>
 		</div>
