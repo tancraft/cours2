@@ -79,15 +79,13 @@ function testerLettre(lettre, mot) {
     }
 }
 
-function creerPos(lettre, mot, depart) {
-
-    res = mot.indexOf(lettre);
+function creerPos(lettre, mot) {
     var tabPos = [];
-    for (let i = depart; i < mot.length; i++) {
-        var reponse = res;
-        tabPos.push(reponse);
-        // res = mot.indexOf(lettre, res + 1);
-        depart = mot.indexOf(lettre, res + 1);
+    for (let i = 0; i < mot.length; i++) {
+        if (lettre == mot[i])
+        {
+            tabPos.push(i);
+        }
     }
     return tabPos;
 }
@@ -102,8 +100,8 @@ function ajouterLettre(mot, index, lettre) {
 
 function ajouterLesLettre(motCoder, mot, lettre) {
 
-    var tabPos = creerPos(lettre, mot, 0);
-
+    var tabPos = creerPos(lettre, mot);
+    console.log(tabPos);
     if (tabPos != null) {
         for (let i = 0; i < tabPos.length; i++) {
 
@@ -117,22 +115,7 @@ function ajouterLesLettre(motCoder, mot, lettre) {
 
 function dessinePendu(nbErreurs)
 {
-    return'<img src="img/00'+nbErreurs+'.png" alt="erreurs pendu">'
-    var monImage = document.createElement('img');
-    
-    // function demarage() {
-
-    //     var monImage = document.createElement('img');
-    
-    //     monImage.src = tImages[1];
-    
-    //     var maDiv = document.getElementById("bleu");
-    
-    //     maDiv.innerHTML = '';
-    
-    //     maDiv.appendChild(monImage);
-    
-    // }
+    dessin.src = 'img/00'+nbErreurs+'.png';
 }
 
 function testerGagner(nbErreurs, motCoder) {
@@ -149,18 +132,17 @@ function testerGagner(nbErreurs, motCoder) {
     }
 }
 
-var afficheErreurs = document.querySelector('#nbErreurs');
 var afficheMot = document.querySelector('#motChoisi');
 var clavier = document.querySelector('#clavier');
 var temps = document.querySelector('#temp');
 var nbErreurs = 0;
+var dessin = document.querySelector('#dessin');
 
 var mot = choixMot();
 var motCoder = coderMot(mot);
 console.log(motCoder);
 var boutons = tabClavier();
 clavier.innerHTML = afficheClavier(boutons);
-afficheErreurs.innerHTML = dessinePendu(nbErreurs);
 
 console.log(mot);
 
@@ -173,7 +155,7 @@ clavier.addEventListener('click', function (e) {
     var test = testerLettre(lettre, mot, 0);
     if (test == -1) {
         nbErreurs++;
-        dessinePendu(afficheErreurs, nbErreurs);
+        dessinePendu(nbErreurs);
 
     }
     else {

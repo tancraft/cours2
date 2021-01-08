@@ -1,0 +1,24 @@
+{
+    "type": "success",
+    "value": [
+        {
+            "id": 342,
+            "joke": "Chuck Norris owns a chain of fast-food restaurants throughout the southwest. They serve nothing but barbecue-flavored ice cream and Hot Pockets.",
+            "categories": []
+        },
+        {
+            "id": 13,
+            "joke": "Chuck Norris once challenged Lance Armstrong in a &quot;Who has more testicles?&quot; contest. Chuck Norris won by 5.",
+            "categories": [
+                "explicit"
+            ]
+        },
+        {
+            "id": 559,
+            "joke": "Chuck Norris' unit tests don't run. They die.",
+            "categories": [
+                "nerdy"
+            ]
+        }
+    ]
+}
