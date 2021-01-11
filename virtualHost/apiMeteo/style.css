@@ -1,0 +1,46 @@
+
+/* global */
+body, h1, h2, h3, h4, h5, h6, p, a{
+    margin: 0;
+    padding: 0;
+
+}
+
+*, ::before, ::after{
+    box-sizing: border-box;
+}
+
+div, form, label, input, body, header{
+    flex: 1;
+    display: flex;
+}
+
+.colonne{
+    flex-direction: column;
+}
+
+fieldset{
+    display: flex;
+}
+
+img{
+    width: 100%;
+}
+
+.centrer{
+    justify-content: center;
+}
+
+.vertical{
+    align-items: center;
+}
+
+/* header */
+
+.titre{
+    flex: 8;
+}
+
+#logo{
+    padding: 0.4em;
+}
