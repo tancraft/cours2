@@ -28,20 +28,9 @@ function texte($codetexte)
 
 /* création d'un tableau de redirection, en fonction du code, on choisit la page à afficher */
 $routes = [
-    "default" => ["PHP/VIEW/", "Accueil", "Accueil"],
-    "accueil" => ["PHP/VIEW/", "Accueil", "Accueil"],
-
-    "actionInscription" => ["PHP/VIEW/", "ActionInscription", "xxx"],
-    "formInscription" => ["PHP/VIEW/", "FormInscription", "Formulaire d'inscription"],
-
-    "actionsConnect" => ["PHP/VIEW/", "ActionsConnect", "xxx"],
-    "formConnect" => ["PHP/VIEW/", "FormConnect", "Formulaire de connection"],
-
-    "actionDeconnection" => ["PHP/VIEW/", "ActionDeconnection", "xxx"],
-
-    "user" => ["PHP/VIEW/", "User", "Page utilisateur"],
-    "admin" => ["PHP/VIEW/", "Admin", "Page administrateur"]
-
+    "default" => ["PHP/VIEW/", "Accueil", "Accueil",false],
+    "accueil" => ["PHP/VIEW/", "Accueil", "Accueil",false],
+    "listeAPI" => ["PHP/MODEL/", "ListeAPI", "Accueil", true]
 ];
 
 if (isset($_GET["codePage"])) {

@@ -13,6 +13,17 @@ function ChargerClasse($classe)
 spl_autoload_register("ChargerClasse");
 
 /**
+ * fonctions pour crypter le mot de passe
+ * 
+ */
+function cryptage($mot)
+{
+
+    return md5(md5(md5($mot).strlen($mot))."m6");
+
+}
+
+/**
  * Méthode qui permet d'affichre une page en fonction de ces paramètres
  * $page tableau contenant 3 valeurs    le chemein d'acces à la page
  *                                      le nom de la page
@@ -23,22 +34,16 @@ function AfficherPage($page)
     $chemin = $page[0];
     $nom = $page[1];
     $titre = $page[2];
-
-    include 'PHP/VIEW/Head.php';
-    include 'PHP/VIEW/Header.php';
-    include 'PHP/VIEW/Nav.php';
-    include $chemin . $nom . '.php'; //Chargement de la page en fonction du chemin et du nom
-    include 'PHP/VIEW/Footer.php';
-}
-
-
-/**
- * fonctions pour crypter le mot de passe
- * 
- */
-function cryptage($mot)
-{
-
-    return md5(md5(md5($mot).strlen($mot))."m6");
-
+    if ($page[3]) //c'est un appel API
+    {
+        include $chemin . $nom . '.php';
+    }
+    else
+    {
+        include 'PHP/VIEW/Head.php';
+        include 'PHP/VIEW/Header.php';
+        // include 'PHP/VIEW/Nav.php';
+        include $chemin . $nom . '.php'; //Chargement de la page en fonction du chemin et du nom
+        include 'PHP/VIEW/Footer.php';
+    }
 }
