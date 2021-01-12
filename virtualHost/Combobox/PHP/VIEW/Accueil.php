@@ -13,7 +13,7 @@ foreach($listeRegion as $elt)
 ?>
 </select>
 
-<div class="listeDep">
+<div class="listeDep colonne">
 
 <div class="unDept"></div>
 </div>
