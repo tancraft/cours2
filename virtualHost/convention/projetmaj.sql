@@ -89,6 +89,7 @@ CREATE TABLE SessionFormation(
         idSessionFormation Int  Auto_increment  NOT NULL PRIMARY KEY,
         numOffreFormation  Varchar (50) NOT NULL ,
         objectifPAE        Text NOT NULL ,
+        dateRapportSuivi     Date NOT NULL ,
         idFormation        Int NOT NULL
 )ENGINE=InnoDB, CHARSET = UTF8;
 
@@ -162,7 +163,6 @@ CREATE TABLE Stages(
         autreRepTravauxDang  Varchar (50) NOT NULL ,
         dateDebut            Date NOT NULL ,
         dateFin              Date NOT NULL ,
-        dateRapportSuivi     Date NOT NULL ,
         idTuteur  Int   NOT NULL ,
         idStagiaire Int NOT NULL
 )ENGINE=InnoDB, CHARSET = UTF8;
