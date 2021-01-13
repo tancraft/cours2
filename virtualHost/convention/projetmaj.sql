@@ -162,6 +162,7 @@ CREATE TABLE Stages(
         autreRepTravauxDang  Varchar (50) NOT NULL ,
         dateDebut            Date NOT NULL ,
         dateFin              Date NOT NULL ,
+        dateRapportSuivi     Date NOT NULL ,
         idTuteur  Int   NOT NULL ,
         idStagiaire Int NOT NULL
 )ENGINE=InnoDB, CHARSET = UTF8;
