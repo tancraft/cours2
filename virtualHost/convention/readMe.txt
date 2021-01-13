@@ -9,3 +9,8 @@ ajout index siret
 formateur acces a tous+donne acces
 stagiaire visuel + modif infos persos
 entreprise stagiaire+modif entreprise
+
+
+ne pas perdre pour generer donnees
+
+https://www.generatedata.com/

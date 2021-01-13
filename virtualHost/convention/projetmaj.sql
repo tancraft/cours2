@@ -46,6 +46,7 @@ CREATE TABLE Utilisateurs(
         prenomUtilisateur Varchar (50) NOT NULL ,
         emailUtilisateur  Varchar (50) NOT NULL ,
         mdpUtilisateur    Varchar (50) NOT NULL ,
+        datePeremption         Varchar (15) NULL ,
         idRole            Int NOT NULL
 )ENGINE=InnoDB, CHARSET = UTF8;
 
