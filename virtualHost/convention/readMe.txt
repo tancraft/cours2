@@ -14,3 +14,5 @@ entreprise stagiaire+modif entreprise
 ne pas perdre pour generer donnees
 
 https://www.generatedata.com/
+
+valeurs travaux dangereux

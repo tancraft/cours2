@@ -39261,7 +39261,7 @@ INSERT INTO `entreprises` (`idEntreprise`,`raisonSociale`,`statutJuridiqueEnt`,`
 INSERT INTO `entreprises` (`idEntreprise`,`raisonSociale`,`statutJuridiqueEnt`,`adresseEnt`,`numSiretEnt`,`indexSiret`,`telEnt`,`assureurEnt`,`numSocietaire`,`nomRepresentant`,`prenomRepresentant`,`fctRepresentant`, `telRepresentant`,`mailRepresentant`,`idVille`) VALUES (NULL,"Commodo Hendrerit Donec LLC","SARL","P.O. Box 489, 7782 Et, Rd.","41086601600000",16,"07 78 20 96 59","Sagittis Felis Company","9090397768481322","Park","Ursa","ouvrier","08 59 45 65 65","molestie.Sed@volutpatNulla.co.uk",6);
 INSERT INTO `entreprises` (`idEntreprise`,`raisonSociale`,`statutJuridiqueEnt`,`adresseEnt`,`numSiretEnt`,`indexSiret`,`telEnt`,`assureurEnt`,`numSocietaire`,`nomRepresentant`,`prenomRepresentant`,`fctRepresentant`, `telRepresentant`,`mailRepresentant`,`idVille`) VALUES (NULL,"Posuere At Velit Inc.","SARL","34085502200000",16,"07 56 97 53 18","Montes Institute","2153477651171995","Dennis","Garrett","developpeur","08 74 67 49 75","non@cursusetmagna.net",5);
 INSERT INTO `entreprises` (`idEntreprise`,`raisonSociale`,`statutJuridiqueEnt`,`adresseEnt`,`numSiretEnt`,`indexSiret`,`telEnt`,`assureurEnt`,`numSocietaire`,`nomRepresentant`,`prenomRepresentant`,`fctRepresentant`, `telRepresentant`,`mailRepresentant`,`idVille`) VALUES (NULL,"Vitae Inc.","EURL","6923 Sed Street","33948339800006",17,"07 89 09 02 66","In PC","8548567751140816","Holloway","Fulton","secretaire","07 83 18 90 77","sem.Pellentesque@vulputateposuere.net",8);
-INSERT INTO `entreprises` (`idEntreprise`,`raisonSociale`,`statutJuridiqueEnt`,`adresseEnt`,`numSiretEnt`,`indexSiret`,`telEnt`,`assureurEnt`,`numSocietaire`,`nomRepresentant`,`prenomRepresentant`,`fctRepresentant`, `telRepresentant`,`mailRepresentant`,`idVille`) VALUES (NULL,("Massa Institute","SARL","707-5099 Egestas. Road","85275111400004",18,"02 75 26 12 36","Libero Nec LLC","9873092440718609","Bolton","Montana","secretaire","06 61 52 70 00","elementum.lorem.ut@erategetipsum.org",38);
+INSERT INTO `entreprises` (`idEntreprise`,`raisonSociale`,`statutJuridiqueEnt`,`adresseEnt`,`numSiretEnt`,`indexSiret`,`telEnt`,`assureurEnt`,`numSocietaire`,`nomRepresentant`,`prenomRepresentant`,`fctRepresentant`, `telRepresentant`,`mailRepresentant`,`idVille`) VALUES (NULL,"Massa Institute","SARL","707-5099 Egestas. Road","85275111400004",18,"02 75 26 12 36","Libero Nec LLC","9873092440718609","Bolton","Montana","secretaire","06 61 52 70 00","elementum.lorem.ut@erategetipsum.org",38);
 INSERT INTO `entreprises` (`idEntreprise`,`raisonSociale`,`statutJuridiqueEnt`,`adresseEnt`,`numSiretEnt`,`indexSiret`,`telEnt`,`assureurEnt`,`numSocietaire`,`nomRepresentant`,`prenomRepresentant`,`fctRepresentant`, `telRepresentant`,`mailRepresentant`,`idVille`) VALUES (NULL,"Massa Institute","EURL","Ap #445-5589 Dolor Av.","37221732300008",19,"09 22 84 64 79","Ullamcorper Institute","6632738630128838","Sargent","Victor","ouvrier","01 68 27 33 56","ullamcorper.eu@ornare.org",8);
 
 
@@ -39370,7 +39370,7 @@ INSERT INTO `participation` (`idParticipation`,`dateDebut`,`dateFin`,`idSessionF
 INSERT INTO `animation`(`idAnimation`, `idUtilisateur`, `idFormation`) VALUES (NULL,1,8);
 INSERT INTO `animation`(`idAnimation`, `idUtilisateur`, `idFormation`) VALUES (NULL,2,4);
 INSERT INTO `animation`(`idAnimation`, `idUtilisateur`, `idFormation`) VALUES (NULL,3,3);
-INSERT INTO `animation`(`idAnimation`, `idUtilisateur`, `idFormation`) VALUES (NULL,4,2;
+INSERT INTO `animation`(`idAnimation`, `idUtilisateur`, `idFormation`) VALUES (NULL,4,2);
 INSERT INTO `animation`(`idAnimation`, `idUtilisateur`, `idFormation`) VALUES (NULL,5,1);
 INSERT INTO `animation`(`idAnimation`, `idUtilisateur`, `idFormation`) VALUES (NULL,6,5);
 
@@ -39404,3 +39404,75 @@ INSERT INTO `evaluations` (`idStage`,`dateEvaluation`,`objectifAcquisition`,`com
 INSERT INTO `evaluations` (`idStage`,`dateEvaluation`,`objectifAcquisition`,`comportementMt`,`satisfactionEnt`,`remarqueEnt`,`perspectiveEmb`) VALUES (NULL,"2021-04-21",1,2,1,"il est nul","non");
 INSERT INTO `evaluations` (`idStage`,`dateEvaluation`,`objectifAcquisition`,`comportementMt`,`satisfactionEnt`,`remarqueEnt`,`perspectiveEmb`) VALUES (NULL,"2021-02-14",3,1,2,"il est doué","oui");
 
+INSERT INTO `valeurtravauxdangereux` (`idStage`,`idTravaux`,`valeurTravaux`) VALUES (NULL,1,5);
+INSERT INTO `valeurtravauxdangereux` (`idStage`,`idTravaux`,`valeurTravaux`) VALUES  (NULL,2,2);
+INSERT INTO `valeurtravauxdangereux` (`idStage`,`idTravaux`,`valeurTravaux`) VALUES  (NULL,4,3);
+INSERT INTO `valeurtravauxdangereux` (`idStage`,`idTravaux`,`valeurTravaux`) VALUES  (NULL,1,1);
+INSERT INTO `valeurtravauxdangereux` (`idStage`,`idTravaux`,`valeurTravaux`) VALUES  (NULL,3,4);
+INSERT INTO `valeurtravauxdangereux` (`idStage`,`idTravaux`,`valeurTravaux`) VALUES  (NULL,5,2);
+
+INSERT INTO `valeuracquis` (`idValeurAcquis`,`idStage`,`ordreAcquis`,`libelleAcquis`,`valeurAcquis`) VALUES (NULL,2,1,`php`,4);
+INSERT INTO `valeuracquis` (`idValeurAcquis`,`idStage`,`ordreAcquis`,`libelleAcquis`,`valeurAcquis`) VALUES (NULL,2,2,`sql`,2);
+INSERT INTO `valeuracquis` (`idValeurAcquis`,`idStage`,`ordreAcquis`,`libelleAcquis`,`valeurAcquis`) VALUES (NULL,2,3,`js`,3);
+INSERT INTO `valeuracquis` (`idValeurAcquis`,`idStage`,`ordreAcquis`,`libelleAcquis`,`valeurAcquis`) VALUES (NULL,2,4,`agile`,5);
+INSERT INTO `valeuracquis` (`idValeurAcquis`,`idStage`,`ordreAcquis`,`libelleAcquis`,`valeurAcquis`) VALUES (NULL,3,1,`php`,5);
+INSERT INTO `valeuracquis` (`idValeurAcquis`,`idStage`,`ordreAcquis`,`libelleAcquis`,`valeurAcquis`) VALUES (NULL,3,2,`sql`,4);
+INSERT INTO `valeuracquis` (`idValeurAcquis`,`idStage`,`ordreAcquis`,`libelleAcquis`,`valeurAcquis`) VALUES (NULL,3,3,`js`,2);
+INSERT INTO `valeuracquis` (`idValeurAcquis`,`idStage`,`ordreAcquis`,`libelleAcquis`,`valeurAcquis`) VALUES (NULL,3,4,`agile`,2);
+INSERT INTO `valeuracquis` (`idValeurAcquis`,`idStage`,`ordreAcquis`,`libelleAcquis`,`valeurAcquis`) VALUES (NULL,1,1,`php`,4);
+INSERT INTO `valeuracquis` (`idValeurAcquis`,`idStage`,`ordreAcquis`,`libelleAcquis`,`valeurAcquis`) VALUES (NULL,1,2,`sql`,2);
+INSERT INTO `valeuracquis` (`idValeurAcquis`,`idStage`,`ordreAcquis`,`libelleAcquis`,`valeurAcquis`) VALUES (NULL,1,3,`js`,5);
+INSERT INTO `valeuracquis` (`idValeurAcquis`,`idStage`,`ordreAcquis`,`libelleAcquis`,`valeurAcquis`) VALUES (NULL,1,4,`agile`,1);
+INSERT INTO `valeuracquis` (`idValeurAcquis`,`idStage`,`ordreAcquis`,`libelleAcquis`,`valeurAcquis`) VALUES (NULL,4,1,`php`,5);
+INSERT INTO `valeuracquis` (`idValeurAcquis`,`idStage`,`ordreAcquis`,`libelleAcquis`,`valeurAcquis`) VALUES (NULL,4,2,`sql`,4);
+INSERT INTO `valeuracquis` (`idValeurAcquis`,`idStage`,`ordreAcquis`,`libelleAcquis`,`valeurAcquis`) VALUES (NULL,4,3,`js`,4);
+INSERT INTO `valeuracquis` (`idValeurAcquis`,`idStage`,`ordreAcquis`,`libelleAcquis`,`valeurAcquis`) VALUES (NULL,4,4,`agile`,3);
+
+INSERT INTO `valeurcomportementsprofessionnels`(`idComportementProfessionnel`, `idStage`, `idLibelleComportementProfessionnel`, `valeurComportement`) VALUES (NULL,1,1,1);
+INSERT INTO `valeurcomportementsprofessionnels`(`idComportementProfessionnel`, `idStage`, `idLibelleComportementProfessionnel`, `valeurComportement`) VALUES (NULL,1,2,1);
+INSERT INTO `valeurcomportementsprofessionnels`(`idComportementProfessionnel`, `idStage`, `idLibelleComportementProfessionnel`, `valeurComportement`) VALUES (NULL,1,3,2);
+INSERT INTO `valeurcomportementsprofessionnels`(`idComportementProfessionnel`, `idStage`, `idLibelleComportementProfessionnel`, `valeurComportement`) VALUES (NULL,1,4,3);
+INSERT INTO `valeurcomportementsprofessionnels`(`idComportementProfessionnel`, `idStage`, `idLibelleComportementProfessionnel`, `valeurComportement`) VALUES (NULL,1,5,2);
+INSERT INTO `valeurcomportementsprofessionnels`(`idComportementProfessionnel`, `idStage`, `idLibelleComportementProfessionnel`, `valeurComportement`) VALUES (NULL,1,6,5);
+INSERT INTO `valeurcomportementsprofessionnels`(`idComportementProfessionnel`, `idStage`, `idLibelleComportementProfessionnel`, `valeurComportement`) VALUES (NULL,1,7,4);
+INSERT INTO `valeurcomportementsprofessionnels`(`idComportementProfessionnel`, `idStage`, `idLibelleComportementProfessionnel`, `valeurComportement`) VALUES (NULL,1,8,3);
+INSERT INTO `valeurcomportementsprofessionnels`(`idComportementProfessionnel`, `idStage`, `idLibelleComportementProfessionnel`, `valeurComportement`) VALUES (NULL,1,9,4);
+INSERT INTO `valeurcomportementsprofessionnels`(`idComportementProfessionnel`, `idStage`, `idLibelleComportementProfessionnel`, `valeurComportement`) VALUES (NULL,1,10,1);
+INSERT INTO `valeurcomportementsprofessionnels`(`idComportementProfessionnel`, `idStage`, `idLibelleComportementProfessionnel`, `valeurComportement`) VALUES (NULL,1,11,1);
+INSERT INTO `valeurcomportementsprofessionnels`(`idComportementProfessionnel`, `idStage`, `idLibelleComportementProfessionnel`, `valeurComportement`) VALUES (NULL,1,12,2);
+INSERT INTO `valeurcomportementsprofessionnels`(`idComportementProfessionnel`, `idStage`, `idLibelleComportementProfessionnel`, `valeurComportement`) VALUES (NULL,2,1,1);
+INSERT INTO `valeurcomportementsprofessionnels`(`idComportementProfessionnel`, `idStage`, `idLibelleComportementProfessionnel`, `valeurComportement`) VALUES (NULL,2,2,5);
+INSERT INTO `valeurcomportementsprofessionnels`(`idComportementProfessionnel`, `idStage`, `idLibelleComportementProfessionnel`, `valeurComportement`) VALUES (NULL,2,3,4);
+INSERT INTO `valeurcomportementsprofessionnels`(`idComportementProfessionnel`, `idStage`, `idLibelleComportementProfessionnel`, `valeurComportement`) VALUES (NULL,2,4,2);
+INSERT INTO `valeurcomportementsprofessionnels`(`idComportementProfessionnel`, `idStage`, `idLibelleComportementProfessionnel`, `valeurComportement`) VALUES (NULL,2,5,3);
+INSERT INTO `valeurcomportementsprofessionnels`(`idComportementProfessionnel`, `idStage`, `idLibelleComportementProfessionnel`, `valeurComportement`) VALUES (NULL,2,6,2);
+INSERT INTO `valeurcomportementsprofessionnels`(`idComportementProfessionnel`, `idStage`, `idLibelleComportementProfessionnel`, `valeurComportement`) VALUES (NULL,2,7,1);
+INSERT INTO `valeurcomportementsprofessionnels`(`idComportementProfessionnel`, `idStage`, `idLibelleComportementProfessionnel`, `valeurComportement`) VALUES (NULL,2,8,4);
+INSERT INTO `valeurcomportementsprofessionnels`(`idComportementProfessionnel`, `idStage`, `idLibelleComportementProfessionnel`, `valeurComportement`) VALUES (NULL,2,9,5);
+INSERT INTO `valeurcomportementsprofessionnels`(`idComportementProfessionnel`, `idStage`, `idLibelleComportementProfessionnel`, `valeurComportement`) VALUES (NULL,2,10,2);
+INSERT INTO `valeurcomportementsprofessionnels`(`idComportementProfessionnel`, `idStage`, `idLibelleComportementProfessionnel`, `valeurComportement`) VALUES (NULL,2,11,3);
+INSERT INTO `valeurcomportementsprofessionnels`(`idComportementProfessionnel`, `idStage`, `idLibelleComportementProfessionnel`, `valeurComportement`) VALUES (NULL,2,12,3);
+INSERT INTO `valeurcomportementsprofessionnels`(`idComportementProfessionnel`, `idStage`, `idLibelleComportementProfessionnel`, `valeurComportement`) VALUES (NULL,3,1,2);
+INSERT INTO `valeurcomportementsprofessionnels`(`idComportementProfessionnel`, `idStage`, `idLibelleComportementProfessionnel`, `valeurComportement`) VALUES (NULL,3,2,5);
+INSERT INTO `valeurcomportementsprofessionnels`(`idComportementProfessionnel`, `idStage`, `idLibelleComportementProfessionnel`, `valeurComportement`) VALUES (NULL,3,3,4);
+INSERT INTO `valeurcomportementsprofessionnels`(`idComportementProfessionnel`, `idStage`, `idLibelleComportementProfessionnel`, `valeurComportement`) VALUES (NULL,3,4,5);
+INSERT INTO `valeurcomportementsprofessionnels`(`idComportementProfessionnel`, `idStage`, `idLibelleComportementProfessionnel`, `valeurComportement`) VALUES (NULL,3,5,4);
+INSERT INTO `valeurcomportementsprofessionnels`(`idComportementProfessionnel`, `idStage`, `idLibelleComportementProfessionnel`, `valeurComportement`) VALUES (NULL,3,6,2);
+INSERT INTO `valeurcomportementsprofessionnels`(`idComportementProfessionnel`, `idStage`, `idLibelleComportementProfessionnel`, `valeurComportement`) VALUES (NULL,3,7,1);
+INSERT INTO `valeurcomportementsprofessionnels`(`idComportementProfessionnel`, `idStage`, `idLibelleComportementProfessionnel`, `valeurComportement`) VALUES (NULL,3,8,3);
+INSERT INTO `valeurcomportementsprofessionnels`(`idComportementProfessionnel`, `idStage`, `idLibelleComportementProfessionnel`, `valeurComportement`) VALUES (NULL,3,9,1);
+INSERT INTO `valeurcomportementsprofessionnels`(`idComportementProfessionnel`, `idStage`, `idLibelleComportementProfessionnel`, `valeurComportement`) VALUES (NULL,3,10,3);
+INSERT INTO `valeurcomportementsprofessionnels`(`idComportementProfessionnel`, `idStage`, `idLibelleComportementProfessionnel`, `valeurComportement`) VALUES (NULL,3,11,1);
+INSERT INTO `valeurcomportementsprofessionnels`(`idComportementProfessionnel`, `idStage`, `idLibelleComportementProfessionnel`, `valeurComportement`) VALUES (NULL,3,12,5);
+INSERT INTO `valeurcomportementsprofessionnels`(`idComportementProfessionnel`, `idStage`, `idLibelleComportementProfessionnel`, `valeurComportement`) VALUES (NULL,4,1,4);
+INSERT INTO `valeurcomportementsprofessionnels`(`idComportementProfessionnel`, `idStage`, `idLibelleComportementProfessionnel`, `valeurComportement`) VALUES (NULL,4,2,5);
+INSERT INTO `valeurcomportementsprofessionnels`(`idComportementProfessionnel`, `idStage`, `idLibelleComportementProfessionnel`, `valeurComportement`) VALUES (NULL,4,3,2);
+INSERT INTO `valeurcomportementsprofessionnels`(`idComportementProfessionnel`, `idStage`, `idLibelleComportementProfessionnel`, `valeurComportement`) VALUES (NULL,4,4,1);
+INSERT INTO `valeurcomportementsprofessionnels`(`idComportementProfessionnel`, `idStage`, `idLibelleComportementProfessionnel`, `valeurComportement`) VALUES (NULL,4,5,2);
+INSERT INTO `valeurcomportementsprofessionnels`(`idComportementProfessionnel`, `idStage`, `idLibelleComportementProfessionnel`, `valeurComportement`) VALUES (NULL,4,6,1);
+INSERT INTO `valeurcomportementsprofessionnels`(`idComportementProfessionnel`, `idStage`, `idLibelleComportementProfessionnel`, `valeurComportement`) VALUES (NULL,4,7,3);
+INSERT INTO `valeurcomportementsprofessionnels`(`idComportementProfessionnel`, `idStage`, `idLibelleComportementProfessionnel`, `valeurComportement`) VALUES (NULL,4,8,1);
+INSERT INTO `valeurcomportementsprofessionnels`(`idComportementProfessionnel`, `idStage`, `idLibelleComportementProfessionnel`, `valeurComportement`) VALUES (NULL,4,9,5);
+INSERT INTO `valeurcomportementsprofessionnels`(`idComportementProfessionnel`, `idStage`, `idLibelleComportementProfessionnel`, `valeurComportement`) VALUES (NULL,4,10,4);
+INSERT INTO `valeurcomportementsprofessionnels`(`idComportementProfessionnel`, `idStage`, `idLibelleComportementProfessionnel`, `valeurComportement`) VALUES (NULL,4,11,3);
+INSERT INTO `valeurcomportementsprofessionnels`(`idComportementProfessionnel`, `idStage`, `idLibelleComportementProfessionnel`, `valeurComportement`) VALUES (NULL,4,12,1);
