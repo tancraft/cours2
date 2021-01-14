@@ -18,10 +18,11 @@ https://www.generatedata.com/
 valeurs travaux dangereux
 
 
-stagesManager: getByIdStagiaire() ,getByIdTuteur()
-animationManager: delete() findById(), getList(), getByFormation(), getByUtilisateur(), AnimationAPI.php
-entrepriseManager: getByNumSiretEnt()
-sessionManager: getByFormation()
-participationManager:getByIdStagiare()
-tuteurManager: getByEntreprise()
-stagiaireManager: getByNumBenefStagiare()
+stagesManager: getByIdStagiaire() ok ,getByIdTuteur() ok
+animationManager: delete() ok findById() a voir, getList() a voir, getByFormation() ok, getByUtilisateur() ok, AnimationAPI.php a voir
+entrepriseManager: getByNumSiretEnt() ok
+sessionManager: getByFormation() ok
+participationManager:getByIdStagiare() ok modif
+tuteurManager: getByEntreprise() ok modif
+stagiaireManager: getByNumBenefStagiare() ok modif
+utilisateurManager: getby email() ok
