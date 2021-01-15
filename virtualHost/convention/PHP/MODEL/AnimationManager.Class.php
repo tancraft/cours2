@@ -31,7 +31,7 @@ class AnimationManager
 	public static function delete($idUtilisateur,$idFormation)
 	{
  		$db=DbConnect::getDb();
-		$db->exec("DELETE FROM Animation WHERE idUtilisateur=" .$idUtilisateur." AND idFormation=".$idFormation);
+		$db->exec("DELETE FROM Animation WHERE idUtilisateur=" .$idUtilisateur and "idFormation=".$idFormation);
 	}
 
 

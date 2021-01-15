@@ -94,7 +94,7 @@ class StagesManager
         $db = DbConnect::getDb();
         $id = (int) $idStagiaire;
         $liste = [];
-        $q = $db->query("SELECT * FROM Stages where idStagiaire=".$id);
+        $q = $db->query("SELECT * FROM Stages where idStagiaire=$id");
         while ($donnees = $q->fetch(PDO::FETCH_ASSOC)) {
             if ($donnees != false) {
                 $liste[] = new Stages($donnees);
