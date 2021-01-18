@@ -1,4 +1,3 @@
-
 /********* Global **********/
 body
 {
@@ -44,8 +43,20 @@ img
     flex:5;
 }
 
+.demi {
+    flex: 0.5;
+}
+
+.mini{
+    flex:0.2;
+}
+
+.double {
+    flex: 2;
+}
+
 .info{
-    margin:1.5em;
+    margin:0.3em;
 }
 /******* Form ********/
 label{
@@ -55,6 +66,11 @@ label{
 
 .centerItem{
     align-items:center;
+}
+
+a {
+    color: var(--CouleurTexte);
+    text-decoration: none
 }
 
 /******* Boutons ********/
@@ -72,7 +88,6 @@ label{
 {
     border:2px solid var(--CouleurTexte);
     color: var(--BordureBouton);
-    /* font-size:1.2em; */
 }
 
 /********* input & Select *********/
@@ -133,12 +148,6 @@ footer{
 
 /********mes ajouts******/
 
- a{
-    color: var(--CouleurTexte);
-    text-decoration: none;
-}
-
-.list{
-    color: var(--CouleurTexte);
-
+.noborder{
+    border: none;
 }
