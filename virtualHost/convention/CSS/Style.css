@@ -11,6 +11,7 @@ div,header,footer,body,nav,section,form
     flex:1;
     justify-content:center;
 }
+
 img
 {
     width:100%;
@@ -75,13 +76,14 @@ label{
 }
 
 /********* input & Select *********/
-input,select
+input, select, .case
 {
     border:1px solid var(--BordureBouton);
     background-color: Transparent;
     padding:0.5em 1em;
     color: var(--CouleurTexte);
 }
+
 input:focus
 {
     background-color: #aaa;
@@ -137,11 +139,6 @@ footer{
 }
 
 .list{
-    margin: 0.8em;
     color: var(--CouleurTexte);
 
-}
-
-.case{
-    padding: 0.2em;
 }
