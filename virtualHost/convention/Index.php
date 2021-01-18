@@ -20,7 +20,7 @@ $lang=isset($_SESSION['lang']) ? $_SESSION['lang'] : 'FR';
 /******Fin des langues******/
 
 $routes=[
-	"default"=>["PHP/VIEW/","sessionList","Accueil"],
+	"default"=>["PHP/VIEW/","detailsSession","Accueil"],
 	// "TestanimationManager"=>["PHP/MODEL/TESTMANAGER/","TestanimationManager","Test de animation"],
 	// "TestcomportementsprofessionnelsManager"=>["PHP/MODEL/TESTMANAGER/","TestcomportementsprofessionnelsManager","Test de comportementsprofessionnels"],
 	// "TestentreprisesManager"=>["PHP/MODEL/TESTMANAGER/","TestentreprisesManager","Test de entreprises"],
@@ -36,7 +36,9 @@ $routes=[
 	// "TesttuteursManager"=>["PHP/MODEL/TESTMANAGER/","TesttuteursManager","Test de tuteurs"],
 	// "TestutilisateursManager"=>["PHP/MODEL/TESTMANAGER/","TestutilisateursManager","Test de utilisateurs"],
 	// "TestvillesManager"=>["PHP/MODEL/TESTMANAGER/","TestvillesManager","Test de villes"],
-		
+	"listeSession" => ["PHP/VIEW/", "ListeSession", "Liste des sessions"],
+	"detailsSession"=>["PHP/VIEW/","DetailsSession","Detail des sessions"],
+
 	"FormConnexion" => ["PHP/VIEW/", "FormConnexion", "Identification"],
 	"ActionConnexion" => ["PHP/VIEW/", "ActionConnexion", "Identification"],
 	"ActionDeconnexion" => ["PHP/VIEW/", "ActionDeconnexion", "Identification"],
