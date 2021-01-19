@@ -88,13 +88,12 @@ class StagesManager
 		}
 		return $liste;
 	}
-	
-	public static function getByIdStagiaire($idStagiaire)
+	public static function getByStagiaire($idStagiaire)
     {
         $db = DbConnect::getDb();
         $id = (int) $idStagiaire;
         $liste = [];
-        $q = $db->query("SELECT * FROM Stages where idStagiaire=$id");
+        $q = $db->query("SELECT * FROM Stages where idStagiaire=".$id);
         while ($donnees = $q->fetch(PDO::FETCH_ASSOC)) {
             if ($donnees != false) {
                 $liste[] = new Stages($donnees);
@@ -102,7 +101,7 @@ class StagesManager
         }return $liste;
 
 	}
-	public static function getByIdTuteur($idTuteur)
+	public static function getByTuteur($idTuteur)
     {
         $db = DbConnect::getDb();
         $id = (int) $idTuteur;

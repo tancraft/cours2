@@ -8,6 +8,7 @@ class Villes
 	private $_idVille;
 	private $_nomVille;
 	private $_codePostal;
+	private $_idDepartement;
 
 	/***************** Accesseurs ***************** */
 
@@ -42,6 +43,16 @@ class Villes
 		$this->_codePostal=$codePostal;
 	}
 
+	public function getIdDepartement()
+	{
+		return $this->_idDepartement;
+	}
+
+	public function setIdDepartement($idDepartement)
+	{
+		$this->_idDepartement=$idDepartement;
+	}
+
 	/*****************Constructeur***************** */
 
 	public function __construct(array $options = [])
@@ -72,7 +83,7 @@ class Villes
 	*/
 	public function toString()
 	{
-		return "IdVille : ".$this->getIdVille()."NomVille : ".$this->getNomVille()."CodePostal : ".$this->getCodePostal()."\n";
+		return "IdVille : ".$this->getIdVille()."NomVille : ".$this->getNomVille()."CodePostal : ".$this->getCodePostal()."IdDepartement : ".$this->getIdDepartement()."\n";
 	}
 
 
