@@ -7,6 +7,9 @@ if (isset($_GET['id'])) // si l'id est renseigné
     if ($idRecu != false) {
         $idChoisi = SessionsFormationsManager::findById($idRecu);
         $idForma = FormationsManager::findById($idChoisi->getIdFormation());
+        $listePae = PeriodesStagesManager::getListBySession($idChoisi->getIdSessionFormation());
+
+        var_dump($listePae);
     }
 }
 ?>
@@ -69,14 +72,66 @@ if ($mode === "ajout") {
         echo '<div class="case">' . $idForma->getLibelleFormation() . '</div>';
     } else {
         echo '<select name="idFormation">
-                <option value="' . $idForma->getIdFormation() . '">' . $idForma->getLibelleFormation() . '</option>';
-        foreach ($formations as $uneFormation) {
-            echo '<option value="' . $uneFormation->getIdFormation() . '">' . $uneFormation->getLibelleFormation() . '</option>';
+                <option value="' . $idForma->getIdFormation() . '" selected >' . $idForma->getLibelleFormation() . '</option>';
+                foreach ($formations as $uneFormation) {
+                    echo '<option value="' . $uneFormation->getIdFormation() . '">' . $uneFormation->getLibelleFormation() . '</option>';
+                }
+                echo '</select>';
         }
-        echo '</select>';
-    }
+
 
 }
+
+if(isset($_GET['id']))
+{
+    //$toto = 'id ok';
+    echo '<div class="colonne" >
+    <div>
+    <div class="colonne" >
+    <label for="dateDebutPAE">Date de début de stage: </label>
+    <input type="date" name="dateDebutPAE" />
+    </div>
+    <div class="colonne" >
+    <label for="dateFinPAE">Date de fin de stage: </label>
+    <input type="date" name="dateFinPAE" />
+    </div>
+    </div>
+    <div class="colonne" >
+    <label for="dateRapportSuivi">Date Rapport de suivi: </label>
+    <input type="date" name="dateRapportSuivi" />
+    </div>
+    <div class="colonne" >
+    <label for="objectifPAE">Objectif de stage: </label>
+    <input type="textarea" name="objectifPAE" />
+    </div>
+    </div>';
+}
+else
+{
+    //$toto = 'id ko';
+    echo '<div class="colonne" >
+    <div>
+    <div class="colonne" >
+    <label for="dateDebutPAE">Date de début de stage: </label>
+    <input type="date" name="dateDebutPAE" />
+    </div>
+    <div class="colonne" >
+    <label for="dateFinPAE">Date de fin de stage: </label>
+    <input type="date" name="dateFinPAE" />
+    </div>
+    </div>
+    <div class="colonne" >
+    <label for="dateRapportSuivi">Date Rapport de suivi: </label>
+    <input type="date" name="dateRapportSuivi" />
+    </div>
+    <div class="colonne" >
+    <label for="objectifPAE">Objectif de stage: </label>
+    <input type="textarea" name="objectifPAE" />
+    </div>
+    </div>';
+}
+
+//var_dump($toto);
 
 ?>
 

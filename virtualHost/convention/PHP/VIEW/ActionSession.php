@@ -7,7 +7,7 @@ if (isset($_GET['id'])) // si l'id est renseigné
 
     $idRecu = $_GET['id'];
     if ($idRecu != false) {
-        $idChoisi = UtilisateursManager::findById($idRecu);
+        $idChoisi = SessionsFormationsManager::findById($idRecu);
 
     }
 }

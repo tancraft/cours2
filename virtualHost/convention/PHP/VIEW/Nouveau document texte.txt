@@ -2,3 +2,9 @@ date debut date fin
 objectif pae
 
 mette a jour la table periode
+
+recuperer la liste des periode ok
+l encoder en json
+
+afficher la liste via js
+
