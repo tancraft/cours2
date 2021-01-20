@@ -53,6 +53,7 @@ $routes=[
 	"ListeSessions" => ["PHP/VIEW/", "ListeSessions", "Gestion des sessions"],
 	"FormSession" => ["PHP/VIEW/", "FormSession", "Gestion des sessions"],
 	"ActionSession" => ["PHP/VIEW/", "ActionSession", "Gestion des sessions"],
+	"FormPeriode" => ["PHP/VIEW/", "FormPeriode", "Ajout de periode"],
 
 	"ListeUtilisateurs" => ["PHP/VIEW/", "ListeUtilisateurs", "Gestion des Utilisateurs"],
 	"FormUtilisateur" => ["PHP/VIEW/", "FormUtilisateur", "Gestion des Utilisateurs"],
