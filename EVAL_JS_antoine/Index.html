@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emprunt</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body class="centrer">
+    <main>
+        <div class="titre centrer"><h1>Calcul du taux d'interet</h1></div>
+        <section class="colonne">
+            <div><label for="capital">capital emprunté</label><input type="text" name="capital" id="capital"><div class="devise">€</div><div class="message"></div></div>
+            <div><label for="taux">Taux nominal Annuel</label><input type="text" name="taux" id="taux"><div class="devise">%</div><div class="message"></div></div>
+            <div><label for="duree">Durée de l'emprunt</label><input type="text" name="duree" id="duree"><div class="devise">Ans</div><div class="message"></div></div>
+        </section>
+        <section class="colonne">
+            <div><label for="mens">Mensualité</label><input type="text" name="mens" id="mens"><div class="devise">€</div><div></div></div>
+            <div><label for="cout">Coût total</label><input type="text" name="cout" id="cout"><div class="devise">€</div><div></div></div>
+        </section >
+        <div class="navig">
+        <button id="calcul">
+            caculer
+        </button>
+        <button>
+            nouveau calcul
+        </button>
+    </div>
+    </main>
+
+    <script src="Script.js"></script>
+</body>
+</html>

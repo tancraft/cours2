@@ -1,0 +1,33 @@
+
+body, div,section, input, label{
+    display: flex;
+    flex: 1;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.centrer{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+main{
+    width: 80%;
+}
+
+.colonne{
+    flex-direction: column;
+}
+
+body{
+    background-color: wheat;
+}
+
+section {
+    border: 2px solid grey;
+}
