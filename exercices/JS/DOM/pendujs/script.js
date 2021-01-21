@@ -926,11 +926,8 @@ var reload = document.querySelector('#reload');
 
 var mot = choixMot();
 var motCoder = coderMot(mot);
-console.log(motCoder);
 var boutons = tabClavier();
 clavier.innerHTML = afficheClavier(boutons);
-
-console.log(mot);
 
 afficherMot(motCoder);
 
@@ -949,7 +946,6 @@ clavier.addEventListener('click', function (e) {
     }
 
     afficherMot(motCoder);
-    console.log('err: ' + nbErreurs);
     var verif = testerGagner(nbErreurs, motCoder);
     var fin = document.querySelector('.fin');
     var finDujeu = document.querySelector('#finDeJeu');
