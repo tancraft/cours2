@@ -2,24 +2,15 @@
 <?php
 
 $mode = $_GET['mode'];
-$idSession = $_GET['idSession'];
+$idSession = $_GET['id'];
 
-var_dump($_GET);
 echo '<div class = "case centre noborder">
 <h2>Ajouter une Periode</h2>
     </div>
     <div class="colonne info" >';
-switch ($mode) {
-    case "ajout":{
 
-            echo '<form  action="index.php?page=ActionSession&mode=fini" method="POST">';
-            break;
-        }
-    case "modif":{
-            echo '<form  action="index.php?page=ActionSession&mode=fini&id=' . $idSession . '" method="POST">';
-            break;
-        }
-}
+echo '<form  action="index.php?page=ActionSession&mode=ajoutPer" method="POST">';
+          
 
 echo '            <div>
 <input type="hidden" name="idSessionFormation" value="' . $idSession . '"/>
@@ -42,23 +33,15 @@ echo '            <div>
     </div>';
 
     echo '<div>
-    <button class="bouton" type="submit">Fini</button>
+    <button class="bouton" type="submit">Valider</button>
     </div>
-    </form>
-    <button id="ajout1p" class="bouton" type="submit"><i class="fas fa-edit"></i> Ajout Periode</button>';
-?>
+
+    <button id="ajout1p" class="bouton" type="submit"><i class="fas fa-edit"></i> Ajout Periode</button>
+    </form>';
+    ?>
 </div>
 <div class="mini"></div>
 <div class="info"><a href="Index.php?page=ListeSessions"><button class="bouton">Retour</button></a></div>
 <div class="mini"></div>
 </section>
 
-<script type="text/javascript">
-var ajoutP = document.querySelector('#ajout1p');
-
-ajoutP.addEventListener('click', function(){
-var form = document.querySelector('form');
-
-form.action +='&perSup=ok'
-});
-</script>

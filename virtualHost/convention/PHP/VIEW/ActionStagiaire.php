@@ -2,27 +2,28 @@
 
 $mode=$_GET['mode'];
 
-$Utilisateur = new Utilisateurs($_POST);
-
+$stagiaire = new Stagiaires($_POST);
+// var_dump($stagiaire);
 
 
 switch($mode)
 {
     case "ajouter":
     {
-        UtilisateursManager::add($Utilisateur);
+        StagiairesManager::add($stagiaire);
         break;
     }
     case "modifier":
     {
-        UtilisateursManager::update($Utilisateur);
+        StagiairesManager::update($stagiaire);
         break;
     }
     case "supprimer":
     {
-        UtilisateursManager::delete($Utilisateur);
+        StagiairesManager::delete($stagiaire);
         break;
     }
 
 }
+
 header("location:index.php?page=ListeStagiaires");
