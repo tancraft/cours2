@@ -34,6 +34,9 @@ switch ($mode)
             break;
         }
     case "delete":    {
+            
+            
+        $idSession = SessionsFormationsManager::findById($_POST['idSessionFormation']);
         $session = new SessionsFormations($_POST);
             for ($i = 0; $i < $_POST['nbPae']; $i++)
             {
@@ -41,8 +44,9 @@ switch ($mode)
                 PeriodesStagesManager::delete($periode);
                 
             }
-            
-            SessionsFormationsManager::delete($session);
+
+            $idSession = SessionsFormationsManager::findById($_POST['idSessionFormation']);
+            SessionsFormationsManager::delete($idSession);
             header("location: Index.php?page=ListeSessions");
             break;
         }
