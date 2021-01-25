@@ -60,26 +60,28 @@ switch ($mode)
 ?>
             <div class = "colonne info">
                 <label for="numOffreFormation">Numéro d'offre: </label>
-            <div>   <input name="numOffreFormation" <?php if ($mode != "ajout")
+            <div class="verif">   
+                <input name="numOffreFormation" <?php if ($mode != "ajout")
 {
     echo 'value="' . $idChoisi->getNumOffreFormation() . '"';}if ($mode == "delete" || $mode == "detail")
 {
     echo 'disabled';
 }
-?>/></div>
+?> pattern="\d{6}"/><div class="false"></div>
+</div>
             </div>
 <div class = "colonne info">
              <label for="idFormation">formation: </label>
         <?php $formations = FormationsManager::getList();
 if ($mode === "ajout")
 {
-    echo '<div ><select name="idFormation">
+    echo '<div class="verif" ><select name="idFormation">
             <option selected="selected">----Choisissez une Formation----</option>';
     foreach ($formations as $uneFormation)
     {
         echo '<option value="' . $uneFormation->getIdFormation() . '">' . $uneFormation->getLibelleFormation() . '</option>';
     }
-    echo '</select></div>';
+    echo '</select><div class="false"></div></div>';
 }
 else
 {
@@ -90,7 +92,7 @@ else
     }
     else
     { /** mode modif */
-        echo '<select name="idFormation">';
+        echo '<select class="verif" name="idFormation">';
         foreach ($formations as $uneFormation)
         {
             $sel = "";
@@ -100,7 +102,7 @@ else
             }
             echo '<option value="' . $uneFormation->getIdFormation() . '"  ' . $sel . '>' . $uneFormation->getLibelleFormation() . '</option>';
         }
-        echo '</select>';
+        echo '</select><div class="false"></div>';
         $disabled = " ";
 
     }
@@ -112,22 +114,26 @@ else
                 <div>
                 <input type="hidden" name="idPeriode' . $i . '" value="' . $listePae[$i]->getIdPeriode() . '"/>
                 <input type="hidden" name="idSessionFormation" value="' . $listePae[$i]->getIdSessionFormation() . '"/>
-                <div class="colonne" >
+                <div class="verif colonne" >
                 <label for="dateDebutPAE">Date de début de stage: </label>
                 <input type="date" name="dateDebutPAE' . $i . '" value="' . $listePae[$i]->getDateDebutPAE() . '" ' . $disabled . ' />
+                <div class="false"></div>
                 </div>
-                <div class="colonne" >
+                <div class="verif colonne" >
                 <label for="dateFinPAE">Date de fin de stage: </label>
                 <input type="date" name="dateFinPAE' . $i . '" value="' . $listePae[$i]->getDateFinPAE() . '" ' . $disabled . ' />
+                <div class="false"></div>
                 </div>
                 </div>
-                <div class="colonne" >
+                <div class="verif colonne" >
                 <label for="dateRapportSuivi">Date Rapport de suivi: </label>
                 <input type="date" name="dateRapportSuivi' . $i . '" value="' . $listePae[$i]->getDateRapportSuivi() . '" ' . $disabled . ' />
+                <div class="false"></div>
                 </div>
-                <div class="colonne" >
+                <div class="verif colonne" >
                 <label for="objectifPAE">Objectif de stage: </label>
                 <input type="textarea" name="objectifPAE' . $i . '" value="' . $listePae[$i]->getObjectifPAE() . '" ' . $disabled . ' />
+                <div class="false"></div>
                 </div>
                 </div>';
     }

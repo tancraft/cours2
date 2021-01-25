@@ -14,20 +14,20 @@ echo '<form  action="index.php?page=ActionSession&mode=ajoutPer" method="POST">'
 
 echo '            <div>
 <input type="hidden" name="idSessionFormation" value="' . $idSession . '"/>
-<div class = "colonne">
+<div class = "verif colonne">
     <label for="dateDebutPAE">Date de début de stage: </label>
-    <input type="date" name="dateDebutPAE" />
+    <input type="date" name="dateDebutPAE" /><div class="false"></div>
     </div>
-    <div class="colonne" >
+    <div class="verif colonne" >
     <label for="dateFinPAE">Date de fin de stage: </label>
-    <input type="date" name="dateFinPAE" />
+    <input type="date" name="dateFinPAE" /><div class="false"></div>
     </div>
     </div>
-    <div class="colonne" >
+    <div class="verif colonne" >
     <label for="dateRapportSuivi">Date Rapport de suivi: </label>
-    <input type="date" name="dateRapportSuivi" />
+    <input type="date" name="dateRapportSuivi" /><div class="false"></div>
     </div>
-    <div class="colonne" >
+    <div class="verif colonne" >
     <label for="objectifPAE">Objectif de stage: </label>
     <input type="textarea" name="objectifPAE" />
     </div>';
@@ -44,4 +44,5 @@ echo '            <div>
 <div class="info"><a href="Index.php?page=ListeSessions"><button class="bouton">Retour</button></a></div>
 <div class="mini"></div>
 </section>
+
 

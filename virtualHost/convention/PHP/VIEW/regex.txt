@@ -1,0 +1,2 @@
+verif num offre
+/^[0-9]*${6}/

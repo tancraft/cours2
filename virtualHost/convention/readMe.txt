@@ -26,3 +26,11 @@ participationManager:getByIdStagiare() ok modif
 tuteurManager: getByEntreprise() ok modif
 stagiaireManager: getByNumBenefStagiare() ok modif
 utilisateurManager: getby email() ok
+
+
+dare debut>date now
+date fin>date debut
+date rapport preremp datefin-15
+modif date rapport <date fin
+
+num offre 6chiffre

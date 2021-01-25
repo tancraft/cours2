@@ -239,3 +239,14 @@ footer {
     border: 2px solid var(--CouleurTexte);
     background-position: right center;
 }
+
+/*mes ajouts*/
+.false{
+    display: none;
+    position: absolute;
+    right: 2em;
+}
+
+.verif{
+    position: relative;
+}
