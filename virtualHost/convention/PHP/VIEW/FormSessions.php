@@ -75,7 +75,7 @@ switch ($mode)
         <?php $formations = FormationsManager::getList();
 if ($mode === "ajout")
 {
-    echo '<div class="verif" ><select name="idFormation">
+    echo '<div class="verif" ><select name="idFormation" pattern="\d" >
             <option selected="selected">----Choisissez une Formation----</option>';
     foreach ($formations as $uneFormation)
     {
@@ -150,7 +150,7 @@ switch ($mode)
     case "ajout":
             {
             echo '<div class="mini">
-            </div><button class="bouton" type="submit"><i class="fas fa-plus-circle"></i> Ajouter une session</button>
+            </div><button class="bouton" type="submit"><i class="fas fa-plus-circle"></i> Valider</button>
             </form>';
             break;
         }
