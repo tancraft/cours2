@@ -72,7 +72,7 @@
 
 function verification(event) {
     var monInput = event.target;
-    var message = (monInput.parentNode).getElementsByClassName("cache")[0];
+    let message = (monInput.parentNode).getElementsByClassName("cache")[0];
 
     if (monInput.value == '') {
         monInput.style.border = "2px solid orange";
@@ -93,8 +93,10 @@ function verification(event) {
 function verifDateDebut(e) {// cette fonction verifie que la date de fin n est pas superieure a la date de debut
     var dateFin = e.target;
     var dateDebut = dateFin.parentNode.parentNode.getElementsByClassName('dateDebutPAE')[0];
+    let message = (dateFin.parentNode).getElementsByClassName("cache")[0];
     if (dateFin.value < dateDebut.value)
-        console.log("superieur");
+        message.style.display = 'block';
+        message.innerHTML = "format incorrect";
 
 }
 
@@ -103,6 +105,7 @@ function verifDateRapport(e) {
     var dateFin = dateRapport.parentNode.parentNode.parentNode.getElementsByClassName('dateFinPAE')[0];
     if (dateFin.value < dateRapport.value)
         console.log("superieur");
+
 
 }
 
