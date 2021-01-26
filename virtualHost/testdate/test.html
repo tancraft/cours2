@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>date</title>
+</head>
+<body>
+    <div id="test"></div>
+    <script type="text/javascript">
+    var date = document.getElementById('test');
+    let dateUser = datePeremtion.value;
+    let jour = parseInt(dateUser.substring(8, 10));
+    let mois = parseInt(dateUser.substring(5, 7));
+    var annee = parseInt(dateUser.substring(0, 4));
+    let date = new Date(annee, mois - 1, jour);
+
+    var today = new Date();
+var tomorrow = new Date();
+        var toto = tomorrow.setDate(today.getDate()+1);
+        console.log(today);
+      </script>
+</body>
+</html>

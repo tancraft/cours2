@@ -1,8 +1,7 @@
 
 function verifDateDebut(e) {// cette fonction verifie que la date de fin n est pas superieure a la date de debut
-    var dateFin = e.target;
-    console.log(e.target);
-    var dateDebut = dateFin.parentNode.parentNode.getElementsByClassName('dateDebutPAE')[0];
+    let dateFin = e.target;
+    let dateDebut = dateFin.parentNode.parentNode.getElementsByClassName('dateDebutPAE')[0];
     let message = (dateFin.parentNode).getElementsByClassName("cache")[0];
     if (dateFin.value < dateDebut.value) {
         message.innerHTML = "date incorrecte";
@@ -18,23 +17,39 @@ function verifDateDebut(e) {// cette fonction verifie que la date de fin n est p
 }
 
 function verifDateRapport(e) {
-    var dateRapport = e.target;
-    var dateFin = dateRapport.parentNode.parentNode.children[0].children[3].children[1];
-    let message = (dateRapport.parentNode).getElementsByClassName("cache")[0];
-    if (dateFin.value < dateRapport.value) {
+    let dateRapport = e.target.value;
+    console.log(e.target)
+    let dateFin = e.target.parentNode.parentNode.children[0].children[2].children[1].value;
+    let message = (e.target.parentNode).getElementsByClassName("cache")[0];
+    if (dateFin < dateRapport) {
         message.innerHTML = "date incorrecte";
         message.style.display = 'block';
-        dateRapport.style.border = "2px solid red";
+        e.target.style.border = "2px solid red";
     }
     else
     {
         message.innerHTML = "";
-        dateRapport.style.border = "2px solid green";
+        e.target.style.border = "2px solid green";
         message.style.display = 'block';
     }
 }
 
-var ajoutP = document.querySelector('#ajout1p');
+function ajoutDateRapport(e)
+{
+    let dateDebutInput = e.target;
+   let dateRapportInput = e.target.parentNode.parentNode.parentNode.children[1].children[1];
+    let dateDebut = new Date(dateDebutInput.value);
+
+    let toto = new Date();
+    toto.setDate(dateDebut.getDate()+15);
+
+    console.log(toto); 
+    // var test = toto.getFullYear()+"-"+(toto.getMonth()+1)+"-"+toto.getDate();
+    console.log(test);
+    dateRapportInput.value = test;
+}                                                                                          
+                                                                                                                               
+var ajoutP = document.querySelector('#ajout1p');                                                  
 
 ajoutP.addEventListener('click', function(){
 var form = document.querySelector('form');
@@ -46,6 +61,7 @@ var listeDateFin = document.getElementsByClassName('dateFinPAE');
 
 for (let i = 0; i < listeDateFin.length; i++) {
     listeDateFin[i].addEventListener('input', verifDateDebut);
+    listeDateFin[i].addEventListener('input', ajoutDateRapport);
 }
 
 var listeDateRapport = document.getElementsByClassName('dateRapportSuivi');

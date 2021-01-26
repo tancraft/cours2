@@ -91,8 +91,8 @@ function verification(event) {
 }
 
 function verifDateDebut(e) {// cette fonction verifie que la date de fin n est pas superieure a la date de debut
-    var dateFin = e.target;
-    var dateDebut = dateFin.parentNode.parentNode.getElementsByClassName('dateDebutPAE')[0];
+    let dateFin = e.target;
+    let dateDebut = dateFin.parentNode.parentNode.getElementsByClassName('dateDebutPAE')[0];
     let message = (dateFin.parentNode).getElementsByClassName("cache")[0];
     if (dateFin.value < dateDebut.value) {
         message.innerHTML = "date incorrecte";
@@ -108,8 +108,8 @@ function verifDateDebut(e) {// cette fonction verifie que la date de fin n est p
 }
 
 function verifDateRapport(e) {
-    var dateRapport = e.target;
-    var dateFin = dateRapport.parentNode.parentNode.children[0].children[3].children[1];
+    let dateRapport = e.target;
+    let dateFin = dateRapport.parentNode.parentNode.children[0].children[3].children[1];
     let message = (dateRapport.parentNode).getElementsByClassName("cache")[0];
     if (dateFin.value < dateRapport.value) {
         message.innerHTML = "date incorrecte";

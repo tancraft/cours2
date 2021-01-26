@@ -16,23 +16,23 @@ echo '            <div>
 <input type="hidden" name="idSessionFormation" value="' . $idSession . '"/>
 <div class = "relatif colonne">
     <label for="dateDebutPAE">Date de début de stage: </label>
-    <input type="date" name="dateDebutPAE" />
+    <input class="dateDebutPAE" type="date" name="dateDebutPAE" />
     <div class="cache erreur"></div>
 </div>
     <div class="relatif colonne" >
         <label for="dateFinPAE">Date de fin de stage: </label>
-        <input type="date" name="dateFinPAE" />
+        <input class="dateFinPAE" type="date" name="dateFinPAE" />
         <div class="cache erreur"></div>
     </div>
 </div>
 <div class="relatif colonne" >
     <label for="dateRapportSuivi">Date Rapport de suivi: </label>
-    <input type="date" name="dateRapportSuivi" />
+    <input class="dateRapportSuivi" type="date" name="dateRapportSuivi" />
     <div class="cache erreur"></div>
 </div>
     <div class="relatif colonne" >
     <label for="objectifPAE">Objectif de stage: </label>
-    <input type="textarea" name="objectifPAE" />
+    <input class="objectifPAE" type="textarea" name="objectifPAE" />
     </div>';
 
     echo '<div>
