@@ -36,12 +36,12 @@ function verifDateRapport(e) {
 
 function ajoutDateRapport(e)
 {
-    let dateDebutInput = e.target;
+    let dateFinInput = e.target;
    let dateRapportInput = e.target.parentNode.parentNode.parentNode.children[1].children[1];
-    let dateDebut = new Date(dateDebutInput.value);
+    let dateFin = new Date(dateFinInput.value);
 
     let toto = new Date();
-    toto.setDate(dateDebut.getDate()+15);
+    toto.setDate(dateFin.getDate()+15);
 
     console.log(toto); 
     // // var test = toto.getFullYear()+"-"+(toto.getMonth()+1)+"-"+toto.getDate();
