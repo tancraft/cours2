@@ -44,9 +44,9 @@ function ajoutDateRapport(e)
     toto.setDate(dateDebut.getDate()+15);
 
     console.log(toto); 
-    // var test = toto.getFullYear()+"-"+(toto.getMonth()+1)+"-"+toto.getDate();
-    console.log(test);
-    dateRapportInput.value = test;
+    // // var test = toto.getFullYear()+"-"+(toto.getMonth()+1)+"-"+toto.getDate();
+    // console.log(test);
+    // dateRapportInput.value = test;
 }                                                                                          
                                                                                                                                
 var ajoutP = document.querySelector('#ajout1p');                                                  
