@@ -33,23 +33,6 @@ switch ($mode)
             }
             break;
         }
-    case "delete":    {
-            
-            
-        $idSession = SessionsFormationsManager::findById($_POST['idSessionFormation']);
-        $session = new SessionsFormations($_POST);
-            for ($i = 0; $i < $_POST['nbPae']; $i++)
-            {
-                $periode = new PeriodesStages(['idPeriode' => $_POST['idPeriode' . $i], 'idSessionFormation' => $_POST['idSessionFormation'], 'dateDebutPAE' => $_POST['dateDebutPAE' . $i], 'dateFinPAE' => $_POST['dateFinPAE' . $i], 'dateRapportSuivi' => $_POST['dateRapportSuivi' . $i], 'objectifPAE' => $_POST['objectifPAE' . $i]]);
-                PeriodesStagesManager::delete($periode);
-                
-            }
-
-            $idSession = SessionsFormationsManager::findById($_POST['idSessionFormation']);
-            SessionsFormationsManager::delete($idSession);
-            header("location: Index.php?page=ListeSessions");
-            break;
-        }
     case "ajoutPer":    {
             $periode = new PeriodesStages($_POST);
             PeriodesStagesManager::add($periode);

@@ -37,14 +37,6 @@ switch ($mode) {
     <input name="idSessionFormation"  value="' . $idChoisi->getIdSessionFormation() . '" type="hidden" />';
             break;
         }
-    case "delete":{
-            echo '<div class = "case centre noborder">
-                    <h2>Supprimer une Session</h2>
-                    </div>
-            <form  action="index.php?page=ActionSession&mode=delete&id=' . $idChoisi->getIdSessionFormation() . '" method="POST">
-    <input name="idSessionFormation"  value="' . $idChoisi->getIdSessionFormation() . '" type="hidden" />';
-            break;
-        }
     case "detail":{
             echo '<div class = "case centre noborder">
                     <h2>Détail d\'une Session</h2>
@@ -71,7 +63,7 @@ switch ($mode) {
         <?php $formations = FormationsManager::getList();
 if ($mode === "ajout") {
     echo '<div class="relatif" ><select name="idFormation" pattern="\d" >
-            <option selected="selected">----Choisissez une Formation----</option>';
+            <option selected="selected" value="defaut" >----Choisissez une Formation----</option>';
     foreach ($formations as $uneFormation) {
         echo '<option value="' . $uneFormation->getIdFormation() . '">' . $uneFormation->getLibelleFormation() . '</option>';
     }
@@ -135,7 +127,7 @@ switch ($mode) {
     case "ajout":
         {
             echo '<div class="mini">
-            </div><button class="bouton" type="submit"><i class="fas fa-plus-circle"></i> Valider</button>
+            </div><button id="valide" class="bouton" type="submit"><i class="fas fa-plus-circle"></i> Valider</button>
             </form>';
             break;
         }
@@ -148,14 +140,8 @@ switch ($mode) {
 
             break;
         }
-    case "delete":
-        {
-            echo '<div class="mini"></div>
-            <button class="bouton" type="submit"><i class="fas fa-trash-alt"></i> Supprimer la session</button>
-            </form>';
-            break;
-        }
 }
+
 echo '<div class="mini"></div>';
 ?>
 </div>

@@ -29,9 +29,6 @@ foreach ($tableau as $uneSession) {
                         <button class="bouton"><i class="fas fa-info-circle"></i> Détail</button>
                     </a>
                     <div class="mini"></div>
-                    <a href="Index.php?page=FormSessions&mode=delete&id='.$uneSession->getIdSessionFormation().'">
-                        <button class="bouton"><i class="fas fa-trash-alt"></i> Supprimer</button>
-                    </a>
                 </div>
             </div>';
 }
