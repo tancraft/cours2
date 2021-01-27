@@ -8,10 +8,10 @@ INSERT INTO `roles` (`idRole`, `libelleRole`) VALUES ('3', 'Tuteur');
 INSERT INTO `roles` (`idRole`, `libelleRole`) VALUES ('4', 'Stagiaire');
 
 
-INSERT INTO `utilisateurs` (`idUtilisateur`, `nomUtilisateur`, `prenomUtilisateur`, `emailUtilisateur`, `mdpUtilisateur`, `idRole`) VALUES (NULL, 'POIX', 'Martine', 'martine.poix@gmail.com', 'toto',  '2');
+INSERT INTO `utilisateurs` (`idUtilisateur`, `nomUtilisateur`, `prenomUtilisateur`, `emailUtilisateur`, `mdpUtilisateur`,  `idRole`) VALUES (NULL, 'POIX', 'Martine', 'martine.poix@gmail.com', 'toto',  '2');
 INSERT INTO `utilisateurs` (`idUtilisateur`, `nomUtilisateur`, `prenomUtilisateur`, `emailUtilisateur`, `mdpUtilisateur`, `idRole`) VALUES (NULL, 'ZOZO', 'Thomas', 'thomas.zozo@gmail.com', 'toto',  '2');
-INSERT INTO `utilisateurs` (`idUtilisateur`, `nomUtilisateur`, `prenomUtilisateur`, `emailUtilisateur`, `mdpUtilisateur`, `idRole`) VALUES (NULL, 'SIMS', 'Alfred', 'alfred.sims@gmail.com', 'toto',  '2');	
-INSERT INTO `utilisateurs` (`idUtilisateur`, `nomUtilisateur`, `prenomUtilisateur`, `emailUtilisateur`, `mdpUtilisateur`, `idRole`) VALUES (NULL, 'toto', 'TOTO', 'toto@gmail.com', 'user', '1');	
+INSERT INTO `utilisateurs` (`idUtilisateur`, `nomUtilisateur`, `prenomUtilisateur`, `emailUtilisateur`, `mdpUtilisateur`,datePeremption, `idRole`) VALUES (NULL, 'SIMS', 'Alfred', 'alfred.sims@gmail.com', 'toto','2021-08-12','2');	
+INSERT INTO `utilisateurs` (`idUtilisateur`, `nomUtilisateur`, `prenomUtilisateur`, `emailUtilisateur`, `mdpUtilisateur`, datePeremption,`idRole`) VALUES (NULL, 'toto', 'TOTO', 'toto@gmail.com', 'user', '2022-01-01','1');	
 INSERT INTO `utilisateurs` (`idUtilisateur`, `nomUtilisateur`, `prenomUtilisateur`, `emailUtilisateur`, `mdpUtilisateur`, `idRole`) VALUES (NULL, 'RJEB', 'Zied', 'zied@gmail.com', 'user', '4');	
 INSERT INTO `utilisateurs` (`idUtilisateur`, `nomUtilisateur`, `prenomUtilisateur`, `emailUtilisateur`, `mdpUtilisateur`, `idRole`) VALUES (NULL, 'BOSS', 'Tuteur', 'tuteur@gmail.com', 'user', '3');
 
@@ -111,39 +111,47 @@ INSERT INTO `stagiaires` (`idStagiaire`,`genreStagiaire`,`nomStagiaire`,`prenomS
 INSERT INTO `stagiaires` (`idStagiaire`,`genreStagiaire`,`nomStagiaire`,`prenomStagiaire`,`numSecuStagiaire`,`numBenefStagiaire`,`dateNaissanceStagiaire`,`emailStagiaire`) VALUES (26,"F","Christian","Nicholas","417501349514365","757103316328797","2021-05-05","tot26o@test.fr");
 INSERT INTO `stagiaires` (`idStagiaire`,`genreStagiaire`,`nomStagiaire`,`prenomStagiaire`,`numSecuStagiaire`,`numBenefStagiaire`,`dateNaissanceStagiaire`,`emailStagiaire`) VALUES (27,"F","Mcdonald","Nelle","129732031875740","701826288356067","2021-05-05","tot27o@test.fr");
 INSERT INTO `stagiaires` (`idStagiaire`,`genreStagiaire`,`nomStagiaire`,`prenomStagiaire`,`numSecuStagiaire`,`numBenefStagiaire`,`dateNaissanceStagiaire`,`emailStagiaire`) VALUES (28,"F","Marquez","Ira","714416769911156","357971867324688","2021-05-05","tot28o@test.fr");
+UPDATE `stagiaires` SET `emailStagiaire`= CONCAT( `nomStagiaire` , "." , `prenomStagiaire`, "@gmail.com");
 
-
-INSERT INTO `sessionsformations` (`idSessionFormation`,`numOffreFormation`,`idFormation`) VALUES (1,"0048196996550",5);
-INSERT INTO `sessionsformations` (`idSessionFormation`,`numOffreFormation`,`idFormation`) VALUES (2,"2566858494579",1);
-INSERT INTO `sessionsformations` (`idSessionFormation`,`numOffreFormation`,`idFormation`) VALUES (3,"4629508445858",7);
-INSERT INTO `sessionsformations` (`idSessionFormation`,`numOffreFormation`,`idFormation`) VALUES (4,"6425382242961",2);
-INSERT INTO `sessionsformations` (`idSessionFormation`,`numOffreFormation`,`idFormation`) VALUES (5,"3207130638156",6);
-INSERT INTO `sessionsformations` (`idSessionFormation`,`numOffreFormation`,`idFormation`) VALUES (6,"8402414753117",9);
-INSERT INTO `sessionsformations` (`idSessionFormation`,`numOffreFormation`,`idFormation`) VALUES (7,"1306014302529",8);
-INSERT INTO `sessionsformations` (`idSessionFormation`,`numOffreFormation`,`idFormation`) VALUES (8,"7799551572292",3);
-INSERT INTO `sessionsformations` (`idSessionFormation`,`numOffreFormation`,`idFormation`) VALUES (9,"0965264250815",1);
-INSERT INTO `sessionsformations` (`idSessionFormation`,`numOffreFormation`,`idFormation`) VALUES (10,"9166444023295",1);
-INSERT INTO `sessionsformations` (`idSessionFormation`,`numOffreFormation`,`idFormation`) VALUES (11,"6477836051307",1);
-INSERT INTO `sessionsformations` (`idSessionFormation`,`numOffreFormation`,`idFormation`) VALUES (12,"2247163510075",8);
-INSERT INTO `sessionsformations` (`idSessionFormation`,`numOffreFormation`,`idFormation`) VALUES (13,"1134883228241",8);
-INSERT INTO `sessionsformations` (`idSessionFormation`,`numOffreFormation`,`idFormation`) VALUES (14,"6829556746887",5);
-INSERT INTO `sessionsformations` (`idSessionFormation`,`numOffreFormation`,`idFormation`) VALUES (15,"5655969257143",1);
-INSERT INTO `sessionsformations` (`idSessionFormation`,`numOffreFormation`,`idFormation`) VALUES (16,"6353900415990",5);
-INSERT INTO `sessionsformations` (`idSessionFormation`,`numOffreFormation`,`idFormation`) VALUES (17,"2814164537344",6);
-INSERT INTO `sessionsformations` (`idSessionFormation`,`numOffreFormation`,`idFormation`) VALUES (18,"5826459903578",4);
-INSERT INTO `sessionsformations` (`idSessionFormation`,`numOffreFormation`,`idFormation`) VALUES (19,"8862082190314",9);
-INSERT INTO `sessionsformations` (`idSessionFormation`,`numOffreFormation`,`idFormation`) VALUES (20,"7082429191074",6);
-INSERT INTO `sessionsformations` (`idSessionFormation`,`numOffreFormation`,`idFormation`) VALUES (21,"9569958541786",3);
-INSERT INTO `sessionsformations` (`idSessionFormation`,`numOffreFormation`,`idFormation`) VALUES (22,"2417177685592",9);
-INSERT INTO `sessionsformations` (`idSessionFormation`,`numOffreFormation`,`idFormation`) VALUES (23,"1543393588906",5);
-INSERT INTO `sessionsformations` (`idSessionFormation`,`numOffreFormation`,`idFormation`) VALUES (24,"7666511056629",1);
-INSERT INTO `sessionsformations` (`idSessionFormation`,`numOffreFormation`,`idFormation`) VALUES (25,"4296814252157",4);
-INSERT INTO `sessionsformations` (`idSessionFormation`,`numOffreFormation`,`idFormation`) VALUES (26,"6611983230353",9);
-INSERT INTO `sessionsformations` (`idSessionFormation`,`numOffreFormation`,`idFormation`) VALUES (27,"1820264622013",5);
-INSERT INTO `sessionsformations` (`idSessionFormation`,`numOffreFormation`,`idFormation`) VALUES (28,"2784852545671",2);
-INSERT INTO `sessionsformations` (`idSessionFormation`,`numOffreFormation`,`idFormation`) VALUES (29,"4958967041890",8);
-INSERT INTO `sessionsformations` (`idSessionFormation`,`numOffreFormation`,`idFormation`) VALUES (30,"0692947198619",3);
-
+INSERT INTO `sessionsformations` (`idSessionFormation`, `numOffreFormation`, `idFormation`, `dateDebut`, `dateFin`) VALUES
+(1, '0048196996550', 5, '2021-01-27', '2021-01-27'),
+(2, '2566858494579', 1, '2021-01-27', '2021-01-27'),
+(3, '4629508445858', 8, '2021-01-27', '2021-01-27'),
+(4, '6425382242961', 2, '2021-01-27', '2021-01-27'),
+(5, '3207130638156', 6, '2021-01-27', '2021-01-27'),
+(6, '8402414753117', 9, '2021-01-27', '2021-01-27'),
+(7, '1306014302529', 8, '2021-01-27', '2021-01-27'),
+(8, '7799551572292', 3, '2021-01-27', '2021-01-27'),
+(9, '0965264250815', 1, '2021-01-27', '2021-01-27'),
+(10, '9166444023295', 1, '2021-01-27', '2021-01-27'),
+(11, '6477836051307', 1, '2021-01-27', '2021-01-27'),
+(12, '2247163510075', 8, '2021-01-27', '2021-01-27'),
+(13, '1134883228241', 8, '2021-01-27', '2021-01-27'),
+(14, '6829556746887', 5, '2021-01-27', '2021-01-27'),
+(15, '5655969257143', 1, '2021-01-27', '2021-01-27'),
+(16, '6353900415990', 5, '2021-01-27', '2021-01-27'),
+(17, '2814164537344', 6, '2021-01-27', '2021-01-27'),
+(18, '5826459903578', 4, '2021-01-27', '2021-01-27'),
+(19, '8862082190314', 9, '2021-01-27', '2021-01-27'),
+(20, '7082429191074', 6, '2021-01-27', '2021-01-27'),
+(21, '9569958541786', 3, '2021-01-27', '2021-01-27'),
+(22, '2417177685592', 9, '2021-01-27', '2021-01-27'),
+(23, '1543393588906', 5, '2021-01-27', '2021-01-27'),
+(24, '7666511056629', 1, '2021-01-27', '2021-01-27'),
+(25, '4296814252157', 4, '2021-01-27', '2021-01-27'),
+(26, '6611983230353', 9, '2021-01-27', '2021-01-27'),
+(27, '1820264622013', 5, '2021-01-27', '2021-01-27'),
+(28, '2784852545671', 2, '2021-01-27', '2021-01-27'),
+(29, '4958967041890', 8, '2021-01-27', '2021-01-27'),
+(30, '0692947198619', 3, '2021-01-27', '2021-01-27'),
+(34, '122112', 1, '2021-01-27', '2021-01-27'),
+(35, '111', 1, '2021-01-27', '2021-01-27'),
+(36, '111', 1, '2021-01-27', '2021-01-27'),
+(37, '111', 3, '2021-01-27', '2021-01-27'),
+(38, '1112', 3, '2021-01-27', '2021-01-27'),
+(39, '111122', 1, '2021-01-27', '2021-01-27'),
+(40, '1', 1, '2021-01-27', '2021-01-27'),
+(41, '2', 1, '2021-01-27', '2021-01-27');
 
 INSERT INTO `participations` (`idParticipation`,`dateDebut`,`dateFin`,`idSessionFormation`,`idStagiaire`) VALUES (1,"2021-09-04 00:26:41","2020-12-09 23:34:59",5,23);
 INSERT INTO `participations` (`idParticipation`,`dateDebut`,`dateFin`,`idSessionFormation`,`idStagiaire`) VALUES (2,"2020-08-10 06:04:45","2020-11-21 00:50:45",6,20);
@@ -221,11 +229,11 @@ INSERT INTO libellesHoraires (idLibelleHoraire , ordreHoraire , libelleHoraire) 
 
 
 
-insert into stages (idStage, etape, dateVisite, nomVisiteur, lieuRealisation, deplacement, frequenceDeplacement, modeDeplacement, attFormReglement, libelleAttFormReg, visiteMedical, travauxDang, dateDeclarationDerog, sujetStage, travauxRealises, objectifPAE, dateDebut, dateFin, idTuteur, idStagiaire) values (1, 1, '2020-03-02 05:38:31', 'Hersch Monnery', 'Entreprise', 1 , 'Quotidien', 'Vehicule de l entreprise', 0, NULL, 1, 1, '2020-12-01 06:15:35', 'Streamlined maximized task-force', 'Secured demand-driven open system', 'Versatile bottom-line projection', '2020-11-12 21:28:57', '2020-08-13 14:36:33', 3, 6);
-insert into stages (idStage, etape, dateVisite, nomVisiteur, lieuRealisation, deplacement, frequenceDeplacement, modeDeplacement, attFormReglement, libelleAttFormReg, visiteMedical, travauxDang, dateDeclarationDerog, sujetStage, travauxRealises, objectifPAE, dateDebut, dateFin, idTuteur, idStagiaire) values (2, 2, '2020-06-02 11:16:47', 'Lenard Mengue', 'Entreprise', 0, 'Quotidien', 'Vehicule de l entreprise', 1, 'attestation formation reglementaire', 0, 1, '2020-07-13 23:45:38', 'Assimilated upward-trending contingency', 'Exclusive fresh-thinking throughput', 'Multi-channelled explicit website', '2020-07-02 18:30:19', '2020-11-25 18:52:22', 4, 2);
-insert into stages (idStage, etape, dateVisite, nomVisiteur, lieuRealisation, deplacement, frequenceDeplacement, modeDeplacement, attFormReglement, libelleAttFormReg, visiteMedical, travauxDang, dateDeclarationDerog, sujetStage, travauxRealises, objectifPAE, dateDebut, dateFin, idTuteur, idStagiaire) values (3, 3, '2020-02-14 12:16:23', 'Esdras Bault', 'Entreprise', 0, 'Quotidien', 'Transport en commun', 1, 'attestation formation reglementaire', 0, 0, '2020-06-26 01:13:45', 'Implemented intangible paradigm', 'Customizable disintermediate website', 'Monitored eco-centric attitude', '2020-02-19 03:19:55', '2020-03-30 03:33:30', 1, 1);
-insert into stages (idStage, etape, dateVisite, nomVisiteur, lieuRealisation, deplacement, frequenceDeplacement, modeDeplacement, attFormReglement, libelleAttFormReg, visiteMedical, travauxDang, dateDeclarationDerog, sujetStage, travauxRealises, objectifPAE, dateDebut, dateFin, idTuteur, idStagiaire) values (4, 4, '2020-06-07 10:39:04', 'Rube Sholem', 'Entreprise', 1, 'Occasionnels', 'vehicule personnel du stagiaire', 0, NULL, 0, 1, '2020-08-30 02:05:39', 'Public-key responsive productivity', 'Centralized attitude-oriented database', 'Synergized systemic help-desk', '2020-07-25 09:26:01', '2020-07-19 13:08:55', 2, 4);
-insert into stages (idStage, etape, dateVisite, nomVisiteur, lieuRealisation, deplacement, frequenceDeplacement, modeDeplacement, attFormReglement, libelleAttFormReg, visiteMedical, travauxDang, dateDeclarationDerog, sujetStage, travauxRealises, objectifPAE, dateDebut, dateFin, idTuteur, idStagiaire) values (5, 5, '2020-09-01 06:48:44', 'Becky Arpur', 'Entreprise', 1, 'Un fois par mois', 'Vehicule de l entreprise', 0, NULL, 1, 1, '2020-07-20 20:08:41', 'De-engineered neutral solution', 'Reactive upward-trending algorithm', 'Reduced uniform knowledge base', '2020-10-23 21:48:47', '2020-03-20 16:30:38', 1, 3);
+insert into stages (idStage, etape, dateVisite, nomVisiteur, lieuRealisation, deplacement, frequenceDeplacement, modeDeplacement, attFormReglement, libelleAttFormReg, visiteMedical, travauxDang, dateDeclarationDerog, sujetStage, travauxRealises, objectifPAE, dateDebut, dateFin, idTuteur, idStagiaire,idPeriode) values (1, 1, '2020-03-02 05:38:31', 'Hersch Monnery', 'Entreprise', 1 , 'Quotidien', 'Vehicule de l entreprise', 0, NULL, 1, 1, '2020-12-01 06:15:35', 'Streamlined maximized task-force', 'Secured demand-driven open system', 'Versatile bottom-line projection', '2020-11-12 21:28:57', '2020-08-13 14:36:33', 3, 6,1);
+insert into stages (idStage, etape, dateVisite, nomVisiteur, lieuRealisation, deplacement, frequenceDeplacement, modeDeplacement, attFormReglement, libelleAttFormReg, visiteMedical, travauxDang, dateDeclarationDerog, sujetStage, travauxRealises, objectifPAE, dateDebut, dateFin, idTuteur, idStagiaire,idPeriode) values (2, 2, '2020-06-02 11:16:47', 'Lenard Mengue', 'Entreprise', 0, 'Quotidien', 'Vehicule de l entreprise', 1, 'attestation formation reglementaire', 0, 1, '2020-07-13 23:45:38', 'Assimilated upward-trending contingency', 'Exclusive fresh-thinking throughput', 'Multi-channelled explicit website', '2020-07-02 18:30:19', '2020-11-25 18:52:22', 4, 2,2);
+insert into stages (idStage, etape, dateVisite, nomVisiteur, lieuRealisation, deplacement, frequenceDeplacement, modeDeplacement, attFormReglement, libelleAttFormReg, visiteMedical, travauxDang, dateDeclarationDerog, sujetStage, travauxRealises, objectifPAE, dateDebut, dateFin, idTuteur, idStagiaire,idPeriode) values (3, 3, '2020-02-14 12:16:23', 'Esdras Bault', 'Entreprise', 0, 'Quotidien', 'Transport en commun', 1, 'attestation formation reglementaire', 0, 0, '2020-06-26 01:13:45', 'Implemented intangible paradigm', 'Customizable disintermediate website', 'Monitored eco-centric attitude', '2020-02-19 03:19:55', '2020-03-30 03:33:30', 1, 1,2);
+insert into stages (idStage, etape, dateVisite, nomVisiteur, lieuRealisation, deplacement, frequenceDeplacement, modeDeplacement, attFormReglement, libelleAttFormReg, visiteMedical, travauxDang, dateDeclarationDerog, sujetStage, travauxRealises, objectifPAE, dateDebut, dateFin, idTuteur, idStagiaire,idPeriode) values (4, 4, '2020-06-07 10:39:04', 'Rube Sholem', 'Entreprise', 1, 'Occasionnels', 'vehicule personnel du stagiaire', 0, NULL, 0, 1, '2020-08-30 02:05:39', 'Public-key responsive productivity', 'Centralized attitude-oriented database', 'Synergized systemic help-desk', '2020-07-25 09:26:01', '2020-07-19 13:08:55', 2, 4,3);
+insert into stages (idStage, etape, dateVisite, nomVisiteur, lieuRealisation, deplacement, frequenceDeplacement, modeDeplacement, attFormReglement, libelleAttFormReg, visiteMedical, travauxDang, dateDeclarationDerog, sujetStage, travauxRealises, objectifPAE, dateDebut, dateFin, idTuteur, idStagiaire,idPeriode) values (5, 5, '2020-09-01 06:48:44', 'Becky Arpur', 'Entreprise', 1, 'Un fois par mois', 'Vehicule de l entreprise', 0, NULL, 1, 1, '2020-07-20 20:08:41', 'De-engineered neutral solution', 'Reactive upward-trending algorithm', 'Reduced uniform knowledge base', '2020-10-23 21:48:47', '2020-03-20 16:30:38', 1, 3,3);
 
 INSERT INTO `evaluations` (`idStage`,`dateEvaluation`,`objectifAcquisition`,`comportementMt`,`satisfactionEnt`,`remarqueEnt`,`perspectiveEmb`) VALUES (1,"2021-02-15",1,1,2,"il est doué",2);
 INSERT INTO `evaluations` (`idStage`,`dateEvaluation`,`objectifAcquisition`,`comportementMt`,`satisfactionEnt`,`remarqueEnt`,`perspectiveEmb`) VALUES (2,"2021-03-11",2,2,3,"il manque de rigueur",1);
@@ -316,7 +324,7 @@ INSERT INTO `periodesstages` (`idPeriode`, `idSessionFormation`, `dateDebutPAE`,
 INSERT INTO `periodesstages` (`idPeriode`, `idSessionFormation`, `dateDebutPAE`, `dateFinPAE`, `dateRapportSuivi`, `objectifPAE`) VALUES (NULL, '5', '2021-05-11', '2021-05-25', '2021-06-25', 'sdvsduyjghjvsdvsdv');
 INSERT INTO `periodesstages` (`idPeriode`, `idSessionFormation`, `dateDebutPAE`, `dateFinPAE`, `dateRapportSuivi`, `objectifPAE`) VALUES (NULL, '1', '2021-07-11', '2021-08-01', '2021-08-30', 'sdvstyuedrgfhdvsdvsdv');
 INSERT INTO `periodesstages` (`idPeriode`, `idSessionFormation`, `dateDebutPAE`, `dateFinPAE`, `dateRapportSuivi`, `objectifPAE`) VALUES (NULL, '21', '2021-02-11', '2021-02-15', '2021-02-25', 'sdvsdfghezgwdfdvsdvsdv');
-INSERT INTO `periodesstages` (`idPeriode`, `idSessionFormation`, `dateDebutPAE`, `dateFinPAE`, `dateRapportSuivi`, `objectifPAE`) VALUES (NULL, '21', '2021-05-11', '2021-12-01', '2021-12-25', 'sdvxfgyuytrjsdvsdvaaaaasdv');
+INSERT INTO `periodesstages` (`idPeriode`, `idSessionFormation`, `dateDebutPAE`, `dateFinPAE`, `dateRapportSuivi`, `objectifPAE`) VALUES (NULL, '21', '2021-05-11', '2021-12-01', '2021-12-30', 'sdvxfgyuytrjsdvsdvaaaaasdv');
 INSERT INTO `periodesstages` (`idPeriode`, `idSessionFormation`, `dateDebutPAE`, `dateFinPAE`, `dateRapportSuivi`, `objectifPAE`) VALUES (NULL, '21', '2021-05-11', '2022-01-02', '2022-01-28', 'sdvwxfuyfgusdvsdvsdezrzerv');
 INSERT INTO `periodesstages` (`idPeriode`, `idSessionFormation`, `dateDebutPAE`, `dateFinPAE`, `dateRapportSuivi`, `objectifPAE`) VALUES (NULL, '8', '2022-05-11', '2022-12-01', '2022-12-30', 'sdvxfgyuytrjsdvsqazzartedvsdv');
 INSERT INTO `periodesstages` (`idPeriode`, `idSessionFormation`, `dateDebutPAE`, `dateFinPAE`, `dateRapportSuivi`, `objectifPAE`) VALUES (NULL, '21', '2022-05-11', '2022-01-02', '2022-01-28', 'sdvwxfuqsdqsdqsdyfgusdvsdvsdv');
@@ -453,5 +461,4 @@ INSERT INTO `departements`  VALUES
 
 UPDATE `villes` SET `idDepartement`=substr(`codePostal`,1,2);
 UPDATE `villes` SET `idDepartement`='2A' where idDepartement=20;
-
 

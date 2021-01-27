@@ -73,10 +73,10 @@ CREATE TABLE Roles(
 
 CREATE TABLE Stagiaires(
         idStagiaire            Int  Auto_increment  NOT NULL PRIMARY KEY,
-        genreStagiaire         Varchar (1) NOT NULL ,
+        genreStagiaire         Varchar (1)  ,
         nomStagiaire           Varchar (50) NOT NULL ,
         prenomStagiaire        Varchar (50) NOT NULL ,
-        numSecuStagiaire       Varchar (15) NOT NULL ,
+        numSecuStagiaire       Varchar (15)  ,
         numBenefStagiaire      Varchar (15) NOT NULL ,
         dateNaissanceStagiaire Date NOT NULL,
         emailStagiaire Varchar (50) NOT NULL 
@@ -99,8 +99,11 @@ CREATE TABLE Formations(
 
 CREATE TABLE SessionsFormations(
         idSessionFormation Int  Auto_increment  NOT NULL PRIMARY KEY,
-        numOffreFormation  Varchar (50) NOT NULL ,
-        idFormation        Int NOT NULL
+        numOffreFormation  Int NOT NULL ,
+        idFormation        Int NOT NULL, 
+        dateDebut DATE NOT NULL, 
+        dateFin DATE NOT NULL
+   
 )ENGINE=InnoDB, CHARSET = UTF8;
 
 #------------------------------------------------------------
@@ -134,10 +137,10 @@ CREATE TABLE Tuteurs(
         idTuteur       Int  Auto_increment  NOT NULL PRIMARY KEY,
         nomTuteur      Varchar (50) NOT NULL ,
         prenomTuteur   Varchar (50) NOT NULL ,
-        fonctionTuteur Varchar (100) NOT NULL ,
-        telTuteur      Varchar (10) NOT NULL ,
+        fonctionTuteur Varchar (100)  ,
+        telTuteur      Varchar (10)  ,
         emailTuteur     Varchar (100) NOT NULL ,
-        idEntreprise   Int NOT NULL
+        idEntreprise   Int 
 )ENGINE=InnoDB, CHARSET = UTF8;
 
 #------------------------------------------------------------
@@ -146,7 +149,7 @@ CREATE TABLE Tuteurs(
 
 CREATE TABLE Stages(
         idStage              Int  Auto_increment  NOT NULL PRIMARY KEY,
-		etape				 Int NOT NULL,
+		etape				 Int NOT NULL comment "1 stagiaire , 2 entreprise ,3 conditions, 4 sujet de stage, 5 evaluations",
         dateVisite           Date  ,
         nomVisiteur          Varchar (200)  ,    
         lieuRealisation      Varchar (200)  ,
@@ -164,7 +167,8 @@ CREATE TABLE Stages(
         dateDebut            Date NOT NULL ,
         dateFin              Date NOT NULL ,
         idTuteur  Int   NOT NULL ,
-        idStagiaire Int NOT NULL
+        idStagiaire Int NOT NULL,
+        idPeriode int not null
 )ENGINE=InnoDB, CHARSET = UTF8;
 
 #------------------------------------------------------------
