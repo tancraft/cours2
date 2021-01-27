@@ -51,7 +51,7 @@ switch ($mode) {
             <div class = "relatif colonne info">
                 <label for="numOffreFormation">Numéro d'offre: </label>
             <div class="relatif">
-                <input name="numOffreFormation" <?php if ($mode != "ajout") {
+                <input id="numOffreFormation" name="numOffreFormation" <?php if ($mode != "ajout") {
     echo 'value="' . $idChoisi->getNumOffreFormation() . '"';}if ($mode == "delete" || $mode == "detail") {
     echo 'disabled';
 }
@@ -62,7 +62,8 @@ switch ($mode) {
              <label for="idFormation">formation: </label>
         <?php $formations = FormationsManager::getList();
 if ($mode === "ajout") {
-    echo '<div class="relatif" ><select id="select" name="idFormation" pattern="\d" >
+    echo '<div class="relatif" >
+    <select id="select" class="relatif" name="idFormation" pattern="\d" >
             <option selected="selected" value="defaut" >----Choisissez une Formation----</option>';
     foreach ($formations as $uneFormation) {
         echo '<option value="' . $uneFormation->getIdFormation() . '">' . $uneFormation->getLibelleFormation() . '</option>';
@@ -127,14 +128,14 @@ switch ($mode) {
     case "ajout":
         {
             echo '<div class="mini">
-            </div><button id="valide" class="bouton" type="submit"><i class="fas fa-plus-circle"></i> Valider</button>
+            </div><button id="valide" class="bouton" type="submit" disabled ><i class="fas fa-plus-circle"></i> Valider</button>
             </form>';
             break;
         }
     case "modif":
         {
             echo '<div class="mini"></div>
-            <button class="bouton" type="submit"><i class="fas fa-edit"></i> Valider</button>
+            <button id="valide" class="bouton" type="submit"><i class="fas fa-edit"></i> Valider</button>
             </form>
             <button id="ajout1p" class="bouton" type="submit"><i class="fas fa-edit"></i> Ajout Periode</button>';
 

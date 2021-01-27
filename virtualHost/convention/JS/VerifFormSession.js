@@ -1,22 +1,19 @@
 
-function verification(event) {
-    let monInput = event.target;
-    let message = (monInput.parentNode).getElementsByClassName("cache")[0];
-
-
-    if (monInput.value == '') {
-        monInput.style.border = "2px solid orange";
+function verification() {
+    let message = (numOffre.parentNode).getElementsByClassName("cache")[0];
+    if (numOffre.value == '') {
         message.style.display = 'block';
         message.innerHTML = "champ manquant";
         val[0] = 0;
-    } else if (!monInput.checkValidity()) {
-        monInput.style.border = "2px solid red";
+    } else if (!numOffre.checkValidity()) {
+        numOffre.classList.add("incorrect");      
         message.style.display = 'block';
         message.innerHTML = "format incorrect";
         val[0] = 0;
     } else {
         message.innerHTML = "";
-        monInput.style.border = "2px solid green";
+        numOffre.classList.remove("incorrect");
+        numOffre.classList.add("correct"); 
         message.style.display = 'block';
         val[0] = 1;
     }
@@ -28,22 +25,23 @@ function changeValeur() {
     valeur = select.options[choix].value;
     if (valeur === 'defaut') {
         val[1] = 0;
+        select.classList.add("incorrect"); 
     }
-    else{
+    else {
         val[1] = 1;
+        select.classList.remove("incorrect");
+        select.classList.add("correct"); 
     }
     validerForm();
 }
 
 function validerForm() {
-    let valide = false;
+    valider.disabled = true
+    if (val[0] == 1 && val[1] == 1) {
+        valide = true;
+        valider.disabled = false;
 
-
-        if (val[i] != 0) {
-            valide = true;
-            valider.disabled = '';
-
-        }
+    }
 
 }
 
@@ -51,9 +49,10 @@ function verifDateDebut(e) {// cette fonction verifie que la date de fin n est p
     let dateFin = e.target;
     let dateDebut = dateFin.parentNode.parentNode.getElementsByClassName('dateDebutPAE')[0];
     let message = (dateFin.parentNode).getElementsByClassName("cache")[0];
+    message.style.display = 'block';
+
     if (dateFin.value < dateDebut.value) {
         message.innerHTML = "date incorrecte";
-        message.style.display = 'block';
         dateFin.style.border = "2px solid red";
     }
     else {
@@ -88,19 +87,17 @@ if (ajoutP != null) {
     });
 }
 
-var valider = document.getElementById('valide');
-valider.disabled = 'disabled';
-
-select = document.getElementById("select");
-select.addEventListener('input',changeValeur );
-
 var val = [];
+var select = document.getElementById("select");
 
-var inputs = document.querySelectorAll("input");
+select.addEventListener('input', changeValeur);
+var numOffre = document.querySelector('#numOffreFormation');
 
-for (let i = 0; i < inputs.length; i++) {
-    inputs[i].addEventListener('input', verification);
-}
+numOffre.addEventListener('input', verification);
+var valider = document.getElementById('valide');
+
+changeValeur();
+verification();
 
 var listeDateFin = document.getElementsByClassName('dateFinPAE');
 
@@ -113,3 +110,6 @@ var listeDateRapport = document.getElementsByClassName('dateRapportSuivi');
 for (let i = 0; i < listeDateRapport.length; i++) {
     listeDateRapport[i].addEventListener('input', verifDateRapport);
 }
+
+
+

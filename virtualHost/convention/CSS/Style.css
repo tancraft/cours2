@@ -155,6 +155,11 @@ select option::selection {
 .vert {
     color: #3db651;
 }
+
+.correct{
+    border: #3db651 solid 3px;
+}
+
 .incorrect{
     border: red solid 3px;
 }
