@@ -62,7 +62,7 @@ switch ($mode) {
              <label for="idFormation">formation: </label>
         <?php $formations = FormationsManager::getList();
 if ($mode === "ajout") {
-    echo '<div class="relatif" ><select name="idFormation" pattern="\d" >
+    echo '<div class="relatif" ><select id="select" name="idFormation" pattern="\d" >
             <option selected="selected" value="defaut" >----Choisissez une Formation----</option>';
     foreach ($formations as $uneFormation) {
         echo '<option value="' . $uneFormation->getIdFormation() . '">' . $uneFormation->getLibelleFormation() . '</option>';
@@ -73,7 +73,7 @@ if ($mode === "ajout") {
         echo '<div class="case">' . $idForma->getLibelleFormation() . '</div>';
         $disabled = "disabled";
     } else {/** mode modif */
-        echo '<select class="relatif" name="idFormation">';
+        echo '<select id="select" class="relatif" name="idFormation">';
         foreach ($formations as $uneFormation) {
             $sel = "";
             if ($uneFormation->getIdFormation() == $idForma->getIdFormation()) {
