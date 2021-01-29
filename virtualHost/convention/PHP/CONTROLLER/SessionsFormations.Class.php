@@ -92,7 +92,7 @@ class SessionsFormations
 	*/
 	public function toString()
 	{
-		return "IdSessionFormation : ".$this->getIdSessionFormation()."NumOffreFormation : ".$this->getNumOffreFormation()."ObjectifPAE : ".$this->getObjectifPAE()."DateRapportSuivi : ".$this->getDateRapportSuivi()."IdFormation : ".$this->getIdFormation()."\n";
+		return "IdSessionFormation : ".$this->getIdSessionFormation()."NumOffreFormation : ".$this->getNumOffreFormation()."ObjectifPAE : "."IdFormation : ".$this->getIdFormation()."\n";
 	}
 
 

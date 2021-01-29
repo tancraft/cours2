@@ -35,17 +35,6 @@ switch ($mode)
             }
             break;
         }
-    case "delete":    {
-            for ($i = 0; $i < $_POST['nbPae']; $i++)
-            {
-                $periode = new PeriodesStages(['idPeriode' => $_POST['idPeriode' . $i], 'idSessionFormation' => $_POST['idSessionFormation'], 'dateDebutPAE' => $_POST['dateDebutPAE' . $i], 'dateFinPAE' => $_POST['dateFinPAE' . $i], 'dateRapportSuivi' => $_POST['dateRapportSuivi' . $i], 'objectifPAE' => $_POST['objectifPAE' . $i]]);
-                PeriodesStagesManager::delete($periode);
-                //header("location: Index.php?page=ListeSessions");
-            }
-            $session = new SessionsFormations($_POST);
-            SessionsFormationsManager::delete($session);
-            break;
-        }
     case "ajoutPer":    {
             $periode = new PeriodesStages($_POST);
             PeriodesStagesManager::add($periode);
