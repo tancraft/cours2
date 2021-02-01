@@ -6,7 +6,7 @@ html, body{
 body{
     display: flex;
     justify-content: center;
-    background-image: url("../media/fond.jpg");
+    background-image: url("media/fond.jpg");
     background-position: center;
 }
 
@@ -45,7 +45,7 @@ header{
 /*footer*/
 footer{
     display: flex;
-    background-image: url(../../media/fond1.png);
+    background-image: url(media/fond1.png);
     background-position: top;
 }
 /*main*/
