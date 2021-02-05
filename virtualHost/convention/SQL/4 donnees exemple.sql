@@ -23,14 +23,13 @@ INSERT INTO `periodesstages` (`idPeriode`, `idSessionFormation`, `dateDebutPAE`,
 (3, 2, '2021-04-01', '2021-04-20', '2021-04-15', '');
 
 
-INSERT INTO `stagiaires` (`idStagiaire`, `genreStagiaire`, `nomStagiaire`, `prenomStagiaire`, `numSecuStagiaire`, `numBenefStagiaire`, `dateNaissanceStagiaire`, `emailStagiaire`) VALUES
-(1, 'H', 'dwOne', 'dwOne', '1211121111222', '12345678', '1995-02-01', 'dwone@gmail.com'),
-(2, 'M', 'dwTwo', 'dwTwo', '1230212123123', '45678945', '1996-02-01', 'dwtwo@gmail.com'),
-(3, 'M', 'dwThree', 'dwThree', '1451212456456', '12345654', '2025-02-01', 'dwthree@gmail.com');
+INSERT INTO `stagiaires`(`idStagiaire`, `genreStagiaire`, `nomStagiaire`, `prenomStagiaire`, `numSecuStagiaire`, `numBenefStagiaire`, `dateNaissanceStagiaire`, `emailStagiaire`, `adresse`, `idVilleHabitation`, `idVilleNaissance`, `TelStagiaire`) VALUES (1, 'H', 'dwOne', 'dwOne', '1211121111222', '12345678', '1995-02-01', 'dwone@gmail.com',"rue des champignons",12,12,"0123456789"),
+(2, 'M', 'dwTwo', 'dwTwo', '1230212123123', '45678945', '1996-02-01', 'dwtwo@gmail.com',"rue des champignons",12,12,"0123456789"),
+(3, 'M', 'dwThree', 'dwThree', '1451212456456', '12345654', '2025-02-01', 'dwthree@gmail.com',"rue des champignons",12,12,"0123456789");
 
 
-INSERT INTO `participations` (`idParticipation`, `idSessionFormation`, `idStagiaire`) VALUES
-(1, 1, 1),(2,1,2),(3,1,3);
+INSERT INTO `participations` (`idParticipation`, `idSessionFormation`, `idStagiaire`,dateDebut,dateFin) VALUES
+(1, 1, 1,'2020-08-31','2021-05-20'),(2,1,2,'2020-08-31','2021-05-20'),(3,1,3,'2020-08-31','2021-05-20');
 
 
 INSERT INTO `tuteurs` (`idTuteur`, `nomTuteur`, `prenomTuteur`, `fonctionTuteur`, `telTuteur`, `emailTuteur`, `idEntreprise`) VALUES
