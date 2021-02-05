@@ -16,7 +16,7 @@ switch ($mode)
             //on recupere l'id du stagiaire créé
             $stagiaire = StagiairesManager::getByEmail($stagiaire->getEmailStagiaire());
             //maj table participations
-            $part = new Participations(["idSessionFormation" => $_POST["idSessionFormation"], "idStagiaire" => $stagiaire->getIdStagiaire(), "dateDebut" => $sess->getDateDebut(), "dateFin" => $sess->getDateFin()]);
+            $part = new Participations(["idSessionFormation" => $_POST["idSessionFormation"], "idStagiaire" => $stagiaire->getIdStagiaire()]);
             ParticipationsManager::add($part);
             //maj table utilisateurs
             creerUtilisateur($stagiaire, $sess);
@@ -49,7 +49,7 @@ switch ($mode)
                 $part = ParticipationsManager::getBySessionStagiaire($_POST['idAncienneSession'], $stagiaire->getIdStagiaire());
                 ParticipationsManager::delete($part);
                 //creer une nouvelle participation
-                $part = new Participations(["idSessionFormation" => $_POST["idSessionFormation"], "idStagiaire" => $stagiaire->getIdStagiaire(), "dateDebut" => $sess->getDateDebut(), "dateFin" => $sess->getDateFin()]);
+                $part = new Participations(["idSessionFormation" => $_POST["idSessionFormation"], "idStagiaire" => $stagiaire->getIdStagiaire()]);
                 ParticipationsManager::add($part);
             }
             StagiairesManager::update($stagiaire);
@@ -71,7 +71,7 @@ function creerUtilisateur($stagiaire, $sess)
     $utilisateur->setNomUtilisateur($stagiaire->getNomStagiaire());
     $utilisateur->setPrenomUtilisateur($stagiaire->getPrenomStagiaire());
     $utilisateur->setEmailUtilisateur($stagiaire->getEmailStagiaire());
-    $utilisateur->setIdRole(3);
+    $utilisateur->setIdRole(4);
     $utilisateur->setMdpUtilisateur($stagiaire->getPrenomStagiaire() . $stagiaire->getNomStagiaire() . $stagiaire->getNumBenefStagiaire());
     $date = date_create_from_format("Y-m-d", $sess->getDateFin());
     $newdate = date_add($date, date_interval_create_from_date_string("15 days"));

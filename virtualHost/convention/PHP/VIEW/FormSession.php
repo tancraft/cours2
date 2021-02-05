@@ -1,14 +1,17 @@
 <?php
 
 $mode = $_GET['mode'];
+$listePae=[];
+$disabled="";
 if (isset($_GET['id'])) // si l'id est renseigné
 {
     $idRecu = $_GET['id'];
     if ($idRecu != false) {
-        $idChoisi = SessionsFormationsManager::findById($idRecu);
-        $idForma = FormationsManager::findById($idChoisi->getIdFormation());
-        $listePae = PeriodesStagesManager::getListBySession($idChoisi->getIdSessionFormation());
+        $sessionChoisie = SessionsFormationsManager::findById($idRecu);
+        $idForma = FormationsManager::findById($sessionChoisie->getIdFormation());
+        $listePae = PeriodesStagesManager::getListBySession($sessionChoisie->getIdSessionFormation());
     }
+    
 }
 ?>
 <section class = "colonne">
@@ -19,60 +22,67 @@ switch ($mode) {
             break;
         }
     case "modif":{
-            echo '<form  action="index.php?page=ActionSession&mode=modif&id=' . $idChoisi->getIdSessionFormation() . '" method="POST">
-                    <input name="idSessionFormation"  value="' . $idChoisi->getIdSessionFormation() . '" type="hidden" />';
+            echo '<form  action="index.php?page=ActionSession&mode=modif&id=' . $sessionChoisie->getIdSessionFormation() . '" method="POST">
+                    <input name="idSessionFormation"  value="' . $sessionChoisie->getIdSessionFormation() . '" type="hidden" />';
             break;
         }
     case "detail":{
+        $disabled="disabled";
             echo '
             <form >
-                <input name="idSessionFormation"  value="' . $idChoisi->getIdSessionFormation() . '" type="hidden" />';
+                <input name="idSessionFormation"  value="' . $sessionChoisie->getIdSessionFormation() . '" type="hidden" />';
             break;
         }
 }
 
 ?>
-            <div class="centre info">
-                <div><label for="numOffreFormation">Numéro d'offre: </label></div>
-               <div class="grande"> <input id="numOffreFormation" name="numOffreFormation" <?php if ($mode != "ajout") { echo 'value="' . $idChoisi->getNumOffreFormation() . '"';}if ($mode == "delete" || $mode == "detail") { echo 'disabled'; } ?> pattern="\d{6}"/></div>
-                <div class=" erreur"></div>
-            </div>
-            
-            <div class = "centre info">
-                <div><label for="idFormation">Formation: </label></div>
+        <div class="centre info">
+            <div><label for="numOffreFormation">Numéro d'offre: </label></div>
+            <div class="grande"> 
+                <input id="numOffreFormation" name="numOffreFormation" <?php if ($mode != "ajout") { echo 'value="' . $sessionChoisie->getNumOffreFormation() . '"';}  echo $disabled; ?> pattern="\d{5}"/></div>
+            <div class=" erreur"></div>
+        </div>
+        
+        <div class = "centre info">
+            <div><label for="idFormation">Formation: </label></div>
 <?php 
 $formations = FormationsManager::getList();
-if ($mode === "ajout") {
-    echo '      <div class="grande">
-                    <select id="select" class="relatif" name="idFormation" pattern="\d" >
-                        <option selected="selected" value="defaut" >----Choisissez une Formation----</option>';
+
+echo '      <div class="grande">
+                <select id="select" class="relatif" name="idFormation" pattern="\d" '.$disabled .' >
+                    <option selected="selected" value="defaut" >----Choisissez une Formation----</option>';
     foreach ($formations as $uneFormation) 
-    {
-        echo '          <option value="' . $uneFormation->getIdFormation() . '">' . $uneFormation->getLibelleFormation() . '</option>';
+    {   $sel = "";
+        if ($mode!="ajout" && $uneFormation->getIdFormation() == $idForma->getIdFormation()) {
+            $sel = " selected ";
+        }
+        echo '          <option '.$sel.' value="' . $uneFormation->getIdFormation() . '">' . $uneFormation->getLibelleFormation() . '</option>';
     }
     echo '          </select>
                 </div>
                 <div class=" erreur"></div>
             </div>';
-} else {
-    if ($mode == "delete" || $mode == "detail") {
-        echo '<div class="titre grande ">' . $idForma->getLibelleFormation() . '</div><div></div> </div>';
-        $disabled = " disabled ";
-    } else {/** mode modif */
-        echo '<div class="grande"><select id="select" class="relatif" name="idFormation">';
-        foreach ($formations as $uneFormation) {
-            $sel = "";
-            if ($uneFormation->getIdFormation() == $idForma->getIdFormation()) {
-                $sel = " selected ";
-            }
-            echo '<option value="' . $uneFormation->getIdFormation() . '"  ' . $sel . '>' . $uneFormation->getLibelleFormation() . '</option>';
-        }
-        echo '</select></div>
-        <div class=" erreur"></div>
-        </div>';
-        $disabled = " ";
+      echo '      <div class="info">
+                    <div class="mini"></div>
+                    <div class=" colonne" >
+                        <label for="dateDebut">Date de début: </label>
+                        <input  type="date" name="dateDebut" value="';
+                        if ($mode !="ajout"){ echo $sessionChoisie->getDateDebut();}
+                        echo  '" '.$disabled.' />
+                        <div class=" erreur"></div>
+                    </div>
+                    <div class="mini"></div>
+                    <div class=" colonne" >
+                        <label for="dateFin">Date de fin : </label>
+                        <input  type="date" name="dateFin" value="';
+                        if ($mode !="ajout"){ echo $sessionChoisie->getDateFin();}
+                        echo '" '.$disabled. ' />
+                        <div class=" erreur"></div>
+                    </div>
+                    <div class="mini"></div>
+                </div>';
 
-    }
+    
     $nbPae = count($listePae);
     echo '<input type="hidden" name="nbPae" value="' . $nbPae . '"/>
             <div class="espaceHor"></div>  ';
@@ -118,8 +128,6 @@ if ($mode === "ajout") {
             </div>';
     }
 
-}
-
 echo '<div class="espaceHor"></div>';
 
 switch ($mode) {
@@ -148,8 +156,8 @@ switch ($mode) {
 
 ?>
 
-<div class="mini"></div>
-<a href="Index.php?page=ListeSessions"><button class="bouton">Retour</button></a>
-<div class="mini"></div></div>
-      </form>
+        <div class="mini"></div>
+        <a href="Index.php?page=ListeSessions" target="_blank"><button class="bouton" type ="button">Retour</button></a> 
+        <div class="mini"></div></div>
+    </form>
 </section>

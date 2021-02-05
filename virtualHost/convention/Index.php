@@ -39,6 +39,10 @@ $routes=[
 	"FormFRCondition" => ["PHP/VIEW/", "FormFRCondition", "Fiche de renseignements",false],
 	"FormFREvaluation" => ["PHP/VIEW/", "FormFREvaluation", "Fiche de renseignements",false],
 	"ActionFormFRStagiaire" => ["PHP/VIEW/", "ActionFormFRStagiaire", "Fiche de renseignements",false],
+	"ActionFormFREntreprise" => ["PHP/VIEW/", "ActionFormFREntreprise", "Fiche de renseignements",false],
+	"ActionFormFRSujetStage" => ["PHP/VIEW/", "ActionFormFRSujetStage", "Fiche de renseignements",false],
+	"ActionFormFRCondition" => ["PHP/VIEW/", "ActionFormFRCondition", "Fiche de renseignements",false],
+	"ActionFormFREvaluation" => ["PHP/VIEW/", "ActionFormFREvaluation", "Fiche de renseignements",false],
 	"ChoixStagiaireTuteur" => ["PHP/VIEW/", "ChoixStagiaireTuteur", "Choisissez le Stagiaire :",false],
 	"FormFRInfosStagiaire" => ["PHP/VIEW/", "FormFRInfosStagiaire", "Identification",false],
 	
@@ -47,10 +51,10 @@ $routes=[
 	"FormFormation" => ["PHP/VIEW/", "FormFormation", "Gestion des formations",false],
 	"ActionFormation" => ["PHP/VIEW/", "ActionFormation", "Gestion des formations",false],
 
-	"ListeSessions" => ["PHP/VIEW/", "ListeSessions", "Gestion des sessions",false],
-	"FormSession" => ["PHP/VIEW/", "FormSession", "Gestion des sessions",false],
+	"ListeSessions" => ["PHP/VIEW/", "ListeSessions", "Gestion des offres",false],
+	"FormSession" => ["PHP/VIEW/", "FormSession", "Gestion des offres",false],
 	"FormPeriode" => ["PHP/VIEW/", "FormPeriode", "Gestion des périodes",false],
-	"ActionSession" => ["PHP/VIEW/", "ActionSession", "Gestion des sessions",false],
+	"ActionSession" => ["PHP/VIEW/", "ActionSession", "Gestion des offres",false],
 
 	"ListeUtilisateurs" => ["PHP/VIEW/", "ListeUtilisateurs", "Gestion des Utilisateurs",false],
 	"FormUtilisateur" => ["PHP/VIEW/", "FormUtilisateur", "Gestion des Utilisateurs",false],
