@@ -23,6 +23,7 @@ if (isset($page))
         case "FormSession" : echo '<script src="./JS/VerifFormSession.js"></script>';break;
         case "FormPeriode" : echo '<script src="./JS/VerifFormPeriode.js"></script>';break;
         case "InterfaceFormateur" : echo '<script src="./JS/InterfaceFormateur.js"></script>';break;
+        case "FormConnexion" : echo '<script src="./JS/verifFormConnexion.js"></script>';break;
 
     }
 }
