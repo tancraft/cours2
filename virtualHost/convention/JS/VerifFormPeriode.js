@@ -37,11 +37,12 @@ function verifDateRapport(e) {
 function ajoutDateRapport(e)
 {
     let dateFinInput = e.target;
-    let dateRapportInput = e.target.parentNode.parentNode.parentNode.children[1].children[1];
+    let dateRapportInput = e.target.parentNode.parentNode.parentNode.children[1].children[0].children[1].children[1];
+    console.log(dateRapportInput);
     let dateFin = new Date(dateFinInput.value);
 
     let dateRapport = new Date(dateFin);
-    dateRapport.setDate(dateRapport.getDate()-15);
+    dateRapport.setDate(dateRapport.getDate()-7);
 
     dateRapportInput.value = dateRapport.toLocaleDateString('en-CA');
 }                                                                                          
