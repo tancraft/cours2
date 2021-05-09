@@ -1,5 +1,16 @@
+:root{
+    --color1: #EFF6E0;
+    --color2: #01161E;
+    --color3: #124559;
+    --color4: #598382;
+    --color5: #AEC3B0;
+}
+
 body{
     display: flex;
+    height: 100vh;
+    background-color: var(--color5);
+    color: var(--color2);
 }
 
 *, ::before, ::after{
@@ -12,15 +23,24 @@ div{
     display: flex;
     flex: 1;
 }
+
 .centrer{
     justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.espaceHor{
+    height:5vh;
+}
+
+#interface{
+    display: block;
 }
 
 #motChoisi{
     letter-spacing: 0.3em;
     font-size: 4em;
-    align-items: center;
-    margin: 1.2em;
 }
 
 .contenu{
@@ -30,14 +50,13 @@ div{
 }
 
 .touche{
-    font-size: 1.2em;
-    padding: 0.8em;
-    margin: 0.1em;
-    background-color: pink;
+    padding: 0.5em;
+    font-size: 1.4em;
+    color: var(--color1);
+    background-color: var(--color2);
 }
 
 #clavier{
-    flex: none;
     flex-wrap: wrap;
 }
 
@@ -51,7 +70,8 @@ div{
 
   .fin{
       display: none;
-      align-items: center;
+      height:50vh;
+      width: 80vw;
   }
 
   #finDeJeu{
@@ -60,4 +80,9 @@ div{
 
   #reload{
     flex: none;
+  }
+
+  #nbErreurs{
+      border: 0.3em solid var(--color2);
+      border-radius: 0.2em;
   }
