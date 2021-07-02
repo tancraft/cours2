@@ -833,7 +833,7 @@ function choixMot() {
 function coderMot(mot) {
     tab = mot.split('');
 
-    for (i = 1; i < tab.length - 1; i++) {
+    for (i = 0; i < tab.length; i++) {
         if (tab[i] == '-') {
             tab[i] = '-';
         }
